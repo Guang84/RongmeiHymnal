@@ -4,7 +4,7 @@
   "id": "hymdaihlu",
   "name": "hymdaihlu",
   "title": "Hymdaihlu",
-  "subtitle": "Rongmei hymns from the legacy digital edition",
+  "subtitle": "Hymdailuh",
   "language": "Rongmei",
   "cover": {
     "image": "assets/hymdaihlu-cover.webp",
@@ -37,8 +37,8 @@
     }
   ],
   "songs": {
-    "file": "songs.json",
-    "url": "",
+    "file": "",
+    "url": "https://raw.githubusercontent.com/Guang84/Guang84.github.io/refs/heads/main/data/RongmeiHymnal/hymdaihlu/songs.json",
     "count": 930,
     "updatedAt": "2026-08-31"
   }
