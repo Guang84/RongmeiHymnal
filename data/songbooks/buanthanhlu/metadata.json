@@ -19,9 +19,9 @@
     "description": "Browse the full songbook alphabetically, search lyrics, and read each song in a focused, adjustable layout."
   },
   "credits": {
-    "editor": "Naingam Pamei",
-    "compiledBy": "Longjang Baptist Youth Fellowship, RBCC",
-    "publisher": "Longjang Baptist Youth Fellowship, RBCC",
+    "editor": "GLab",
+    "compiledBy": "GLab",
+    "publisher": "guang84.github.io",
     "year": "2026",
     "rights": "Original song rights remain with their respective authors and rights holders."
   },
@@ -36,8 +36,8 @@
     }
   ],
   "songs": {
-    "file": "songs.json",
-    "url": "",
+    "file": "",
+    "url": "https://drive.google.com/file/d/1sBcmKs7fA2QOCV5aWFhY_Kt3CFRz2mEp/view?usp=sharing",
     "count": 305,
     "updatedAt": "2026-08-31"
   }
