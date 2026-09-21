@@ -4,7 +4,7 @@
   "id": "buanthanhlu",
   "name": "buanthanhlu",
   "title": "Buanthanhlu",
-  "subtitle": "Rongmei Gospel Hymnal",
+  "subtitle": "Rongmei Hymnal",
   "language": "Rongmei",
   "cover": {
     "image": "assets/buanthanhlu-cover-v2.webp",
@@ -36,7 +36,7 @@
     }
   ],
   "songs": {
-    "file": "",
+    "file": "https://drive.google.com/file/d/1sBcmKs7fA2QOCV5aWFhY_Kt3CFRz2mEp/view?usp=sharing",
     "url": "https://drive.google.com/file/d/1sBcmKs7fA2QOCV5aWFhY_Kt3CFRz2mEp/view?usp=sharing",
     "count": 305,
     "updatedAt": "2026-08-31"
