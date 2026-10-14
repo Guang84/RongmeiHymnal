@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "contentVersion": "1.2.0",
+  "contentVersion": "1.3.0",
   "updatedAt": "2026-10-14",
   "bookId": "ngai-luzaam",
   "sourceSummary": {
@@ -79,7 +79,9 @@
       "search": {
         "keywords": [
           "printed song 2",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: G",
+          "Meta 3: 10.10.10"
         ]
       },
       "verification": {
@@ -109,6 +111,14 @@
           "Kanloumei nun nkhuan pui bam zuan ni.",
           "Duikhuan chumak mei khou ai zaeng thaek ni."
         ]
+      },
+      "chord": "G",
+      "meta3": "10.10.10",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 2,
+        "match": "title-match-0.96"
       }
     },
     {
@@ -213,7 +223,9 @@
       "search": {
         "keywords": [
           "printed song 5",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: A",
+          "Meta 3: 10.8.10.9"
         ]
       },
       "verification": {
@@ -247,6 +259,14 @@
           "Ai suan ni lauziu na kagun daimei,",
           "Tam makpui tingsaeng gaipui ramkhou."
         ]
+      },
+      "chord": "A",
+      "meta3": "10.8.10.9",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 5,
+        "match": "title-match-0.95"
       }
     },
     {
@@ -310,7 +330,9 @@
       "search": {
         "keywords": [
           "printed song 7",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: Bb",
+          "Meta 3: 6.9.6.6.9.9"
         ]
       },
       "verification": {
@@ -351,6 +373,14 @@
           "Poubaomei ta nkhuan ngam makge,",
           "Theina ringthao datpui ram gaimei."
         ]
+      },
+      "chord": "Bb",
+      "meta3": "6.9.6.6.9.9",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 7,
+        "match": "title-match-0.90"
       }
     },
     {
@@ -363,7 +393,9 @@
       "search": {
         "keywords": [
           "printed song 8",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: A",
+          "Meta 3: 8.8.8.9"
         ]
       },
       "verification": {
@@ -392,6 +424,14 @@
           "Nkhuai mei guaita kanlou na,",
           "Zaigut louni he tingkau ram khou."
         ]
+      },
+      "chord": "A",
+      "meta3": "8.8.8.9",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 8,
+        "match": "title-match-0.96"
       }
     },
     {
@@ -404,7 +444,9 @@
       "search": {
         "keywords": [
           "printed song 9",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: A",
+          "Meta 3: 9.9.8.10"
         ]
       },
       "verification": {
@@ -437,6 +479,14 @@
           "Zingpui ram khou bam mei guai ta.",
           "Ganlou datna nang rui zai guang datro."
         ]
+      },
+      "chord": "A",
+      "meta3": "9.9.8.10",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 9,
+        "match": "title-match-1.00"
       }
     },
     {
@@ -449,7 +499,10 @@
       "search": {
         "keywords": [
           "printed song 10",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: Eb",
+          "Meta 3: 8.8.8.7 ",
+          "Meta 4: John 14:2"
         ]
       },
       "verification": {
@@ -479,6 +532,15 @@
           "Ata ti e hei tei ruina,",
           "Tingsaeng na ringdiu khang rui ."
         ]
+      },
+      "chord": "Eb",
+      "meta3": "8.8.8.7 ",
+      "meta4": "John 14:2",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 10,
+        "match": "title-match-1.00"
       }
     },
     {
@@ -537,7 +599,9 @@
       "search": {
         "keywords": [
           "printed song 12",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: F",
+          "Meta 3: 9.8.8.5"
         ]
       },
       "verification": {
@@ -571,6 +635,14 @@
           "Nangchaeng nthan mei tei hou khang.",
           "Akhou tigaan o."
         ]
+      },
+      "chord": "F",
+      "meta3": "9.8.8.5",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 12,
+        "match": "title-match-0.96"
       }
     },
     {
@@ -583,7 +655,9 @@
       "search": {
         "keywords": [
           "printed song 13",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: Eb",
+          "Meta 3: 7.5.7.5"
         ]
       },
       "verification": {
@@ -618,6 +692,14 @@
           "Rianramei kandi mun ta,",
           "Ningdat pulak khe."
         ]
+      },
+      "chord": "Eb",
+      "meta3": "7.5.7.5",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 13,
+        "match": "title-match-0.96"
       }
     },
     {
@@ -630,7 +712,9 @@
       "search": {
         "keywords": [
           "printed song 14",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: G",
+          "Meta 3: 10.9.10.9."
         ]
       },
       "verification": {
@@ -664,6 +748,14 @@
           "Akhang tei rui khaeng lou mei alung khou,",
           "Ai rui theih mei ngan na muh lak khe."
         ]
+      },
+      "chord": "G",
+      "meta3": "10.9.10.9.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 14,
+        "match": "title-match-1.00"
       }
     },
     {
@@ -676,7 +768,10 @@
       "search": {
         "keywords": [
           "printed song 15",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: B",
+          "Meta 3: 8.5.8. 5. ",
+          "Meta 4: Isaiah 12:2"
         ]
       },
       "verification": {
@@ -709,6 +804,15 @@
           "Akhang ni nang raeng gaimei e,",
           "He! Poubaomei le."
         ]
+      },
+      "chord": "B",
+      "meta3": "8.5.8. 5. ",
+      "meta4": "Isaiah 12:2",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 15,
+        "match": "title-match-1.00"
       }
     },
     {
@@ -818,7 +922,10 @@
       "search": {
         "keywords": [
           "printed song 18",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: A",
+          "Meta 3: 12.8.12.8. ",
+          "Meta 4: Luk 15; 11 – 241."
         ]
       },
       "verification": {
@@ -852,6 +959,15 @@
           "Kandih munpuang arih ta ai ningdat lak khe,",
           "Puang chui loupui ganni dui e."
         ]
+      },
+      "chord": "A",
+      "meta3": "12.8.12.8. ",
+      "meta4": "Luk 15; 11 – 241.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 18,
+        "match": "title-match-0.95"
       }
     },
     {
@@ -914,7 +1030,9 @@
       "search": {
         "keywords": [
           "printed song 20",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: E",
+          "Meta 3: 8.7.9.9."
         ]
       },
       "verification": {
@@ -948,6 +1066,14 @@
           "Kandih heimu rianrapui ram e,",
           "Tang lakni thei ping e zailou o."
         ]
+      },
+      "chord": "E",
+      "meta3": "8.7.9.9.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 20,
+        "match": "title-match-1.00"
       }
     },
     {
@@ -960,7 +1086,10 @@
       "search": {
         "keywords": [
           "printed song 21",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: C",
+          "Meta 3: 7.6.12.10.",
+          "Meta 4: Rev. 22:2"
         ]
       },
       "verification": {
@@ -995,6 +1124,15 @@
           "Poubaomei le nthanmei nun bampui ram tei,",
           "Poubaomei bampui zion ching gaimei."
         ]
+      },
+      "chord": "C",
+      "meta3": "7.6.12.10.",
+      "meta4": "Rev. 22:2",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 21,
+        "match": "title-match-1.00"
       }
     },
     {
@@ -1061,7 +1199,9 @@
       "search": {
         "keywords": [
           "printed song 23",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: G",
+          "Meta 3: 13.8.12.8."
         ]
       },
       "verification": {
@@ -1102,6 +1242,14 @@
           "Lungh rian ra pingmei guai nailak khe hei khou tei, 2",
           "[ Nailak khe mikdui kei datmei.]2"
         ]
+      },
+      "chord": "G",
+      "meta3": "13.8.12.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 23,
+        "match": "title-match-1.00"
       }
     },
     {
@@ -1114,7 +1262,9 @@
       "search": {
         "keywords": [
           "printed song 24",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: C",
+          "Meta 3: 10.9.10.8."
         ]
       },
       "verification": {
@@ -1147,6 +1297,14 @@
           "Nang rui hamna ai hei kanloumeipu,",
           "Nang ta ning na tingzing ngam mak."
         ]
+      },
+      "chord": "C",
+      "meta3": "10.9.10.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 24,
+        "match": "title-match-1.00"
       }
     },
     {
@@ -1159,7 +1317,9 @@
       "search": {
         "keywords": [
           "printed song 25",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: A",
+          "Meta 3: 9.8.8.9."
         ]
       },
       "verification": {
@@ -1193,6 +1353,14 @@
           "Ryanramei guay nang ta thuan e,",
           "Akhang neihlaa liang mei nang na de."
         ]
+      },
+      "chord": "A",
+      "meta3": "9.8.8.9.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 25,
+        "match": "title-match-0.96"
       }
     },
     {
@@ -1205,7 +1373,9 @@
       "search": {
         "keywords": [
           "printed song 26",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: D",
+          "Meta 3: 8.6.8.6."
         ]
       },
       "verification": {
@@ -1239,6 +1409,14 @@
           "Kaniu ningmei guangc tangh khang e",
           "Kros khou thaeng thaumei tei."
         ]
+      },
+      "chord": "D",
+      "meta3": "8.6.8.6.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 26,
+        "match": "title-match-0.96"
       }
     },
     {
@@ -1251,7 +1429,9 @@
       "search": {
         "keywords": [
           "printed song 27",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: C",
+          "Meta 3: 6.7.10.6.6."
         ]
       },
       "verification": {
@@ -1285,6 +1465,14 @@
           "Ai tatnipui chaeng tei,",
           "Guangh khrista hei nade."
         ]
+      },
+      "chord": "C",
+      "meta3": "6.7.10.6.6.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 27,
+        "match": "title-match-0.95"
       }
     },
     {
@@ -1392,7 +1580,10 @@
       "search": {
         "keywords": [
           "printed song 30",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: Bb",
+          "Meta 3: 8.8.8.8.8.8.",
+          "Meta 4: 2 korinthian 5:2"
         ]
       },
       "verification": {
@@ -1436,6 +1627,15 @@
           "Tingmik ‘thui ai ning bam sini,",
           "Poubaomei ai guang tan ngam mak."
         ]
+      },
+      "chord": "Bb",
+      "meta3": "8.8.8.8.8.8.",
+      "meta4": "2 korinthian 5:2",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 30,
+        "match": "title-match-0.96"
       }
     },
     {
@@ -1448,7 +1648,9 @@
       "search": {
         "keywords": [
           "printed song 31",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: Eb",
+          "Meta 3: 8.5.8.6"
         ]
       },
       "verification": {
@@ -1487,6 +1689,14 @@
           "Abaanzat hei rui hamguang e,",
           "Zianmei guai le salam."
         ]
+      },
+      "chord": "Eb",
+      "meta3": "8.5.8.6",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 31,
+        "match": "title-match-0.96"
       }
     },
     {
@@ -1499,7 +1709,9 @@
       "search": {
         "keywords": [
           "printed song 32",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: B",
+          "Meta 3: 10.10.11.11."
         ]
       },
       "verification": {
@@ -1533,6 +1745,14 @@
           "Poubaomei ram tigaan loumei guai tei ni,",
           "Tak makna tingsaeng zaeng gaanbam puni the."
         ]
+      },
+      "chord": "B",
+      "meta3": "10.10.11.11.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 32,
+        "match": "title-match-0.92"
       }
     },
     {
@@ -1545,7 +1765,9 @@
       "search": {
         "keywords": [
           "printed song 33",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: D",
+          "Meta 3: 8.8.8.8."
         ]
       },
       "verification": {
@@ -1578,6 +1800,14 @@
           "Gaipuiram tei guang tang nuh the,",
           "Kandih ryanraram pat louna."
         ]
+      },
+      "chord": "D",
+      "meta3": "8.8.8.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 33,
+        "match": "title-match-1.00"
       }
     },
     {
@@ -1636,7 +1866,9 @@
       "search": {
         "keywords": [
           "printed song 35",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: E",
+          "Meta 3: 8.6.8.6."
         ]
       },
       "verification": {
@@ -1675,6 +1907,14 @@
           "Apumh hei tipat ngam sini,",
           "Hei tei rui biu makge."
         ]
+      },
+      "chord": "E",
+      "meta3": "8.6.8.6.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 35,
+        "match": "title-match-0.92"
       }
     },
     {
@@ -1687,7 +1927,9 @@
       "search": {
         "keywords": [
           "printed song 36",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: F",
+          "Meta 3: 8.6.8.6."
         ]
       },
       "verification": {
@@ -1721,6 +1963,14 @@
           "Kamei ning mei sulou ni tuang",
           "Ai rui ramthai mak ge."
         ]
+      },
+      "chord": "F",
+      "meta3": "8.6.8.6.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 36,
+        "match": "title-match-1.00"
       }
     },
     {
@@ -1733,7 +1983,10 @@
       "search": {
         "keywords": [
           "printed song 37",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: Bb",
+          "Meta 3: 8.8.9.8.",
+          "Meta 4: Psalms 91:4"
         ]
       },
       "verification": {
@@ -1767,6 +2020,15 @@
           "Tingkauhram gaimei tei lapuni,",
           "Tingkau raengguai haeng puni the."
         ]
+      },
+      "chord": "Bb",
+      "meta3": "8.8.9.8.",
+      "meta4": "Psalms 91:4",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 37,
+        "match": "title-match-1.00"
       }
     },
     {
@@ -1830,7 +2092,9 @@
       "search": {
         "keywords": [
           "printed song 39",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: D",
+          "Meta 3: 6.6.10.6.6.7."
         ]
       },
       "verification": {
@@ -1868,6 +2132,14 @@
           "Neihlaa puilu suan ni.",
           "He! Halleluijah tuna.] 2"
         ]
+      },
+      "chord": "D",
+      "meta3": "6.6.10.6.6.7.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 39,
+        "match": "title-match-1.00"
       }
     },
     {
@@ -1880,7 +2152,9 @@
       "search": {
         "keywords": [
           "printed song 40",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: Bb",
+          "Meta 3: 8.9.9.6.6."
         ]
       },
       "verification": {
@@ -1918,6 +2192,14 @@
           "Rui lai ngam puni e,",
           "Halleluiah Amen."
         ]
+      },
+      "chord": "Bb",
+      "meta3": "8.9.9.6.6.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 40,
+        "match": "title-match-0.96"
       }
     },
     {
@@ -1930,7 +2212,10 @@
       "search": {
         "keywords": [
           "printed song 41",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: D",
+          "Meta 3: 14.12.10.11.",
+          "Meta 4: Mk. 14:32-36"
         ]
       },
       "verification": {
@@ -1970,6 +2255,15 @@
           "Paap lev rihta ngam na Jordan duikan the.",
           "Poubaomei ta zai the thei pui bam tangkhang."
         ]
+      },
+      "chord": "D",
+      "meta3": "14.12.10.11.",
+      "meta4": "Mk. 14:32-36",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 41,
+        "match": "title-match-0.92"
       }
     },
     {
@@ -1982,7 +2276,9 @@
       "search": {
         "keywords": [
           "printed song 42",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: Bb",
+          "Meta 3: 9.8.8.8.9."
         ]
       },
       "verification": {
@@ -2014,6 +2310,14 @@
           "Kanloumei nah bam phuna,",
           "He! Abumaeng le sam tatro."
         ]
+      },
+      "chord": "Bb",
+      "meta3": "9.8.8.8.9.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 42,
+        "match": "title-match-0.93"
       }
     },
     {
@@ -2026,7 +2330,9 @@
       "search": {
         "keywords": [
           "printed song 43",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: F",
+          "Meta 3: 11.10.10.9."
         ]
       },
       "verification": {
@@ -2060,6 +2366,14 @@
           "Kalvary lauziu Na ‘zianlou mei Pu;",
           "Nangta ninga suan ni tingsaengzaeng."
         ]
+      },
+      "chord": "F",
+      "meta3": "11.10.10.9.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 43,
+        "match": "title-match-1.00"
       }
     },
     {
@@ -2072,7 +2386,9 @@
       "search": {
         "keywords": [
           "printed song 44",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: Bb",
+          "Meta 3: 7.7.7.6.13.13."
         ]
       },
       "verification": {
@@ -2118,6 +2434,14 @@
           "Kamei nzianloumei thuan",
           "Ku o halleluijah."
         ]
+      },
+      "chord": "Bb",
+      "meta3": "7.7.7.6.13.13.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 44,
+        "match": "title-match-0.95"
       }
     },
     {
@@ -2177,7 +2501,9 @@
       "search": {
         "keywords": [
           "printed song 46",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: G",
+          "Meta 3: 10.6.9.7."
         ]
       },
       "verification": {
@@ -2206,6 +2532,14 @@
           "Kandi neila mei khang suang gai e,",
           "Tingkao neila mei tei mu."
         ]
+      },
+      "chord": "G",
+      "meta3": "10.6.9.7.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 46,
+        "match": "title-match-0.97"
       }
     },
     {
@@ -2218,7 +2552,9 @@
       "search": {
         "keywords": [
           "printed song 47",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: Ab",
+          "Meta 3: 10.10.11.10."
         ]
       },
       "verification": {
@@ -2257,6 +2593,14 @@
           "Guangh guayna Guangc Poubao mei thuai hian liang mei",
           "Aniu panti ngan na thuan kho Guangh khrista."
         ]
+      },
+      "chord": "Ab",
+      "meta3": "10.10.11.10.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 47,
+        "match": "title-match-0.95"
       }
     },
     {
@@ -2269,7 +2613,9 @@
       "search": {
         "keywords": [
           "printed song 48",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: E",
+          "Meta 3: 11.11.11.11."
         ]
       },
       "verification": {
@@ -2303,6 +2649,14 @@
           "Rianra akhaeng na tat maan ngam kanmei guai,",
           "Kau kagun daihpui ram khou kalun houni."
         ]
+      },
+      "chord": "E",
+      "meta3": "11.11.11.11.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 48,
+        "match": "title-match-0.96"
       }
     },
     {
@@ -2315,7 +2669,9 @@
       "search": {
         "keywords": [
           "printed song 49",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: Eb",
+          "Meta 3: 10.10.9.11."
         ]
       },
       "verification": {
@@ -2349,6 +2705,14 @@
           "Guang jan khou guang mei ta thuan ku e,",
           "Messiah ariuna kao e hosana."
         ]
+      },
+      "chord": "Eb",
+      "meta3": "10.10.9.11.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 49,
+        "match": "title-match-1.00"
       }
     },
     {
@@ -2412,7 +2776,9 @@
       "search": {
         "keywords": [
           "printed song 51",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: G",
+          "Meta 3: 11.9.11.11."
         ]
       },
       "verification": {
@@ -2446,6 +2812,14 @@
           "Theithu Poubaomei suaihiam mei lapuni,",
           "Neihlaa na thuanc kho Poubaumei kanloumei."
         ]
+      },
+      "chord": "G",
+      "meta3": "11.9.11.11.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 51,
+        "match": "title-match-1.00"
       }
     },
     {
@@ -2458,7 +2832,10 @@
       "search": {
         "keywords": [
           "printed song 52",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: C",
+          "Meta 3: 11.10.11.",
+          "Meta 4: Isaiah 53:5"
         ]
       },
       "verification": {
@@ -2487,6 +2864,15 @@
           "Kaniu Guangh theihmei ta zau ngammei makge;",
           "Poubaomei theipui nung kandi zing e."
         ]
+      },
+      "chord": "C",
+      "meta3": "11.10.11.",
+      "meta4": "Isaiah 53:5",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 52,
+        "match": "title-match-0.94"
       }
     },
     {
@@ -2637,7 +3023,9 @@
       "search": {
         "keywords": [
           "printed song 56",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: E",
+          "Meta 3: 9.8.7.6."
         ]
       },
       "verification": {
@@ -2671,6 +3059,14 @@
           "Ai rui hei tei mu lak khe;",
           "Halleluijah Amen."
         ]
+      },
+      "chord": "E",
+      "meta3": "9.8.7.6.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 56,
+        "match": "title-match-0.92"
       }
     },
     {
@@ -2737,7 +3133,9 @@
       "search": {
         "keywords": [
           "printed song 58",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: D",
+          "Meta 3: 8.7.9.6.8.7.8.7."
         ]
       },
       "verification": {
@@ -2778,6 +3176,14 @@
           "Tingkao namdai guang tang pukhou,",
           "Nai lak khe kapum ma tei."
         ]
+      },
+      "chord": "D",
+      "meta3": "8.7.9.6.8.7.8.7.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 58,
+        "match": "title-match-0.92"
       }
     },
     {
@@ -2790,7 +3196,9 @@
       "search": {
         "keywords": [
           "printed song 59",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: E",
+          "Meta 3: 13. 8.8.8."
         ]
       },
       "verification": {
@@ -2839,6 +3247,14 @@
           "Khou tei rian ra mikdui keimei,",
           "Guang jisu rui thut phui lou puni."
         ]
+      },
+      "chord": "E",
+      "meta3": "13. 8.8.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 59,
+        "match": "title-match-1.00"
       }
     },
     {
@@ -2902,7 +3318,9 @@
       "search": {
         "keywords": [
           "printed song 61",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: D",
+          "Meta 3: 8.8.8.6."
         ]
       },
       "verification": {
@@ -2936,6 +3354,14 @@
           "Kandi ram hei patlou pukhou",
           "Ning lak khe kap pui ram."
         ]
+      },
+      "chord": "D",
+      "meta3": "8.8.8.6.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 61,
+        "match": "title-match-0.96"
       }
     },
     {
@@ -2948,7 +3374,9 @@
       "search": {
         "keywords": [
           "printed song 62",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: Ab",
+          "Meta 3: 10.10.10.9.8.8.10."
         ]
       },
       "verification": {
@@ -2981,6 +3409,14 @@
           "Kao ganchuang le than mei nun rui,",
           "Gann phiu rui guang than puan mei dinlou e."
         ]
+      },
+      "chord": "Ab",
+      "meta3": "10.10.10.9.8.8.10.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 62,
+        "match": "title-match-0.96"
       }
     },
     {
@@ -2993,7 +3429,9 @@
       "search": {
         "keywords": [
           "printed song 63",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: G",
+          "Meta 3: 8.8.8.8."
         ]
       },
       "verification": {
@@ -3028,6 +3466,14 @@
           "Ravguangc nah e,",
           "Nang ta thuan ne zaat guay na rui."
         ]
+      },
+      "chord": "G",
+      "meta3": "8.8.8.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 63,
+        "match": "title-match-0.96"
       }
     },
     {
@@ -3040,7 +3486,9 @@
       "search": {
         "keywords": [
           "printed song 64",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: C",
+          "Meta 3: 8.6.8.7.8."
         ]
       },
       "verification": {
@@ -3078,6 +3526,14 @@
           "Neihlapui lu than suanni;",
           "Khou tei bam khang ai neihlaa e."
         ]
+      },
+      "chord": "C",
+      "meta3": "8.6.8.7.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 64,
+        "match": "title-match-0.92"
       }
     },
     {
@@ -3090,7 +3546,9 @@
       "search": {
         "keywords": [
           "printed song 65",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: E",
+          "Meta 3: 8.8.9.5."
         ]
       },
       "verification": {
@@ -3124,6 +3582,14 @@
           "Ai rui theihmei ngan na ning bam ni,",
           "Guloumei pu ta."
         ]
+      },
+      "chord": "E",
+      "meta3": "8.8.9.5.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 65,
+        "match": "title-match-0.95"
       }
     },
     {
@@ -3136,7 +3602,9 @@
       "search": {
         "keywords": [
           "printed song 66",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: G",
+          "Meta 3: 11.8.11.11."
         ]
       },
       "verification": {
@@ -3170,6 +3638,14 @@
           "Aniu khang rui kapmei lev rian ra kanmei,",
           "Guangh khrista thuanku khang kathan sudat diu."
         ]
+      },
+      "chord": "G",
+      "meta3": "11.8.11.11.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 66,
+        "match": "title-match-0.95"
       }
     },
     {
@@ -3182,7 +3658,9 @@
       "search": {
         "keywords": [
           "printed song 67",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: E",
+          "Meta 3: 8.8.8.6."
         ]
       },
       "verification": {
@@ -3213,6 +3691,14 @@
           "Kao ram gai zion nam dai khou,",
           "Ai zao bamni raguang."
         ]
+      },
+      "chord": "E",
+      "meta3": "8.8.8.6.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 67,
+        "match": "title-match-0.96"
       }
     },
     {
@@ -3412,7 +3898,9 @@
       "search": {
         "keywords": [
           "printed song 72",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: G",
+          "Meta 3: 14.12.12.8."
         ]
       },
       "verification": {
@@ -3449,6 +3937,14 @@
           "Mei guai nakhang neihlamei gaimei sudiu khang,",
           "He! Bumaeng than mei sam kei o."
         ]
+      },
+      "chord": "G",
+      "meta3": "14.12.12.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 72,
+        "match": "title-match-0.96"
       }
     },
     {
@@ -3502,7 +3998,9 @@
       "search": {
         "keywords": [
           "printed song 74",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: Bb",
+          "Meta 3: 8.11.9.13."
         ]
       },
       "verification": {
@@ -3536,6 +4034,14 @@
           "Pou’ rui damloumei Salem namdaih,",
           "Aniu kapumma hei lungni rianramei maknga."
         ]
+      },
+      "chord": "Bb",
+      "meta3": "8.11.9.13.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 74,
+        "match": "title-match-0.93"
       }
     },
     {
@@ -3548,7 +4054,9 @@
       "search": {
         "keywords": [
           "printed song 75",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: F",
+          "Meta 3: 8.10.9.9.6."
         ]
       },
       "verification": {
@@ -3580,6 +4088,14 @@
           "Kalvary zauzian lum lou mei guai,",
           "Rui seitan ta ngam ni."
         ]
+      },
+      "chord": "F",
+      "meta3": "8.10.9.9.6.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 75,
+        "match": "title-match-0.92"
       }
     },
     {
@@ -3690,7 +4206,9 @@
       "search": {
         "keywords": [
           "printed song 78",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: E",
+          "Meta 3: 8.8.10.8."
         ]
       },
       "verification": {
@@ -3724,6 +4242,14 @@
           "Ai ning na kap tan tan na bam the.",
           "He! Lathao lou o, Poubaomei ."
         ]
+      },
+      "chord": "E",
+      "meta3": "8.8.10.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 78,
+        "match": "title-match-0.92"
       }
     },
     {
@@ -3782,7 +4308,9 @@
       "search": {
         "keywords": [
           "printed song 80",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: D",
+          "Meta 3: 8.10.12.5."
         ]
       },
       "verification": {
@@ -3815,6 +4343,14 @@
           "Buhmaeng kandi thu tei bam cham lou puni e",
           "Kandih kathan thu."
         ]
+      },
+      "chord": "D",
+      "meta3": "8.10.12.5.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 80,
+        "match": "title-match-0.96"
       }
     },
     {
@@ -3827,7 +4363,9 @@
       "search": {
         "keywords": [
           "printed song 81",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: B",
+          "Meta 3: 7.6.12.10."
         ]
       },
       "verification": {
@@ -3860,6 +4398,14 @@
           "Olive chingru khou tei muangru khou ding lana,",
           "Gaipui ram nzuan the kanloumei Pu."
         ]
+      },
+      "chord": "B",
+      "meta3": "7.6.12.10.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 81,
+        "match": "title-match-0.92"
       }
     },
     {
@@ -3872,7 +4418,9 @@
       "search": {
         "keywords": [
           "printed song 82",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: D",
+          "Meta 3: 10.10.11.9"
         ]
       },
       "verification": {
@@ -3906,6 +4454,14 @@
           "Lumloumei nun Salem ‘than ta thuanku the,",
           "Israel nunni lumlou dat the."
         ]
+      },
+      "chord": "D",
+      "meta3": "10.10.11.9",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 82,
+        "match": "title-match-0.93"
       }
     },
     {
@@ -3918,7 +4474,9 @@
       "search": {
         "keywords": [
           "printed song 83",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: B",
+          "Meta 3: 10.12.11."
         ]
       },
       "verification": {
@@ -3944,6 +4502,14 @@
           "Nang bang nunguay khou neihla mei padik diu,",
           "Nang kandih gaipui ram khou guang puni the."
         ]
+      },
+      "chord": "B",
+      "meta3": "10.12.11.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 83,
+        "match": "title-match-1.00"
       }
     },
     {
@@ -3956,7 +4522,9 @@
       "search": {
         "keywords": [
           "printed song 84",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: E",
+          "Meta 3: 10.7.6.6."
         ]
       },
       "verification": {
@@ -3986,6 +4554,14 @@
           "Zaat kapumma guai khang;",
           "Tingkwm ‘thanh houdat diu."
         ]
+      },
+      "chord": "E",
+      "meta3": "10.7.6.6.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 84,
+        "match": "title-match-0.97"
       }
     },
     {
@@ -3998,7 +4574,9 @@
       "search": {
         "keywords": [
           "printed song 85",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: E",
+          "Meta 3: 9.9.9.11."
         ]
       },
       "verification": {
@@ -4027,6 +4605,14 @@
           "Poubaomei ti o ring mei bumaeng ,",
           "Zaat guay rianra mei hei munkumv ma puangc diu."
         ]
+      },
+      "chord": "E",
+      "meta3": "9.9.9.11.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 85,
+        "match": "title-match-0.97"
       }
     },
     {
@@ -4039,7 +4625,9 @@
       "search": {
         "keywords": [
           "printed song 86",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: F",
+          "Meta 3: 7.6.9.11."
         ]
       },
       "verification": {
@@ -4068,6 +4656,14 @@
           "Kandih neihla mei guai maan puni,",
           "Munpuang kumhmei tingsaeng ram ta ai ning e."
         ]
+      },
+      "chord": "F",
+      "meta3": "7.6.9.11.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 86,
+        "match": "title-match-0.95"
       }
     },
     {
@@ -4080,7 +4676,9 @@
       "search": {
         "keywords": [
           "printed song 87",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: D",
+          "Meta 3: 9.10.9.10."
         ]
       },
       "verification": {
@@ -4114,6 +4712,14 @@
           "Kanloumei pu le kanloumei guai,",
           "Ntam dat makna bam puni e."
         ]
+      },
+      "chord": "D",
+      "meta3": "9.10.9.10.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 87,
+        "match": "title-match-0.94"
       }
     },
     {
@@ -4265,7 +4871,9 @@
       "search": {
         "keywords": [
           "printed song 91",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: G",
+          "Meta 3: 11.9.8.6."
         ]
       },
       "verification": {
@@ -4299,6 +4907,14 @@
           "Lu tei suan na ruak tei gaina,",
           "Kagundai ting kao ram."
         ]
+      },
+      "chord": "G",
+      "meta3": "11.9.8.6.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 91,
+        "match": "title-match-0.95"
       }
     },
     {
@@ -4311,7 +4927,9 @@
       "search": {
         "keywords": [
           "printed song 92",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: G",
+          "Meta 3: 8.7.8.7."
         ]
       },
       "verification": {
@@ -4350,6 +4968,14 @@
           "Bumaeng kapum khuam kariu na",
           "Latzan suni kapum ta."
         ]
+      },
+      "chord": "G",
+      "meta3": "8.7.8.7.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 92,
+        "match": "title-match-0.92"
       }
     },
     {
@@ -4362,7 +4988,9 @@
       "search": {
         "keywords": [
           "printed song 93",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: G",
+          "Meta 3: 9.9.9.9."
         ]
       },
       "verification": {
@@ -4401,6 +5029,14 @@
           "Mbaan thai pui ram guang tang puni,",
           "Pou Ravguangc zianmei khou lung puni."
         ]
+      },
+      "chord": "G",
+      "meta3": "9.9.9.9.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 93,
+        "match": "title-match-0.96"
       }
     },
     {
@@ -4413,7 +5049,9 @@
       "search": {
         "keywords": [
           "printed song 94",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: A",
+          "Meta 3: 6.5.12.6."
         ]
       },
       "verification": {
@@ -4450,6 +5088,14 @@
           "Kalvary zuanna tat",
           "Khalou mei makna tat."
         ]
+      },
+      "chord": "A",
+      "meta3": "6.5.12.6.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 94,
+        "match": "title-match-0.91"
       }
     },
     {
@@ -4462,7 +5108,9 @@
       "search": {
         "keywords": [
           "printed song 95",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: E",
+          "Meta 3: 8.7.8.10."
         ]
       },
       "verification": {
@@ -4496,6 +5144,14 @@
           "Ngam mei lu than gaimei guai tei,",
           "Kandih hei luaipui nung ai rui suan ni."
         ]
+      },
+      "chord": "E",
+      "meta3": "8.7.8.10.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 95,
+        "match": "title-match-0.92"
       }
     },
     {
@@ -4508,7 +5164,9 @@
       "search": {
         "keywords": [
           "printed song 96",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: G",
+          "Meta 3: 8.7.8.7."
         ]
       },
       "verification": {
@@ -4542,6 +5200,14 @@
           "Tingkao kandih guangc tang pukhou,",
           "Salak khe chunsi salam ."
         ]
+      },
+      "chord": "G",
+      "meta3": "8.7.8.7.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 96,
+        "match": "title-match-0.92"
       }
     },
     {
@@ -4554,7 +5220,9 @@
       "search": {
         "keywords": [
           "printed song 97",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: E",
+          "Meta 3: 8.8.7."
         ]
       },
       "verification": {
@@ -4583,6 +5251,14 @@
           "Abumaeng rui guang tang e thei;",
           "Ringhmei mun tei ai suni."
         ]
+      },
+      "chord": "E",
+      "meta3": "8.8.7.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 97,
+        "match": "title-match-0.96"
       }
     },
     {
@@ -4595,7 +5271,9 @@
       "search": {
         "keywords": [
           "printed song 98",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: Ab",
+          "Meta 3: 10.8.9.9."
         ]
       },
       "verification": {
@@ -4629,6 +5307,14 @@
           "Muang rui gumliam e nang lun gaimei,",
           "Neihrui patna ndauh lou dat ro"
         ]
+      },
+      "chord": "Ab",
+      "meta3": "10.8.9.9.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 98,
+        "match": "title-match-0.96"
       }
     },
     {
@@ -4785,7 +5471,9 @@
       "search": {
         "keywords": [
           "printed song 102",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: Bb",
+          "Meta 3: 8.7.8.7."
         ]
       },
       "verification": {
@@ -4823,6 +5511,14 @@
           "Kaguangc bampaeng patlou duna",
           "Nuan phuang mei nun khang guang the."
         ]
+      },
+      "chord": "Bb",
+      "meta3": "8.7.8.7.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 127,
+        "match": "title-match-1.00"
       }
     },
     {
@@ -4835,7 +5531,9 @@
       "search": {
         "keywords": [
           "printed song 103",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: G",
+          "Meta 3: 8.8.8.8."
         ]
       },
       "verification": {
@@ -4864,6 +5562,14 @@
           "Theimei rui kaniu phaan suna",
           "Rianra rianriu khaeng puni."
         ]
+      },
+      "chord": "G",
+      "meta3": "8.8.8.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 126,
+        "match": "title-match-0.93"
       }
     },
     {
@@ -4967,7 +5673,9 @@
       "search": {
         "keywords": [
           "printed song 106",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: Ab",
+          "Meta 3: 8.8.8.8."
         ]
       },
       "verification": {
@@ -5001,6 +5709,14 @@
           "Nang zauzianc rui nkha lou o",
           "Nuan phungmei nun guai ta zaipat khang ."
         ]
+      },
+      "chord": "Ab",
+      "meta3": "8.8.8.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 133,
+        "match": "title-match-1.00"
       }
     },
     {
@@ -5107,7 +5823,9 @@
       "search": {
         "keywords": [
           "printed song 109",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: A",
+          "Meta 3: 8.7.8.7."
         ]
       },
       "verification": {
@@ -5146,6 +5864,14 @@
           "Ganbam mi thei ]2",
           "Ai ning mei guang tang ni the."
         ]
+      },
+      "chord": "A",
+      "meta3": "8.7.8.7.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 146,
+        "match": "title-match-0.91"
       }
     },
     {
@@ -5204,7 +5930,9 @@
       "search": {
         "keywords": [
           "printed song 111",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: A",
+          "Meta 3: 12.10.12.10."
         ]
       },
       "verification": {
@@ -5238,6 +5966,14 @@
           "Mikdui keimei hei buinung, syni nai lak khe,",
           "Gaimei nraeng ting patpui ramv kiw e."
         ]
+      },
+      "chord": "A",
+      "meta3": "12.10.12.10.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 148,
+        "match": "title-match-0.96"
       }
     },
     {
@@ -5296,7 +6032,9 @@
       "search": {
         "keywords": [
           "printed song 113",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: E",
+          "Meta 3: 7.7.7.7."
         ]
       },
       "verification": {
@@ -5330,6 +6068,14 @@
           "Tingkao ram tangpui kan khou",
           "Aniu ntam dat lak khe."
         ]
+      },
+      "chord": "E",
+      "meta3": "7.7.7.7.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 105,
+        "match": "title-match-0.95"
       }
     },
     {
@@ -5342,7 +6088,9 @@
       "search": {
         "keywords": [
           "printed song 114",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: D",
+          "Meta 3: 10.10."
         ]
       },
       "verification": {
@@ -5372,6 +6120,14 @@
           "7. Nzianmei guai ta, ntam bam sini..",
           "Tingkao ram gai khou khuan bam pu..ni ye."
         ]
+      },
+      "chord": "D",
+      "meta3": "10.10.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 108,
+        "match": "title-match-0.93"
       }
     },
     {
@@ -5384,7 +6140,9 @@
       "search": {
         "keywords": [
           "printed song 115",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: A",
+          "Meta 3: 8.6.8.6."
         ]
       },
       "verification": {
@@ -5418,6 +6176,14 @@
           "Mei guaina khou rah ndauni,",
           "Lauziuna pari hei."
         ]
+      },
+      "chord": "A",
+      "meta3": "8.6.8.6.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 138,
+        "match": "title-match-0.95"
       }
     },
     {
@@ -5430,7 +6196,9 @@
       "search": {
         "keywords": [
           "printed song 116",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: D",
+          "Meta 3: 10.10.1010."
         ]
       },
       "verification": {
@@ -5459,6 +6227,14 @@
           "Khoutei guang khang Jisu rui kau bam e",
           "Mbaan thaimei tingkau khou guangdiu khang."
         ]
+      },
+      "chord": "D",
+      "meta3": "10.10.1010.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 187,
+        "match": "title-match-1.00"
       }
     },
     {
@@ -5471,7 +6247,9 @@
       "search": {
         "keywords": [
           "printed song 117",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: Bb",
+          "Meta 3: 8.8.8.8."
         ]
       },
       "verification": {
@@ -5510,6 +6288,14 @@
           "Tatlou puibam kathui na khou",
           "Zailou naro nang baanzat rui."
         ]
+      },
+      "chord": "Bb",
+      "meta3": "8.8.8.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 123,
+        "match": "title-match-0.94"
       }
     },
     {
@@ -5702,7 +6488,9 @@
       "search": {
         "keywords": [
           "printed song 122",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: D",
+          "Meta 3: 8.8.8.8.8.8."
         ]
       },
       "verification": {
@@ -5731,6 +6519,14 @@
           "Gunh kumna khiu ‘phuan khangni nai,",
           "Lumlou makmei guai khang hamh e."
         ]
+      },
+      "chord": "D",
+      "meta3": "8.8.8.8.8.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 112,
+        "match": "title-match-0.96"
       }
     },
     {
@@ -5882,7 +6678,9 @@
       "search": {
         "keywords": [
           "printed song 126",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: G",
+          "Meta 3: 8.9.8.8."
         ]
       },
       "verification": {
@@ -5915,6 +6713,14 @@
           "Kandih khou gaimei hou ngam the.",
           "Neihla mei nzian mei ham na."
         ]
+      },
+      "chord": "G",
+      "meta3": "8.9.8.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 149,
+        "match": "title-match-1.00"
       }
     },
     {
@@ -6018,7 +6824,9 @@
       "search": {
         "keywords": [
           "printed song 129",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: D",
+          "Meta 3: 9.7.7.7."
         ]
       },
       "verification": {
@@ -6054,6 +6862,14 @@
           "Tatna Kalvary ching khou,",
           "Poubaomei ta guang zau lo."
         ]
+      },
+      "chord": "D",
+      "meta3": "9.7.7.7.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 135,
+        "match": "title-match-0.93"
       }
     },
     {
@@ -6398,7 +7214,9 @@
       "search": {
         "keywords": [
           "printed song 137",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: Bb",
+          "Meta 3: 8.8.8.8."
         ]
       },
       "verification": {
@@ -6432,6 +7250,14 @@
           "Kalloumei Pu nduanghou o,",
           "Theihmei duipaeng ram gaimei khou."
         ]
+      },
+      "chord": "Bb",
+      "meta3": "8.8.8.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 140,
+        "match": "title-match-0.95"
       }
     },
     {
@@ -6536,7 +7362,9 @@
       "search": {
         "keywords": [
           "printed song 140",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: G",
+          "Meta 3: 8.6.8"
         ]
       },
       "verification": {
@@ -6566,6 +7394,14 @@
           "Suaihiam mei poubaomei,",
           "Nang baan rui ata zailou o."
         ]
+      },
+      "chord": "G",
+      "meta3": "8.6.8",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 116,
+        "match": "title-match-0.96"
       }
     },
     {
@@ -6764,7 +7600,9 @@
       "search": {
         "keywords": [
           "printed song 145",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: D",
+          "Meta 3: 9.7.10.10.4."
         ]
       },
       "verification": {
@@ -6802,6 +7640,14 @@
           "Neihla taek mak nga lung bam puni e",
           "Zian mei nun le."
         ]
+      },
+      "chord": "D",
+      "meta3": "9.7.10.10.4.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 106,
+        "match": "title-match-0.93"
       }
     },
     {
@@ -7041,7 +7887,9 @@
       "search": {
         "keywords": [
           "printed song 151",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: F",
+          "Meta 3: 7.7.7.9."
         ]
       },
       "verification": {
@@ -7074,6 +7922,14 @@
           "Sinhnui na Pouta zai tat,",
           "Tikih mei nun rui nuh lou mak khe."
         ]
+      },
+      "chord": "F",
+      "meta3": "7.7.7.9.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 144,
+        "match": "title-match-0.90"
       }
     },
     {
@@ -7347,7 +8203,9 @@
       "search": {
         "keywords": [
           "printed song 158",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: Ab",
+          "Meta 3: 8.8.8.9."
         ]
       },
       "verification": {
@@ -7381,6 +8239,14 @@
           "Kapma latlumei nailak khe,",
           "Neihlamei rui aniu duan suni."
         ]
+      },
+      "chord": "Ab",
+      "meta3": "8.8.8.9.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 120,
+        "match": "title-match-1.00"
       }
     },
     {
@@ -7611,7 +8477,9 @@
       "search": {
         "keywords": [
           "printed song 164",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: D",
+          "Meta 3: 8.8.8.8."
         ]
       },
       "verification": {
@@ -7645,6 +8513,14 @@
           "Zingbang le kalaan kathumh khou,",
           "Thaukan the tuna salou e."
         ]
+      },
+      "chord": "D",
+      "meta3": "8.8.8.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 110,
+        "match": "title-match-0.95"
       }
     },
     {
@@ -7834,7 +8710,9 @@
       "search": {
         "keywords": [
           "printed song 169",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: E",
+          "Meta 3: 11.8.10.10."
         ]
       },
       "verification": {
@@ -7868,6 +8746,14 @@
           "Tingkao ram gaikhou guang tang pui nung kiu",
           "Tam mei nailak khe nzian mei nun ta."
         ]
+      },
+      "chord": "E",
+      "meta3": "11.8.10.10.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 107,
+        "match": "title-match-0.97"
       }
     },
     {
@@ -8190,7 +9076,9 @@
       "search": {
         "keywords": [
           "printed song 177",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: D",
+          "Meta 3: 8.8.8.8."
         ]
       },
       "verification": {
@@ -8222,6 +9110,14 @@
           "Tingkao pirunc ganlou duna",
           "Sau pirunc runc na thei lou the."
         ]
+      },
+      "chord": "D",
+      "meta3": "8.8.8.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 143,
+        "match": "title-match-0.95"
       }
     },
     {
@@ -8624,7 +9520,9 @@
       "search": {
         "keywords": [
           "printed song 188",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: C",
+          "Meta 3: 9.6.12.6.10."
         ]
       },
       "verification": {
@@ -8663,6 +9561,14 @@
           "Thanmei banchra guai le",
           "Guangh lauziu Nata tingsaeng thuan bamni."
         ]
+      },
+      "chord": "C",
+      "meta3": "9.6.12.6.10.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 118,
+        "match": "title-match-1.00"
       }
     },
     {
@@ -8675,7 +9581,9 @@
       "search": {
         "keywords": [
           "printed song 189",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: E",
+          "Meta 4: 12.8.6.8.8."
         ]
       },
       "verification": {
@@ -8707,6 +9615,14 @@
           "Kalvary mun puangc tuai kanmei",
           "Aniu pang khou guang puangc lou datro."
         ]
+      },
+      "chord": "E",
+      "meta4": "12.8.6.8.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 150,
+        "match": "title-match-0.92"
       }
     },
     {
@@ -10064,7 +10980,9 @@
       "search": {
         "keywords": [
           "printed song 225",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: E",
+          "Meta 3: 8.7.9.9."
         ]
       },
       "verification": {
@@ -10098,6 +11016,14 @@
           "Kandih hei rianra pui ram dai e,",
           "Tang lak ni the pinge zailou o."
         ]
+      },
+      "chord": "E",
+      "meta3": "8.7.9.9.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 20,
+        "match": "title-match-0.96"
       }
     },
     {
@@ -10238,7 +11164,9 @@
       "search": {
         "keywords": [
           "printed song 229",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: D",
+          "Meta 3: 13.8.5."
         ]
       },
       "verification": {
@@ -10270,6 +11198,14 @@
           "Jerusalem kathan gai khou tei",
           "Lung mei kan khou."
         ]
+      },
+      "chord": "D",
+      "meta3": "13.8.5.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 180,
+        "match": "title-match-1.00"
       }
     },
     {
@@ -10857,7 +11793,9 @@
       "search": {
         "keywords": [
           "printed song 243",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: A",
+          "Meta 3: 8.8.8.8."
         ]
       },
       "verification": {
@@ -10886,6 +11824,14 @@
           "Ai lum the kata hou puni,",
           "Kalvary jisu champaan ta."
         ]
+      },
+      "chord": "A",
+      "meta3": "8.8.8.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 183,
+        "match": "title-match-0.95"
       }
     },
     {
@@ -11518,7 +12464,9 @@
       "search": {
         "keywords": [
           "printed song 257",
-          "Khristian Luzaam PDF"
+          "Khristian Luzaam PDF",
+          "Chord: G",
+          "Meta 3: 8.8.8.8."
         ]
       },
       "verification": {
@@ -11547,6 +12495,14 @@
           "Gaanc guang dat ro kanloumeipu,",
           "Ringmei thinglimh khou zaeng sw ni."
         ]
+      },
+      "chord": "G",
+      "meta3": "8.8.8.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 184,
+        "match": "title-match-1.00"
       }
     },
     {
@@ -11561,7 +12517,9 @@
           "legacy database record 104",
           "SQLite BookTypeID 2",
           "Key: G",
-          "Meter: 12.13.9.13."
+          "Meter: 12.13.9.13.",
+          "Chord: G",
+          "Meta 3: 12.13.9.13."
         ]
       },
       "verification": {
@@ -11593,6 +12551,14 @@
           "Neila e tingkauh banchra lukhuan,",
           "Alung khou ninga bamme amu dat jat lak khe."
         ]
+      },
+      "chord": "G",
+      "meta3": "12.13.9.13.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 104,
+        "match": "source-id"
       }
     },
     {
@@ -11607,7 +12573,9 @@
           "legacy database record 111",
           "SQLite BookTypeID 2",
           "Key: Bb",
-          "Meter: 10.8.9.8."
+          "Meter: 10.8.9.8.",
+          "Chord: Bb",
+          "Meta 3: 10.8.9.8."
         ]
       },
       "verification": {
@@ -11639,6 +12607,14 @@
           "Tingkauh thu Raguang himdaimei su diu,",
           "Nban khou nchu njangmei nai diu."
         ]
+      },
+      "chord": "Bb",
+      "meta3": "10.8.9.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 111,
+        "match": "source-id"
       }
     },
     {
@@ -11653,7 +12629,9 @@
           "legacy database record 113",
           "SQLite BookTypeID 2",
           "Key: G",
-          "Meter: 8.7.8.7.8.7.8.7."
+          "Meter: 8.7.8.7.8.7.8.7.",
+          "Chord: G",
+          "Meta 3: 8.7.8.7.8.7.8.7."
         ]
       },
       "verification": {
@@ -11694,6 +12672,14 @@
           "Kross tei phung khang ping lak khe,",
           "Jisu #@8 sa e, ai #@8 naNang chang kasiam lou the."
         ]
+      },
+      "chord": "G",
+      "meta3": "8.7.8.7.8.7.8.7.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 113,
+        "match": "source-id"
       }
     },
     {
@@ -11708,7 +12694,9 @@
           "legacy database record 115",
           "SQLite BookTypeID 2",
           "Key: D",
-          "Meter: 8.7.8.7."
+          "Meter: 8.7.8.7.",
+          "Chord: D",
+          "Meta 3: 8.7.8.7."
         ]
       },
       "verification": {
@@ -11738,6 +12726,14 @@
           "Jingmei khou hei bam sang lak khe,",
           "Neiriu kum tiganlou o."
         ]
+      },
+      "chord": "D",
+      "meta3": "8.7.8.7.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 115,
+        "match": "source-id"
       }
     },
     {
@@ -11752,7 +12748,9 @@
           "legacy database record 119",
           "SQLite BookTypeID 2",
           "Key: Bb",
-          "Meter: 12.11.10.10."
+          "Meter: 12.11.10.10.",
+          "Chord: Bb",
+          "Meta 3: 12.11.10.10."
         ]
       },
       "verification": {
@@ -11787,6 +12785,14 @@
           "Pat lou tho jianmei nun kandih ram khou,",
           "Guang thuan pui ram khou #@8 riu dat ni."
         ]
+      },
+      "chord": "Bb",
+      "meta3": "12.11.10.10.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 119,
+        "match": "source-id"
       }
     },
     {
@@ -11801,7 +12807,9 @@
           "legacy database record 121",
           "SQLite BookTypeID 2",
           "Key: E",
-          "Meter: 8.8.8.8."
+          "Meter: 8.8.8.8.",
+          "Chord: E",
+          "Meta 3: 8.8.8.8."
         ]
       },
       "verification": {
@@ -11840,6 +12848,14 @@
           "Thuaihian liangmei poubaumei le,",
           "Nthuk pui pari tei gailiang e."
         ]
+      },
+      "chord": "E",
+      "meta3": "8.8.8.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 121,
+        "match": "source-id"
       }
     },
     {
@@ -11854,7 +12870,9 @@
           "legacy database record 124",
           "SQLite BookTypeID 2",
           "Key: E",
-          "Meter: 9.9.7.7.10."
+          "Meter: 9.9.7.7.10.",
+          "Chord: E",
+          "Meta 3: 9.9.7.7.10."
         ]
       },
       "verification": {
@@ -11889,6 +12907,14 @@
           "Chunsimei mikdui keimei, rianra rianriumei guaina,",
           "Khatsini mak ge tingkauh ram khou tei."
         ]
+      },
+      "chord": "E",
+      "meta3": "9.9.7.7.10.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 124,
+        "match": "source-id"
       }
     },
     {
@@ -11903,7 +12929,9 @@
           "legacy database record 125",
           "SQLite BookTypeID 2",
           "Key: G",
-          "Meter: 10.14.7."
+          "Meter: 10.14.7.",
+          "Chord: G",
+          "Meta 3: 10.14.7."
         ]
       },
       "verification": {
@@ -11938,6 +12966,14 @@
           "Mei guai ta jaiguanga poubaumei hukhou dingni;",
           "Latjan suni kapum ta."
         ]
+      },
+      "chord": "G",
+      "meta3": "10.14.7.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 125,
+        "match": "source-id"
       }
     },
     {
@@ -11952,7 +12988,9 @@
           "legacy database record 130",
           "SQLite BookTypeID 2",
           "Key: G",
-          "Meter: 8.8.8.8."
+          "Meter: 8.8.8.8.",
+          "Chord: G",
+          "Meta 3: 8.8.8.8."
         ]
       },
       "verification": {
@@ -11982,6 +13020,14 @@
           "Aram rianra Raguang #!7 thai,",
           "Apui neimei makum pukhou."
         ]
+      },
+      "chord": "G",
+      "meta3": "8.8.8.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 130,
+        "match": "source-id"
       }
     },
     {
@@ -11996,7 +13042,9 @@
           "legacy database record 131",
           "SQLite BookTypeID 2",
           "Key: D",
-          "Meter: 10.6.4."
+          "Meter: 10.6.4.",
+          "Chord: D",
+          "Meta 3: 10.6.4."
         ]
       },
       "verification": {
@@ -12022,6 +13070,14 @@
           "Khiu than lou o;",
           "Nangta ninga ai%&6 rih hei ngam ni."
         ]
+      },
+      "chord": "D",
+      "meta3": "10.6.4.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 131,
+        "match": "source-id"
       }
     },
     {
@@ -12036,7 +13092,9 @@
           "legacy database record 142",
           "SQLite BookTypeID 2",
           "Key: Gb",
-          "Meter: Irregular"
+          "Meter: Irregular",
+          "Chord: Gb",
+          "Meta 3: Irregular"
         ]
       },
       "verification": {
@@ -12069,6 +13127,14 @@
           "Tingkauh ram gaimei tang khang e,",
           "Nangniu ta gulou khang#-5 puanpat lou the."
         ]
+      },
+      "chord": "Gb",
+      "meta3": "Irregular",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 142,
+        "match": "source-id"
       }
     },
     {
@@ -12083,7 +13149,9 @@
           "legacy database record 152",
           "SQLite BookTypeID 2",
           "Key: D",
-          "Meter: 8.10.9.9."
+          "Meter: 8.10.9.9.",
+          "Chord: D",
+          "Meta 3: 8.10.9.9."
         ]
       },
       "verification": {
@@ -12118,6 +13186,14 @@
           "Asei hei nanglung khou Jisuta,",
           "Neila neihlana guang ti tu o."
         ]
+      },
+      "chord": "D",
+      "meta3": "8.10.9.9.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 152,
+        "match": "source-id"
       }
     },
     {
@@ -12132,7 +13208,9 @@
           "legacy database record 153",
           "SQLite BookTypeID 2",
           "Key: D",
-          "Meter: 11.10.11.11."
+          "Meter: 11.10.11.11.",
+          "Chord: D",
+          "Meta 3: 11.10.11.11."
         ]
       },
       "verification": {
@@ -12163,6 +13241,14 @@
           "Nang poubaumei tuang siamruai sujina cho?",
           "Laujiu changmun lanlou bam khou gut datro."
         ]
+      },
+      "chord": "D",
+      "meta3": "11.10.11.11.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 153,
+        "match": "source-id"
       }
     },
     {
@@ -12177,7 +13263,9 @@
           "legacy database record 155",
           "SQLite BookTypeID 2",
           "Key: G",
-          "Meter: 8.8.8.4."
+          "Meter: 8.8.8.4.",
+          "Chord: G",
+          "Meta 3: 8.8.8.4."
         ]
       },
       "verification": {
@@ -12219,6 +13307,14 @@
           "Suanrei guai le.",
           "Favourite song: Acham Kamei"
         ]
+      },
+      "chord": "G",
+      "meta3": "8.8.8.4.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 155,
+        "match": "source-id"
       }
     },
     {
@@ -12233,7 +13329,9 @@
           "legacy database record 156",
           "SQLite BookTypeID 2",
           "Key: C",
-          "Meter: Irregular"
+          "Meter: Irregular",
+          "Chord: C",
+          "Meta 3: Irregular"
         ]
       },
       "verification": {
@@ -12264,6 +13362,14 @@
           "Kathei ai lai tat ni ai ping tuang nai lakkhe,",
           "Tingkauh kaidai thang aniu guanglung chamni."
         ]
+      },
+      "chord": "C",
+      "meta3": "Irregular",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 156,
+        "match": "source-id"
       }
     },
     {
@@ -12278,7 +13384,9 @@
           "legacy database record 158",
           "SQLite BookTypeID 2",
           "Key: A",
-          "Meter: 8.7.8.7."
+          "Meter: 8.7.8.7.",
+          "Chord: A",
+          "Meta 3: 8.7.8.7."
         ]
       },
       "verification": {
@@ -12318,6 +13426,14 @@
           "Akhou na kumma samthai ethei,",
           "Sam ni tingkauh ram khou tei."
         ]
+      },
+      "chord": "A",
+      "meta3": "8.7.8.7.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 158,
+        "match": "source-id"
       }
     },
     {
@@ -12332,7 +13448,9 @@
           "legacy database record 159",
           "SQLite BookTypeID 2",
           "Key: C",
-          "Meter: 8.8.9.10."
+          "Meter: 8.8.9.10.",
+          "Chord: C",
+          "Meta 3: 8.8.9.10."
         ]
       },
       "verification": {
@@ -12367,6 +13485,14 @@
           "Neilamei munpuang tei tuai dat lak khe,",
           "Kangan maknga thuan ni halleluijah."
         ]
+      },
+      "chord": "C",
+      "meta3": "8.8.9.10.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 159,
+        "match": "source-id"
       }
     },
     {
@@ -12381,7 +13507,9 @@
           "legacy database record 160",
           "SQLite BookTypeID 2",
           "Key: Ab",
-          "Meter: 8.8.8.8."
+          "Meter: 8.8.8.8.",
+          "Chord: Ab",
+          "Meta 3: 8.8.8.8."
         ]
       },
       "verification": {
@@ -12412,6 +13540,14 @@
           "Niu @&4 tan loumei tan guai tei,",
           "Raguang @&4 suan ti puni the."
         ]
+      },
+      "chord": "Ab",
+      "meta3": "8.8.8.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 160,
+        "match": "source-id"
       }
     },
     {
@@ -12426,7 +13562,9 @@
           "legacy database record 161",
           "SQLite BookTypeID 2",
           "Key: A",
-          "Meter: 12.910.10.9."
+          "Meter: 12.910.10.9.",
+          "Chord: A",
+          "Meta 3: 12.910.10.9."
         ]
       },
       "verification": {
@@ -12462,6 +13600,14 @@
           "Tingkauh kaidai khou thuan na bam ni.",
           "Favourite song: Samson Pastor"
         ]
+      },
+      "chord": "A",
+      "meta3": "12.910.10.9.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 161,
+        "match": "source-id"
       }
     },
     {
@@ -12476,7 +13622,9 @@
           "legacy database record 164",
           "SQLite BookTypeID 2",
           "Key: Bb",
-          "Meter: 10.12.12.10."
+          "Meter: 10.12.12.10.",
+          "Chord: Bb",
+          "Meta 3: 10.12.12.10."
         ]
       },
       "verification": {
@@ -12515,6 +13663,14 @@
           "Khrista rukhou supui jang )_3 kachan lak khe,",
           "Kumma asei kai hei kaikhun di the."
         ]
+      },
+      "chord": "Bb",
+      "meta3": "10.12.12.10.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 164,
+        "match": "source-id"
       }
     },
     {
@@ -12529,7 +13685,9 @@
           "legacy database record 165",
           "SQLite BookTypeID 2",
           "Key: D",
-          "Meter: 8.8.8.6."
+          "Meter: 8.8.8.6.",
+          "Chord: D",
+          "Meta 3: 8.8.8.6."
         ]
       },
       "verification": {
@@ -12556,6 +13714,14 @@
           "",
           "Favourite song: G. Khuandin"
         ]
+      },
+      "chord": "D",
+      "meta3": "8.8.8.6.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 165,
+        "match": "source-id"
       }
     },
     {
@@ -12571,7 +13737,10 @@
           "SQLite BookTypeID 2",
           "Key: D",
           "Meter: Irregular",
-          "Reference: Mathiu: 25"
+          "Reference: Mathiu: 25",
+          "Chord: D",
+          "Meta 3: Irregular",
+          "Meta 4: Mathiu: 25"
         ]
       },
       "verification": {
@@ -12600,6 +13769,15 @@
           "Neila khang nang tat patna katanh tan o,",
           "Panti nnai san tat patna tan o."
         ]
+      },
+      "chord": "D",
+      "meta3": "Irregular",
+      "meta4": "Mathiu: 25",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 168,
+        "match": "source-id"
       }
     },
     {
@@ -12614,7 +13792,9 @@
           "legacy database record 169",
           "SQLite BookTypeID 2",
           "Key: G",
-          "Meter: Irregular"
+          "Meter: Irregular",
+          "Chord: G",
+          "Meta 3: Irregular"
         ]
       },
       "verification": {
@@ -12653,6 +13833,14 @@
           "Nousuan khou kajao khang nousuan pheibanMakmei gut nu makna bam du puni,",
           "Zion rangpang thang tei."
         ]
+      },
+      "chord": "G",
+      "meta3": "Irregular",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 169,
+        "match": "source-id"
       }
     },
     {
@@ -12667,7 +13855,9 @@
           "legacy database record 170",
           "SQLite BookTypeID 2",
           "Key: G",
-          "Meter: Irregular"
+          "Meter: Irregular",
+          "Chord: G",
+          "Meta 3: Irregular"
         ]
       },
       "verification": {
@@ -12690,6 +13880,14 @@
           "Phung lana neilamei din lou khang,",
           "Guang the asei hei aniu khang."
         ]
+      },
+      "chord": "G",
+      "meta3": "Irregular",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 170,
+        "match": "source-id"
       }
     },
     {
@@ -12704,7 +13902,9 @@
           "legacy database record 171",
           "SQLite BookTypeID 2",
           "Key: D",
-          "Meter: irregular"
+          "Meter: irregular",
+          "Chord: D",
+          "Meta 3: irregular"
         ]
       },
       "verification": {
@@ -12734,6 +13934,14 @@
           "Nang bumang r!-2kung pui tuuang e,",
           "Nang poubaumei khou huainei o."
         ]
+      },
+      "chord": "D",
+      "meta3": "irregular",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 171,
+        "match": "source-id"
       }
     },
     {
@@ -12748,7 +13956,9 @@
           "legacy database record 172",
           "SQLite BookTypeID 2",
           "Key: C",
-          "Meter: Irregular"
+          "Meter: Irregular",
+          "Chord: C",
+          "Meta 3: Irregular"
         ]
       },
       "verification": {
@@ -12781,6 +13991,14 @@
           "Roulou nimei makge kandih khouhei,",
           "Dap tari kim mak ge."
         ]
+      },
+      "chord": "C",
+      "meta3": "Irregular",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 172,
+        "match": "source-id"
       }
     },
     {
@@ -12795,7 +14013,9 @@
           "legacy database record 174",
           "SQLite BookTypeID 2",
           "Key: E",
-          "Meter: 8.6.8.6."
+          "Meter: 8.6.8.6.",
+          "Chord: E",
+          "Meta 3: 8.6.8.6."
         ]
       },
       "verification": {
@@ -12819,6 +14039,14 @@
           "Himdaimei sudiu bumang thanmei khou,",
           "Ngan makmei tingkum khou."
         ]
+      },
+      "chord": "E",
+      "meta3": "8.6.8.6.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 174,
+        "match": "source-id"
       }
     },
     {
@@ -12833,7 +14061,9 @@
           "legacy database record 176",
           "SQLite BookTypeID 2",
           "Key: C",
-          "Meter: 8.8.8.8."
+          "Meter: 8.8.8.8.",
+          "Chord: C",
+          "Meta 3: 8.8.8.8."
         ]
       },
       "verification": {
@@ -12863,6 +14093,14 @@
           "Poubaumei guang bampang hu khou,",
           "Tingsang hei ram khou ai lungni."
         ]
+      },
+      "chord": "C",
+      "meta3": "8.8.8.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 176,
+        "match": "source-id"
       }
     },
     {
@@ -12877,7 +14115,9 @@
           "legacy database record 178",
           "SQLite BookTypeID 2",
           "Key: F",
-          "Meter: 6.6.8.6."
+          "Meter: 6.6.8.6.",
+          "Chord: F",
+          "Meta 3: 6.6.8.6."
         ]
       },
       "verification": {
@@ -12906,6 +14146,14 @@
           "Kumsi niu lung alam bamni,",
           "Gaina riu dat mak san."
         ]
+      },
+      "chord": "F",
+      "meta3": "6.6.8.6.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 178,
+        "match": "source-id"
       }
     },
     {
@@ -12920,7 +14168,9 @@
           "legacy database record 179",
           "SQLite BookTypeID 2",
           "Key: C",
-          "Meter: 9.9.8.8."
+          "Meter: 9.9.8.8.",
+          "Chord: C",
+          "Meta 3: 9.9.8.8."
         ]
       },
       "verification": {
@@ -12950,6 +14200,14 @@
           "Halleluijah sam kan nithe,",
           "Tingkauh guang jubili ngai khang."
         ]
+      },
+      "chord": "C",
+      "meta3": "9.9.8.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 179,
+        "match": "source-id"
       }
     },
     {
@@ -12964,7 +14222,9 @@
           "legacy database record 181",
           "SQLite BookTypeID 2",
           "Key: Eb",
-          "Meter: 8.7.8.7."
+          "Meter: 8.7.8.7.",
+          "Chord: Eb",
+          "Meta 3: 8.7.8.7."
         ]
       },
       "verification": {
@@ -12999,6 +14259,14 @@
           "Kabampang hu khou lu suanni,",
           "Jisu jan ta thuan bamni."
         ]
+      },
+      "chord": "Eb",
+      "meta3": "8.7.8.7.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 181,
+        "match": "source-id"
       }
     },
     {
@@ -13013,7 +14281,9 @@
           "legacy database record 182",
           "SQLite BookTypeID 2",
           "Key: D",
-          "Meter: 9.9."
+          "Meter: 9.9.",
+          "Chord: D",
+          "Meta 3: 9.9."
         ]
       },
       "verification": {
@@ -13040,6 +14310,14 @@
           "",
           "6. He poubaumei niuta duang lou o (2)."
         ]
+      },
+      "chord": "D",
+      "meta3": "9.9.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 182,
+        "match": "source-id"
       }
     },
     {
@@ -13054,7 +14332,9 @@
           "legacy database record 185",
           "SQLite BookTypeID 2",
           "Key: C",
-          "Meter: 8.6.8.6."
+          "Meter: 8.6.8.6.",
+          "Chord: C",
+          "Meta 3: 8.6.8.6."
         ]
       },
       "verification": {
@@ -13083,6 +14363,14 @@
           "Banchra guai kauh thang +:1 keina,",
           "Abumang phung kuni."
         ]
+      },
+      "chord": "C",
+      "meta3": "8.6.8.6.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 185,
+        "match": "source-id"
       }
     },
     {
@@ -13097,7 +14385,9 @@
           "legacy database record 188",
           "SQLite BookTypeID 2",
           "Key: D",
-          "Meter: 11.7.11.7."
+          "Meter: 11.7.11.7.",
+          "Chord: D",
+          "Meta 3: 11.7.11.7."
         ]
       },
       "verification": {
@@ -13127,6 +14417,14 @@
           "Ai thei ni ringni tabui guang pusini,",
           "Ai hei kaipou nang tuang e."
         ]
+      },
+      "chord": "D",
+      "meta3": "11.7.11.7.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 188,
+        "match": "source-id"
       }
     },
     {
@@ -13141,7 +14439,9 @@
           "legacy database record 189",
           "SQLite BookTypeID 2",
           "Key: A",
-          "Meter: 8.8.8.8."
+          "Meter: 8.8.8.8.",
+          "Chord: A",
+          "Meta 3: 8.8.8.8."
         ]
       },
       "verification": {
@@ -13171,6 +14471,14 @@
           "Ntammei rianra chunsimei,",
           "Nailak khe nang guangdih gai khou tei."
         ]
+      },
+      "chord": "A",
+      "meta3": "8.8.8.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 189,
+        "match": "source-id"
       }
     },
     {
@@ -13185,7 +14493,9 @@
           "legacy database record 191",
           "SQLite BookTypeID 2",
           "Key: A",
-          "Meter: 6.6.8.6."
+          "Meter: 6.6.8.6.",
+          "Chord: A",
+          "Meta 3: 6.6.8.6."
         ]
       },
       "verification": {
@@ -13219,6 +14529,14 @@
           "Thei pukhou tingjkauh thang lungni,",
           "Tingkauh thanmei nun le."
         ]
+      },
+      "chord": "A",
+      "meta3": "6.6.8.6.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 191,
+        "match": "source-id"
       }
     },
     {
@@ -13233,7 +14551,9 @@
           "legacy database record 192",
           "SQLite BookTypeID 2",
           "Key: Eb",
-          "Meter: 8.6.8.6.6.8."
+          "Meter: 8.6.8.6.6.8.",
+          "Chord: Eb",
+          "Meta 3: 8.6.8.6.6.8."
         ]
       },
       "verification": {
@@ -13266,6 +14586,14 @@
           "Chrinmei kajaujian ta (2),",
           "Jat kaguai ({0 ti ndao e."
         ]
+      },
+      "chord": "Eb",
+      "meta3": "8.6.8.6.6.8.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 192,
+        "match": "source-id"
       }
     },
     {
@@ -13280,7 +14608,9 @@
           "legacy database record 194",
           "SQLite BookTypeID 2",
           "Key: D",
-          "Meter: 10.12.11.11."
+          "Meter: 10.12.11.11.",
+          "Chord: D",
+          "Meta 3: 10.12.11.11."
         ]
       },
       "verification": {
@@ -13315,6 +14645,14 @@
           "Gaimei dam guang nimei tei machun lou kho,",
           "Theithang kaipou tuang banjat thang neilani."
         ]
+      },
+      "chord": "D",
+      "meta3": "10.12.11.11.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 194,
+        "match": "source-id"
       }
     },
     {
@@ -13329,7 +14667,9 @@
           "legacy database record 195",
           "SQLite BookTypeID 2",
           "Key: G",
-          "Meter: 9.9.9.6."
+          "Meter: 9.9.9.6.",
+          "Chord: G",
+          "Meta 3: 9.9.9.6."
         ]
       },
       "verification": {
@@ -13359,6 +14699,14 @@
           "Kajan pan({0 aniu rih ngamni,",
           "Tingsang khang run lou o."
         ]
+      },
+      "chord": "G",
+      "meta3": "9.9.9.6.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 195,
+        "match": "source-id"
       }
     },
     {
@@ -13373,7 +14721,9 @@
           "legacy database record 196",
           "SQLite BookTypeID 2",
           "Key: Fb",
-          "Meter: 11.11.11.11."
+          "Meter: 11.11.11.11.",
+          "Chord: Fb",
+          "Meta 3: 11.11.11.11."
         ]
       },
       "verification": {
@@ -13397,6 +14747,14 @@
           "Alauh guaita nang ({0 kungna sulou o,",
           "Tingkauh khou lungcham khang niuta sulou o."
         ]
+      },
+      "chord": "Fb",
+      "meta3": "11.11.11.11.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 196,
+        "match": "source-id"
       }
     },
     {
@@ -13411,7 +14769,9 @@
           "legacy database record 197",
           "SQLite BookTypeID 2",
           "Key: C",
-          "Meter: Irregular"
+          "Meter: Irregular",
+          "Chord: C",
+          "Meta 3: Irregular"
         ]
       },
       "verification": {
@@ -13448,6 +14808,14 @@
           "Jisu Khrista puan the,",
           "Guloumeipu Jisu e."
         ]
+      },
+      "chord": "C",
+      "meta3": "Irregular",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 197,
+        "match": "source-id"
       }
     },
     {
@@ -13462,7 +14830,9 @@
           "legacy database record 198",
           "SQLite BookTypeID 2",
           "Key: D",
-          "Meter: 12.9.12.9."
+          "Meter: 12.9.12.9.",
+          "Chord: D",
+          "Meta 3: 12.9.12.9."
         ]
       },
       "verification": {
@@ -13493,6 +14863,14 @@
           "Kamei ({0 aniuta titui lou pui pan({0,",
           "Niu bumang kaguangdih khou lungkhang."
         ]
+      },
+      "chord": "D",
+      "meta3": "12.9.12.9.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 198,
+        "match": "source-id"
       }
     },
     {
@@ -13507,7 +14885,9 @@
           "legacy database record 199",
           "SQLite BookTypeID 2",
           "Key: G",
-          "Meter: 8.6.8.6."
+          "Meter: 8.6.8.6.",
+          "Chord: G",
+          "Meta 3: 8.6.8.6."
         ]
       },
       "verification": {
@@ -13536,6 +14916,14 @@
           "Raguang thuanmei tak mak thuanni,",
           "Tao thuanmei suang thuanni."
         ]
+      },
+      "chord": "G",
+      "meta3": "8.6.8.6.",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 199,
+        "match": "source-id"
       }
     },
     {
@@ -13551,7 +14939,10 @@
           "SQLite BookTypeID 2",
           "Key: D",
           "Meter: Irregular",
-          "Reference: (Latding kaguang – 66)"
+          "Reference: (Latding kaguang – 66)",
+          "Chord: D",
+          "Meta 3: Irregular",
+          "Meta 4: (Latding kaguang – 66)"
         ]
       },
       "verification": {
@@ -13579,6 +14970,15 @@
           "Johan Thaoreimei, Johan Kaneimei, Johan",
           "Kathummei, Juda Ndaoloumei, Halleluijah Amen."
         ]
+      },
+      "chord": "D",
+      "meta3": "Irregular",
+      "meta4": "(Latding kaguang – 66)",
+      "metadataSource": {
+        "source": "hymnal_1_2_3.db",
+        "bookTypeId": 2,
+        "hymnId": 200,
+        "match": "source-id"
       }
     }
   ]
