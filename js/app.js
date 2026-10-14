@@ -25,6 +25,20 @@ const PAGE_SIZE = 60;
 let catalogSongs = [];
 let visibleSongCount = PAGE_SIZE;
 
+
+function songTitleParts(song) {
+  const rongmei = song?.titleRongmei || song?.rongmeiTitle || song?.title_rongmei || song?.title || '';
+  const english = song?.titleEnglish || song?.englishTitle || song?.title_english || song?.titleEnglishTitle || '';
+  return { primary: rongmei || english, secondary: english && english !== rongmei ? english : '' };
+}
+function appendSongTitle(parent, song, link = false) {
+  const parts = songTitleParts(song);
+  const primary = createElement(link ? 'a' : 'span', 'song-title-primary', parts.primary);
+  if (link) primary.href = buildHymnURL(song);
+  parent.append(primary);
+  if (parts.secondary) parent.append(createElement('span', 'song-title-secondary', parts.secondary));
+}
+
 const selectedBookId = () => new URLSearchParams(location.search).get('book');
 const setText = (selector, value = '—') => document.querySelectorAll(selector).forEach(node => { node.textContent = value || '—'; });
 
@@ -166,9 +180,7 @@ function renderSongTable(songs = getHymnsAlphabetically(), reset = false) {
     const row = document.createElement('tr');
     const number = createElement('td', 'table-number', song.number);
     const titleCell = document.createElement('td');
-    const title = createElement('a', '', song.title);
-    title.href = buildHymnURL(song);
-    titleCell.append(title);
+    appendSongTitle(titleCell, song, true);
     const actionCell = createElement('td', 'table-action');
     const action = createElement('a', '', 'Read →');
     action.href = buildHymnURL(song);
@@ -233,7 +245,7 @@ function renderGlobalSearchResults(results, query) {
     link.href = buildHymnURL(song, book);
     link.append(
       createElement('span', 'search-result-book', book.title),
-      createElement('strong', '', `${song.number} · ${song.title}`),
+      createElement('strong', '', `${song.number} · ${songTitleParts(song).primary}${songTitleParts(song).secondary ? ` / ${songTitleParts(song).secondary}` : ''}`),
       createElement('span', 'search-result-action', 'Read song →')
     );
     node.append(link);
@@ -361,7 +373,16 @@ function renderReader() {
   $('[data-reader]').hidden = false;
   setText('[data-reader-book]', book.title);
   setText('[data-reader-number]', `Song ${song.number}`);
-  setText('[data-reader-title]', song.title);
+  const readerTitle = $('[data-reader-title]');
+  const titleParts = songTitleParts(song);
+  setText('[data-reader-title]', titleParts.primary);
+  const priorSecondary = $('[data-reader-title-secondary]');
+  priorSecondary?.remove();
+  if (titleParts.secondary && readerTitle) {
+    const secondary = createElement('p', 'song-title-secondary reader-title-secondary', titleParts.secondary);
+    secondary.dataset.readerTitleSecondary = '';
+    readerTitle.insertAdjacentElement('afterend', secondary);
+  }
   setText('[data-verification]', song.verification?.note || (song.verification?.status === 'verified' ? 'Verified song text' : `${book.title} digital edition`));
   document.title = `${song.title} | ${book.title}`;
   renderLyrics(song);
@@ -457,6 +478,9 @@ async function init() {
     document.body.dataset.page === 'book' ? renderBookPage() : renderReader();
   } catch (error) {
     renderLoadError(error);
+  } finally {
+    document.querySelector('[data-app-loader]')?.classList.add('is-hidden');
+    document.body.classList.remove('app-loading');
   }
 }
 
