@@ -27,7 +27,8 @@ async function registeredBookFiles() {
     const metadataResponse = await availableResponse(metadata);
     const data = await metadataResponse.json();
     const songFile = data.songs?.file;
-    const localSong = !data.songs?.url && typeof songFile === 'string' && /^[a-z0-9][a-z0-9._-]*\.json$/i.test(songFile) ? `./data/songbooks/${book.directory}/${songFile}` : null;\n    const remoteSong = typeof data.songs?.url === 'string' && /^https?:\/\//i.test(data.songs.url) ? data.songs.url : null;
+    const localSong = !data.songs?.url && typeof songFile === 'string' && /^[a-z0-9][a-z0-9._-]*\.json$/i.test(songFile) ? `./data/songbooks/${book.directory}/${songFile}` : null;
+    const remoteSong = typeof data.songs?.url === 'string' && /^https?:\/\//i.test(data.songs.url) ? data.songs.url : null;
     const cover = typeof data.cover?.image === 'string' && !/^(?:[a-z]+:)?\/\//i.test(data.cover.image) ? `./${data.cover.image.replace(/^\.?\//, '')}` : null;
     const icon = typeof data.icon === 'string' && !/^(?:[a-z]+:)?\/\//i.test(data.icon) ? `./${data.icon.replace(/^\.?\//, '')}` : null;
     if (!localSong && !data.songs?.url) throw new Error(`No downloadable song data was found for ${book.directory}.`);
