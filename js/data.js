@@ -215,5 +215,6 @@ export async function searchAcrossBooks(query) {
 }
 
 export function getHymnsAlphabetically() {
-  return [...records].sort((a, b) => a.title.localeCompare(b.title, undefined, { sensitivity: 'base', numeric: true }) || a.number - b.number);
+  const titleForSort = song => song.titleRongmei || song.rongmeiTitle || song.title || song.titleEnglish || song.englishTitle || '';
+  return [...records].sort((a, b) => titleForSort(a).localeCompare(titleForSort(b), undefined, { sensitivity: 'base', numeric: true }) || a.number - b.number);
 }
