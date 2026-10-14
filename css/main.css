@@ -1347,3 +1347,46 @@ body.presentation-mode .presentation-exit:hover { border-color: var(--accent); c
   .table-wrap { max-height: clamp(300px, 62vh, 620px); }
   .hymn-table th, .hymn-table td { padding-inline: 10px; }
 }
+
+
+/* Scrollable catalogue with a persistent heading row. */
+.table-wrap {
+  max-height: min(72vh, 760px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  border-radius: 12px;
+}
+.hymn-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.hymn-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background: var(--surface);
+  box-shadow: 0 1px 0 var(--line);
+}
+.hymn-table tbody tr:hover {
+  background: color-mix(in srgb, var(--accent) 5%, var(--surface));
+}
+.song-title-source {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: .73rem;
+}
+.hymn-source-number {
+  margin: -10px 0 18px;
+  color: var(--muted);
+  font-size: .8rem;
+}
+@media (max-width: 640px) {
+  .table-wrap { max-height: 64vh; }
+  .hymn-table th, .hymn-table td { padding-inline: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .table-wrap { scroll-behavior: auto; }
+}
