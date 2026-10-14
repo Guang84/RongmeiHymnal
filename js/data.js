@@ -17,6 +17,28 @@ async function fetchJSON(url, label) {
   return response.json();
 }
 
+function cleanLyricLine(value) {
+  let line = String(value ?? '')
+    .replace(/&nbsp;|&#160;/gi, ' ')
+    .replace(/&amp;/gi, '&')
+    .replace(/&lt;/gi, '<')
+    .replace(/&gt;/gi, '>')
+    .replace(/&quot;/gi, '"')
+    .replace(/&#39;|&apos;/gi, "'")
+    .replace(/\\u00a0/g, ' ')
+    .replace(/\\u0092/g, '’')
+    .replace(/<br\\s*\\/?\\s*>/gi, ' ')
+    .replace(/<[^>]*>/g, '');
+  // The legacy SQLite song field uses symbol/number sequences as lost chord/layout glyphs.
+  // Strip those display artifacts without altering normal punctuation or the stored source text.
+  line = line
+    .replace(/(?:\\d+[!@#$%^&*+|<>~_{}]+[0-9]*|[!@#$%^&*+|<>~_{}]+[0-9]+|[!@#$%^&*+|~_{}]{2,}|[<>]+)/g, ' ')
+    .replace(/(^|\\s)[!@#$%^&*+|~_](?=\\s|$|[.,;:!?])/g, '$1')
+    .replace(/[ \\t]{2,}/g, ' ')
+    .replace(/[ \\t]+$/g, '');
+  return line;
+}
+
 function hasLines(lines) {
   return Array.isArray(lines) && lines.some(line => typeof line === 'string' && line.trim());
 }
@@ -138,11 +160,11 @@ export function getSongSections(song) {
       .map(section => ({
         type: section.type || 'verse',
         label: section.label || '',
-        lines: section.lines.map(line => String(line))
+        lines: section.lines.map(cleanLyricLine)
       }));
   }
 
-  const rawLines = (song?.content?.lines || []).map(line => String(line));
+  const rawLines = (song?.content?.lines || []).map(cleanLyricLine)
   const firstVerseIndex = rawLines.findIndex(line => /^\s*1[.)]\s+\S/.test(line));
   const candidateDetails = firstVerseIndex > 0 ? rawLines.slice(0, firstVerseIndex).filter(line => line.trim()) : [];
   const hasSongDetails = candidateDetails.some(line => /\bdoh hei\b|\bref\.?|\bchorus\b|\brefrain\b|\b\d+\.\d+\b/i.test(line));
