@@ -1311,3 +1311,39 @@ body.presentation-mode .presentation-exit:hover { border-color: var(--accent); c
 @keyframes glab-loading-slide { 0% { transform: translateX(-120%); } 100% { transform: translateX(290%); } }
 @media (prefers-reduced-motion: reduce) { .app-loader-logo, .app-loader-track::after { animation: none; } [data-app-loader] { transition: none; } }
 @media (max-width: 640px) { .brand-mark-image { width: 34px; height: 34px; } .song-title-secondary { font-size: .82em; } }
+
+
+/* Complete alphabetic song catalog: keep the header visible while scrolling. */
+.table-wrap {
+  position: relative;
+  max-height: clamp(320px, 66vh, 760px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+.hymn-table { width: 100%; border-collapse: separate; border-spacing: 0; }
+.hymn-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--surface);
+  box-shadow: 0 1px 0 var(--line);
+}
+.hymn-table tbody tr:hover { background: color-mix(in srgb, var(--accent) 5%, var(--surface)); }
+.song-title-source {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: .73rem;
+}
+.hymn-source-number {
+  margin: -10px 0 18px;
+  color: var(--muted);
+  font-size: .78rem;
+}
+@media (max-width: 640px) {
+  .table-wrap { max-height: clamp(300px, 62vh, 620px); }
+  .hymn-table th, .hymn-table td { padding-inline: 10px; }
+}
