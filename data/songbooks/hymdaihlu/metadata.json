@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "contentVersion": "1.2.0",
+  "contentVersion": "1.3.0",
   "id": "hymdaihlu",
   "name": "hymdaihlu",
   "title": "Hymdaihlu",
@@ -38,6 +38,10 @@
     {
       "date": "2026-10-14",
       "note": "Added separate Rongmei and English title fields to all 930 records. English titles are populated where the source database contains a clear English title; uncertain titles were not invented."
+    },
+    {
+      "date": "2026-10-14",
+      "note": "Added Chord, Beat, Author, Meta3, and Meta4 from the SQLite record for all 930 songs where available. The song reader now exposes the source metadata."
     }
   ],
   "songs": {
