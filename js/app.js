@@ -214,7 +214,7 @@ function initSearch() {
     const matches = searchHymns(query);
     status.textContent = query ? `${matches.length} matching song${matches.length === 1 ? '' : 's'} in ${getActiveBook().title}` : '';
     const matchedIds = new Set(matches.map(song => song.id));
-    renderSongTable(query ? getHymnsAlphabetically().filter(song => matchedIds.has(song.id)) : getHymnsAlphabetically(), true);
+    renderSongTable(query ? getHymnsAlphabetically().filter(song => matchedIds.has(song.id)) : getHymnsAlphabetically());
   });
   clear.addEventListener('click', () => {
     input.value = '';
@@ -294,7 +294,7 @@ function renderHome() {
 function renderBookPage() {
   const book = getActiveBook();
   renderBookDetails();
-  renderSongTable(getHymnsAlphabetically(), true);
+  renderSongTable(getHymnsAlphabetically());
   renderMiniLists();
   const latest = getHistory().find(recordKey => recordKey.startsWith(`${book.id}:`));
   const lastSong = getAllHymns().find(song => getRecordKey(song) === latest);
