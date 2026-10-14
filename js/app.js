@@ -21,7 +21,10 @@ import { $, renderMiniLists, toast } from './ui.js';
 import { initSettings } from './settings.js';
 import { initOfflineLibrary } from './offline.js';
 
-const PAGE_SIZE = 60;\nlet catalogSongs = [];\nlet visibleSongCount = PAGE_SIZE;\nlet catalogScrollInitialized = false;
+const PAGE_SIZE = 60;
+let catalogSongs = [];
+let visibleSongCount = PAGE_SIZE;
+let catalogScrollInitialized = false;
 
 
 function songTitleParts(song) {
