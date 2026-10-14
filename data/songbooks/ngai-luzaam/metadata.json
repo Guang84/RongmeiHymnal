@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "contentVersion": "1.2.0",
+  "contentVersion": "1.3.0",
   "id": "ngai-luzaam",
   "name": "ngai-luzaam",
   "title": "Ngai Luzaam",
@@ -38,6 +38,10 @@
     {
       "date": "2026-10-14",
       "note": "Compared the PDF song pages against the 200-row SQLite collection, imported all 250 available PDF song pages, and added 44 unmatched legacy database records. Seven printed numbers (179, 215, 218–222) are absent from the supplied PDF."
+    },
+    {
+      "date": "2026-10-14",
+      "note": "Imported available chord, beat, author, Meta3, and Meta4 fields from the SQLite database for 138 matching songs. Metadata remains blank where the sources do not provide a confident match."
     }
   ],
   "songs": {
