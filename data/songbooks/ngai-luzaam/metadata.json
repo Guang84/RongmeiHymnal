@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0",
+  "contentVersion": "1.0.0",
+  "id": "ngai-luzaam",
+  "name": "ngai-luzaam",
+  "title": "Ngai Luzaam",
+  "subtitle": "Khristian Luzaam · Seasonal songs",
+  "language": "Rongmei",
+  "cover": {
+    "image": "assets/Rongmei Gospel song books.png",
+    "alt": "Rongmei Hymnal collection cover"
+  },
+  "icon": "https://raw.githubusercontent.com/Guang84/Guang84.github.io/main/assets/brand/glab-mark-256.png",
+  "theme": {
+    "accent": "#8d4c35",
+    "accentSoft": "#e9c8ae"
+  },
+  "intro": {
+    "summary": "A separate Rongmei Christian song collection for Christmas and the church festival season.",
+    "description": "This is the first digitized release of Ngai Luzaam. Four Christmas-season selections have been transcribed from the supplied PDF so far; the printed collection contains more songs, and the remaining entries still need transcription and review."
+  },
+  "credits": {
+    "editor": "Guang84 · GLab",
+    "compiledBy": "Transcribed from the supplied Ngai Luzaam PDF; partial digital edition",
+    "publisher": "Original publication details not yet verified",
+    "year": "Digital edition · 2026",
+    "rights": "Song text and source-book rights remain with their respective authors, translators, compilers, publishers, and rights holders. This digital transcription does not change ownership."
+  },
+  "changelog": [
+    {
+      "date": "2026-10-14",
+      "note": "Added the Ngai Luzaam collection page and an initial four-song Christmas-season transcription. More songs remain to be digitized and checked."
+    }
+  ],
+  "songs": {
+    "file": "songs.json",
+    "count": 4,
+    "updatedAt": "2026-10-14"
+  }
+}
