@@ -1292,3 +1292,22 @@ body.presentation-mode .presentation-exit:hover { border-color: var(--accent); c
   font-size: .7em;
   letter-spacing: .03em
 }
+
+
+/* GLab brand + responsive dual-language titles */
+.brand-mark-image { width: 38px; height: 38px; border-radius: 11px; background: var(--surface); box-shadow: 0 3px 12px #1c29251a; }
+.brand-mark-image img { object-fit: contain; padding: 2px; }
+.song-title-primary { display: block; font-weight: 600; }
+.song-title-secondary { display: block; margin-top: 3px; color: var(--muted); font-size: .88em; font-weight: 400; }
+.reader-title-secondary { margin: -10px 0 20px; font: 500 clamp(1.05rem, 2.5vw, 1.45rem)/1.35 'DM Sans', sans-serif; }
+[data-app-loader] { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; background: var(--bg, #f4f0e8); opacity: 1; visibility: visible; transition: opacity .28s ease, visibility .28s ease; }
+[data-app-loader].is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+.app-loader-content { display: grid; justify-items: center; gap: 14px; padding: 28px; text-align: center; }
+.app-loader-logo { width: 76px; height: 76px; object-fit: contain; animation: glab-heartbeat 1.25s ease-in-out infinite; filter: drop-shadow(0 8px 18px #23483f22); }
+.app-loader-label { color: var(--muted, #6b746e); font-size: .86rem; letter-spacing: .04em; }
+.app-loader-track { width: 118px; height: 3px; overflow: hidden; border-radius: 99px; background: var(--line, #d9d9cc); }
+.app-loader-track::after { content: ''; display: block; width: 42%; height: 100%; background: var(--accent, #b65e3e); border-radius: inherit; animation: glab-loading-slide 1.05s ease-in-out infinite; }
+@keyframes glab-heartbeat { 0%, 100% { transform: scale(1); } 14% { transform: scale(1.08); } 28% { transform: scale(1); } 42% { transform: scale(1.12); } 70% { transform: scale(1); } }
+@keyframes glab-loading-slide { 0% { transform: translateX(-120%); } 100% { transform: translateX(290%); } }
+@media (prefers-reduced-motion: reduce) { .app-loader-logo, .app-loader-track::after { animation: none; } [data-app-loader] { transition: none; } }
+@media (max-width: 640px) { .brand-mark-image { width: 34px; height: 34px; } .song-title-secondary { font-size: .82em; } }
