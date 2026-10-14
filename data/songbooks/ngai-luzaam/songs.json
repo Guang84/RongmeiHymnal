@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "contentVersion": "1.0.0",
+  "contentVersion": "1.1.0",
   "updatedAt": "2026-10-14",
   "songs": [
     {
@@ -199,16 +199,16 @@
       }
     },
     {
-      "id": "ngai-luzaam-204",
+      "id": "ngai-luzaam-254",
       "number": 4,
-      "sourceNumber": 204,
-      "title": "Eden neihlaamei zion tyng puanzing",
-      "titleRongmei": "Eden neihlaamei zion tyng puanzing",
+      "sourceNumber": 254,
+      "title": "He kaidai launa Bethlehem",
+      "titleRongmei": "He kaidai launa Bethlehem",
       "search": {
         "keywords": [
-          "Zion",
-          "Eden",
-          "No. 204"
+          "Christmas",
+          "Bethlehem",
+          "No. 254"
         ]
       },
       "content": {
@@ -217,43 +217,202 @@
             "type": "verse",
             "label": "Verse 1",
             "lines": [
-              "Eden neila mei zion",
-              "Ting puan zing makpui ram,",
-              "Nzianna nkhuanc neh Poubaomei tyngmik;",
-              "Ravguangc latzan nam dai khou",
-              "Bw-neih gaanhmei nai dat lak khe’",
-              "Lauziuna riu tei rui",
-              "Tingsaeng gan bam puni"
+              "He kaidai launa Bethlehem",
+              "Nang zip rim-rim bam e!",
+              "Nang zip theimang mang bam khou tei",
+              "Gaanchuang rui tatbam e;",
+              "Zinghmei nang chaeng guai khou",
+              "Tingsaengzaeng riu gaan bam e;",
+              "Tingsaengna machunh guangmei tei",
+              "‘Seih zingbang ariu the."
             ]
           },
           {
             "type": "verse",
             "label": "Verse 2",
             "lines": [
-              "Chui mak mei na maan mei pri tei rui;",
-              "Paap phung mei ata ncham louna,",
-              "Alung laina guang nge",
-              "Aravguangc lalou o."
+              "Mary khou rui Khrista puan the;",
+              "Meiguai zipri bam khou,",
+              "Ch’rinmei ramzian tei zau lana",
+              "Baanch’ra guai rih gaanbam.",
+              "Laukhuan gaanphiu guai rui",
+              "Thanmei ngana puanhmei ta!",
+              "Kau na Raguang ta thuan na suan,",
+              "Dih khou zaengmei nai diu."
             ]
           },
           {
             "type": "verse",
             "label": "Verse 3",
             "lines": [
-              "Apu ram nzian thaimak khou rui",
-              "Kandih ramgai khou ai maeng du the",
-              "Ai rianc rana apu",
-              "Ta ning tou na kap be."
+              "Adih rim-rimna charinmei",
+              "Kaipat tei tilou cho!",
+              "Raguang rui maansei guai lung khou",
+              "Tingkau suaihiam tilou.",
+              "Paap kandi khou Kamei;",
+              "Guangmei chu mak khuan sini,",
+              "Kata laloumei lung guai khou,",
+              "Khrista rui gut bam e."
             ]
           },
           {
             "type": "verse",
             "label": "Verse 4",
             "lines": [
-              "Tingzin kei nruai guai rabam the;",
-              "Ai ni akai tingkao zuan ni the,",
-              "Ai amaan saeng lak khe",
-              "Akai zuan kan ni the."
+              "Nthanmei Bethlehem ngana,",
+              "Aniu khou keilou o;",
+              "‘Niu paap la ganna gut bam o",
+              "‘Niu khou ‘seih puanlou o,",
+              "Baanch’ra nun phung guangmei",
+              "Gaicham tei aniu chu e",
+              "Guangna ‘niu ta bamduanghlou o,",
+              "‘Niu pou Immanuel."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ngai-luzaam-255",
+      "number": 5,
+      "sourceNumber": 255,
+      "title": "Reinungh Noel baanch’ra sa e",
+      "titleRongmei": "Reinungh Noel baanch’ra sa e",
+      "search": {
+        "keywords": [
+          "Noel",
+          "Christmas",
+          "Bethlehem",
+          "No. 255"
+        ]
+      },
+      "content": {
+        "sections": [
+          {
+            "type": "verse",
+            "label": "Verse 1",
+            "lines": [
+              "Reinungh Noel baanch’ra sa e",
+              "Lauziu gaenghmei nun lau khou bam khou;",
+              "Lauziu gaeng bammei laupuk khou,",
+              "Nchumei tingsei zingbang khou."
+            ]
+          },
+          {
+            "type": "chorus",
+            "label": "Chorus",
+            "lines": [
+              "Puan the, puan the,",
+              "Puan the, puan the;",
+              "Puanhmei tei Israel Guang e."
+            ]
+          },
+          {
+            "type": "verse",
+            "label": "Verse 2",
+            "lines": [
+              "Kaniu zauku neihpat biak thang",
+              "Gaanphiu akhat gaan bammei hou the,",
+              "Kandi khou tei gaanchui na gaan,",
+              "Zingbang ni, kalaan ni gaan e."
+            ]
+          },
+          {
+            "type": "verse",
+            "label": "Verse 3",
+            "lines": [
+              "Gaanphiu riu khou dih duh thang rui,",
+              "Ningtingmei gaanthumh Guangh ta phu khang;",
+              "Gaanchuang rui zailoupui bamthuih,",
+              "Kaniu suina nzuan guang e."
+            ]
+          },
+          {
+            "type": "verse",
+            "label": "Verse 4",
+            "lines": [
+              "Gaanphiu rui neihkei le nliang,",
+              "Bethlehem rukhou guangtang pukhou,",
+              "Khou tei dingna nthaeklou the,",
+              "Jisu zip bammei rukhou tei."
+            ]
+          },
+          {
+            "type": "verse",
+            "label": "Verse 5",
+            "lines": [
+              "Ningtingmei nun gaanthumh tei rui,",
+              "Champouh na khuksunna kalum the,",
+              "Kahu khou tei katlou kan the,",
+              "Kaniu tuang kachaek, mundui, agau."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ngai-luzaam-256",
+      "number": 6,
+      "sourceNumber": 256,
+      "title": "Neihpat thang Guangh aniu gaanthumh",
+      "titleRongmei": "Neihpat thang Guangh aniu gaanthumh",
+      "search": {
+        "keywords": [
+          "Christmas",
+          "Bethlehem",
+          "No. 256"
+        ]
+      },
+      "content": {
+        "sections": [
+          {
+            "type": "verse",
+            "label": "Verse 1",
+            "lines": [
+              "Neihpat thang Guangh aniu gaanthumh;",
+              "Kaipat phungna nzuanh guang e",
+              "Chingh, ‘zaeng, duithuak, laupuk, kaanna",
+              "Gaanchuang ta suiguang e."
+            ]
+          },
+          {
+            "type": "chorus",
+            "label": "Chorus",
+            "lines": [
+              "He, ch’rinmei zingbang gaanchuangna,",
+              "Guangh ramgai gaanhmei gaanchuang,",
+              "Neihkei biak aniu ta zaina,",
+              "Gaanchuimei khou zailou o."
+            ]
+          },
+          {
+            "type": "verse",
+            "label": "Verse 2",
+            "lines": [
+              "Guangh ‘khat puan e Bethlehem khou,",
+              "Ai kakhang kachaek phung guang e,",
+              "Tingsaengzaengna taekdat makna",
+              "‘Niu rukhou guanghtu khang,"
+            ]
+          },
+          {
+            "type": "verse",
+            "label": "Verse 3",
+            "lines": [
+              "Munrim gaimei ai phung guang e;",
+              "ARaguang khang katlou diu khang;",
+              "Meiguai rui thauna thuanku o,",
+              "Raguang ta kalum o."
+            ]
+          },
+          {
+            "type": "verse",
+            "label": "Verse 4",
+            "lines": [
+              "Nkhumei agau rim hei rui",
+              "Zinghmei guang nimei dinh tuang e:",
+              "Rianrana, zei keina, theina,",
+              "Tarou khou phup puni."
             ]
           }
         ]
