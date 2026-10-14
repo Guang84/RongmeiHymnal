@@ -1390,3 +1390,174 @@ body.presentation-mode .presentation-exit:hover { border-color: var(--accent); c
 @media (prefers-reduced-motion: reduce) {
   .table-wrap { scroll-behavior: auto; }
 }
+
+
+/* Responsive library polish, adjustable type scale, and richer song metadata. */
+html { font-size: var(--ui-font-size, 16px); }
+.book-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: 0 8px 28px #20352d12;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.book-card:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--accent) 50%, var(--line));
+  box-shadow: 0 15px 38px #20352d1c;
+}
+.book-card:focus-visible, .table-wrap:focus-visible, .button:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 70%, white);
+  outline-offset: 3px;
+}
+.book-card-cover { object-fit: cover; }
+.book-card-content { min-width: 0; }
+.book-card strong, .book-card small, .book-card-credit { overflow-wrap: anywhere; }
+.book-main { padding-bottom: clamp(38px, 6vw, 84px); }
+.book-intro { gap: clamp(24px, 5vw, 74px); }
+.book-intro-copy h1 { text-wrap: balance; }
+.book-page-cover { border-radius: 16px; overflow: hidden; }
+.book-detail-facts > div {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
+.song-catalog { margin-top: clamp(28px, 4vw, 54px); }
+.song-catalog .section-heading { gap: 22px; }
+.song-catalog .catalog-note { max-width: 44ch; text-align: right; }
+.table-wrap {
+  max-height: min(68vh, 780px);
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.hymn-table { width: 100%; min-width: 0; table-layout: fixed; }
+.hymn-table th:first-child, .hymn-table td:first-child { width: 4.2rem; }
+.hymn-table th:last-child, .hymn-table td:last-child { width: 5rem; }
+.hymn-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background: var(--green);
+  box-shadow: 0 1px 0 var(--line);
+}
+.hymn-table tbody tr:nth-child(even) { background: color-mix(in srgb, var(--bg) 48%, var(--surface)); }
+.hymn-table tbody tr:hover { background: color-mix(in srgb, var(--accent) 7%, var(--surface)); }
+.hymn-table td { overflow-wrap: anywhere; }
+.song-title-primary { display: block; font-weight: 600; line-height: 1.4; }
+.song-title-secondary { display: block; margin-top: 3px; color: var(--muted); font-size: .88em; line-height: 1.4; }
+.song-catalog-meta {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: .76em;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.song-title-source {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: .74em;
+}
+.catalog-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 12px;
+}
+.catalog-pagination p { margin: 0; color: var(--muted); font-size: .84rem; }
+.catalog-pagination [hidden] { display: none !important; }
+.reader-toolbar { flex-wrap: wrap; gap: 12px; }
+.reader-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.reader { width: 100%; }
+.reader-heading h1 { overflow-wrap: anywhere; }
+.song-metadata {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 145px), 1fr));
+  gap: 9px;
+  margin: 18px 0 14px;
+  padding: 0;
+}
+.song-metadata[hidden] { display: none !important; }
+.song-metadata > div {
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--surface) 76%, var(--bg));
+}
+.song-metadata dt {
+  color: var(--muted);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+.song-metadata dd {
+  margin: 4px 0 0;
+  font: 600 .96rem/1.45 'DM Sans', sans-serif;
+  overflow-wrap: anywhere;
+}
+.hymn-source-number { color: var(--muted); font-size: .8rem; }
+.lyrics .song-section { margin-bottom: clamp(16px, 3vw, 28px); }
+.lyrics .song-section-label { font-size: .7em; }
+.lyrics p { overflow-wrap: anywhere; }
+.settings-panel input[type="range"] { width: 100%; accent-color: var(--accent); }
+@media (min-width: 1000px) {
+  .book-main { width: min(1260px, calc(100% - 64px)); }
+  .book-intro { grid-template-columns: minmax(220px, 310px) minmax(0, 1fr); }
+  .song-catalog .section-heading h2 { font-size: clamp(2rem, 3vw, 2.65rem); }
+  .reader-main { width: min(1180px, calc(100% - 64px)); }
+  .reader { padding-inline: clamp(32px, 6vw, 86px); }
+}
+@media (max-width: 700px) {
+  .shell { width: min(100% - 28px, 1180px); }
+  .book-main { padding-top: 18px; }
+  .book-intro { grid-template-columns: 112px minmax(0, 1fr); gap: 18px; align-items: start; }
+  .book-page-cover { margin: 0; }
+  .book-page-cover img { width: 100%; height: auto; }
+  .book-intro-copy h1 { font-size: clamp(1.8rem, 7.2vw, 2.8rem); line-height: 1.02; }
+  .book-intro-copy .book-summary { font-size: .93rem; }
+  .book-intro-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+  .book-intro-actions .button { padding: 9px 11px; font-size: .78rem; }
+  .book-detail-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
+  .book-detail-facts > div { min-width: 0; padding: 8px; }
+  .book-detail-facts dd { overflow-wrap: anywhere; font-size: .95rem; }
+  .selected-book-heading, .song-catalog .section-heading { align-items: start; flex-direction: column; }
+  .song-catalog .catalog-note { max-width: 100%; text-align: left; }
+  .table-wrap { max-height: min(64vh, 620px); }
+  .hymn-table th, .hymn-table td { padding: 10px 8px; }
+  .hymn-table th:first-child, .hymn-table td:first-child { width: 3.2rem; }
+  .hymn-table th:last-child, .hymn-table td:last-child { width: 4.25rem; }
+  .catalog-pagination { align-items: start; flex-direction: column; }
+  .reader-main { padding-top: 14px; }
+  .reader-toolbar { align-items: stretch; flex-direction: column; }
+  .reader-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .reader-actions .button { min-width: 0; padding: 9px 8px; font-size: .78rem; }
+  .reader { padding: 22px 16px; margin-top: 22px; }
+  .reader-heading h1 { font-size: clamp(2rem, 9vw, 3.2rem); }
+  .song-metadata { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lyrics { font-size: var(--reader-size, 18px); }
+  .book-footer-grid { gap: 24px; }
+}
+@media (max-width: 390px) {
+  .brand strong { font-size: 1.08rem; }
+  .brand small { font-size: .58rem; }
+  nav { gap: 10px; }
+  .book-intro { grid-template-columns: 88px minmax(0, 1fr); gap: 13px; }
+  .book-intro-copy h1 { font-size: 1.8rem; }
+  .book-detail-facts { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .song-metadata { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .book-card { transition: none; }
+  .book-card:hover { transform: none; }
+}
