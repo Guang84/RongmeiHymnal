@@ -10,7 +10,7 @@ let settings = getSettings();
 
 function apply() {
   document.body.classList.toggle('dark', settings.theme === 'dark');
-  document.documentElement.style.setProperty('--reader-size', `${settings.font}px`);
+  document.documentElement.style.setProperty('--reader-size', `${settings.font}px`);\n  document.documentElement.style.setProperty('--ui-font-size', `${(16 * Math.min(28, Math.max(14, settings.font)) / 18).toFixed(2)}px`);
   document.documentElement.dataset.spacing = settings.spacing;
   document.documentElement.dataset.width = settings.width;
   document.documentElement.dataset.tone = settings.tone;
