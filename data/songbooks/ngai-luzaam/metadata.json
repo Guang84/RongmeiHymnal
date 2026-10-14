@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "contentVersion": "1.0.0",
+  "contentVersion": "1.1.0",
   "id": "ngai-luzaam",
   "name": "ngai-luzaam",
   "title": "Ngai Luzaam",
@@ -30,11 +30,15 @@
     {
       "date": "2026-10-14",
       "note": "Added the Ngai Luzaam collection page and an initial four-song Christmas-season transcription. More songs remain to be digitized and checked."
+    },
+    {
+      "date": "2026-10-14",
+      "note": "Added Bethlehem, Noel, and seasonal worship selections from printed song numbers 254–256. The online edition remains a partial transcription."
     }
   ],
   "songs": {
     "file": "songs.json",
-    "count": 4,
+    "count": 6,
     "updatedAt": "2026-10-14"
   }
 }
