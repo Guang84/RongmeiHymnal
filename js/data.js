@@ -65,7 +65,8 @@ async function loadSongsForBook(book) {
   if (bookSongCache.has(book.id)) return bookSongCache.get(book.id);
   const externalURL = book.songs?.url?.trim();
   const sourceURL = externalURL || localBookURL(book, book.songs?.file || 'songs.json');
-  const versionedURL = externalURL ? sourceURL : `${sourceURL}?v=${encodeURIComponent(book.songs?.updatedAt || book.version || 'latest')}`;
+  const version = encodeURIComponent(book.songs?.updatedAt || book.version || 'latest');
+  const versionedURL = `${sourceURL}${sourceURL.includes('?') ? '&' : '?'}v=${version}`;
   const data = await fetchJSON(versionedURL, `songs for ${book.title}`);
   validateSongsData(data, book);
   const result = {
