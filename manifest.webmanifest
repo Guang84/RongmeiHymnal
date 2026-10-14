@@ -7,21 +7,19 @@
   "display": "standalone",
   "orientation": "any",
   "description": "Install the Rongmei songbook library and read, search, and save songs offline.",
-  "categories": ["books", "education", "music"],
+  "categories": [
+    "books",
+    "education",
+    "music"
+  ],
   "theme_color": "#f4f0e8",
   "background_color": "#f4f0e8",
   "icons": [
     {
-      "src": "assets/icons/icon-192.png",
-      "sizes": "192x192",
+      "src": "https://raw.githubusercontent.com/Guang84/Guang84.github.io/main/assets/brand/glab-mark-256.png",
+      "sizes": "256x256",
       "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "assets/icons/icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     }
   ]
 }
