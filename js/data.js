@@ -12,8 +12,21 @@ const safeFile = value => typeof value === 'string' && /^[a-z0-9][a-z0-9._-]*\.j
 const localBookURL = (book, file) => `data/songbooks/${encodeURIComponent(book.directory)}/${encodeURIComponent(file)}`;
 
 async function fetchJSON(url, label) {
-  const response = await fetch(url, { cache: 'no-store' });
-  if (!response.ok) throw new Error(`${label} (${response.status})`);
+  let response;
+  try {
+    response = await fetch(url, { cache: 'no-store' });
+  } catch {
+    if (typeof caches !== 'undefined') {
+      try { response = await caches.match(url, { ignoreSearch: true }); } catch { /* Cache unavailable. */ }
+    }
+  }
+  if (!response?.ok && typeof caches !== 'undefined') {
+    try {
+      const cached = await caches.match(url, { ignoreSearch: true });
+      if (cached) response = cached;
+    } catch { /* Keep the network error. */ }
+  }
+  if (!response?.ok) throw new Error(label + ' (' + (response?.status || 'offline') + ')');
   return response.json();
 }
 
