@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "contentVersion": "1.1.0",
+  "contentVersion": "1.2.0",
   "id": "hymdaihlu",
   "name": "hymdaihlu",
   "title": "Hymdaihlu",
@@ -34,12 +34,16 @@
     {
       "date": "2026-08-31",
       "note": "Imported 930 records from two source book types; duplicate source numbering is preserved in metadata while app catalog numbers remain unique."
+    },
+    {
+      "date": "2026-10-14",
+      "note": "Added separate Rongmei and English title fields to all 930 records. English titles are populated where the source database contains a clear English title; uncertain titles were not invented."
     }
   ],
   "songs": {
     "file": "",
     "url": "https://raw.githubusercontent.com/Guang84/Guang84.github.io/refs/heads/main/data/RongmeiHymnal/hymdaihlu/songs.json",
     "count": 930,
-    "updatedAt": "2026-08-31"
+    "updatedAt": "2026-10-14"
   }
 }
