@@ -1,0 +1,263 @@
+{
+  "schemaVersion": "1.0",
+  "contentVersion": "1.0.0",
+  "updatedAt": "2026-10-14",
+  "songs": [
+    {
+      "id": "ngai-luzaam-200",
+      "number": 1,
+      "sourceNumber": 200,
+      "title": "Khristmas thingbang, Khristmas thingbang",
+      "titleRongmei": "Khristmas thingbang, Khristmas thingbang",
+      "search": {
+        "keywords": [
+          "Christmas",
+          "Khristmas",
+          "seasonal",
+          "No. 200"
+        ]
+      },
+      "content": {
+        "sections": [
+          {
+            "type": "verse",
+            "label": "Verse 1",
+            "lines": [
+              "Khristmas thingbang, Khristmas thingbang!",
+              "Ndiak ring gaimei thingbang;",
+              "Kanui diakchui laophunsuan khou",
+              "Tingsei gan rui ngam puni cho;",
+              "Khristmas thingbang, Khristmas thingbang",
+              "Ndiak ring gaimei thingbang."
+            ]
+          },
+          {
+            "type": "verse",
+            "label": "Verse 2",
+            "lines": [
+              "Khristmas thingbang, Khristmas thingbang!",
+              "Alung khou lu tisuan lou;",
+              "Nang thaumei riu gaanchuang riu kum",
+              "Chrinmei riu kandi khou tikei;",
+              "Khristmas thingbang, Khristmas thingbang!",
+              "Alung khou lu tisuan lou."
+            ]
+          },
+          {
+            "type": "verse",
+            "label": "Verse 3",
+            "lines": [
+              "Khristmas thingbang, Khristmas thingbang!",
+              "Raguang khou rui nang kei e;",
+              "Zian lou mei Raguang tuang kheiliak",
+              "Kau thang rui di khou diukei e;",
+              "Khristmas thingbang, Khristmas thingbang!",
+              "Raguang khou rui nang kei e."
+            ]
+          },
+          {
+            "type": "verse",
+            "label": "Verse 4",
+            "lines": [
+              "Khristmas thingbang, Khristmas thingbang!",
+              "Raguang e tumei dinlou;",
+              "Aniu rui lanu khang chinlou",
+              "Raguang ta thukna lumbam khang",
+              "Khristmas thingbang, Khristmas thingbang!",
+              "Raguang e tumei dinlou."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ngai-luzaam-201",
+      "number": 2,
+      "sourceNumber": 201,
+      "title": "He neihla Christmas",
+      "titleRongmei": "He neihla Christmas",
+      "search": {
+        "keywords": [
+          "Christmas",
+          "Khristmas",
+          "No. 201"
+        ]
+      },
+      "content": {
+        "sections": [
+          {
+            "type": "verse",
+            "label": "Verse 1",
+            "lines": [
+              "He neila khrismas mun puang gaimei tuai the",
+              "Tingkum man nimei thei laikan the;",
+              "Kaban tei sin na nu mak na tat kan the",
+              "He neila christmas."
+            ]
+          },
+          {
+            "type": "chorus",
+            "label": "Chorus",
+            "lines": [
+              "Nkhuan no, nkhuan no nzian na nkhuan no",
+              "Arup arian nzian mei nun",
+              "Ntam mei hei neila christmas."
+            ]
+          },
+          {
+            "type": "verse",
+            "label": "Verse 2",
+            "lines": [
+              "He Raguang ntam kan nimei nzian e",
+              "Nei khat na sini bam lakna cho.",
+              "Aniu khang gaimei munpuang tei tuai kan the;",
+              "He neila Christmas."
+            ]
+          },
+          {
+            "type": "verse",
+            "label": "Verse 3",
+            "lines": [
+              "Keidat nimei ta hou khang tei cham dan o",
+              "Nkhuan bam o tingkao than mei ta,",
+              "Suaihiam kathan pui tuang guaini lapuni;",
+              "He neihla Christmas."
+            ]
+          },
+          {
+            "type": "verse",
+            "label": "Verse 4",
+            "lines": [
+              "Tingkao kandi ganloumei tuang tei kum na",
+              "Ntam mak nu makge poubaomei;",
+              "Nang zanc ta saan na heikhou tei thuanc bam ni,",
+              "He! neihla Christmas."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ngai-luzaam-202",
+      "number": 3,
+      "sourceNumber": 202,
+      "title": "Rim-rimpui zingbang, thanmei zingbang khou",
+      "titleRongmei": "Rim-rimpui zingbang, thanmei zingbang khou",
+      "search": {
+        "keywords": [
+          "Christmas",
+          "Bethlehem",
+          "No. 202"
+        ]
+      },
+      "content": {
+        "sections": [
+          {
+            "type": "verse",
+            "label": "Verse 1",
+            "lines": [
+              "Rim-rimpui zingbang, thanmei zingbang khou",
+              "Banchra nun khuan le kaniu tiguang e,",
+              "Khou tei thau the, lauziu gaangmei;",
+              "Bethlehem khou puan. [3]"
+            ]
+          },
+          {
+            "type": "verse",
+            "label": "Verse 2",
+            "lines": [
+              "Keikhuang khou ziloumei ta hou puni",
+              "Pouta souriu khang nangniu tatthau tho;",
+              "Poubaomei kahim dai kandiu,",
+              "Di khou chuzaengmei nai kandiu",
+              "Khrista puanlouna. [3]"
+            ]
+          },
+          {
+            "type": "verse",
+            "label": "Verse 3",
+            "lines": [
+              "Lauziu gaengmei Bethlehem thang tat the’",
+              "Khou tei kaniu Jisu ta ariu the;",
+              "Din kasuaklou tina guangmei",
+              "Duan gaidiu pouta souriumei,",
+              "Tao kamei guanglouna. [3]"
+            ]
+          },
+          {
+            "type": "verse",
+            "label": "Verse 4",
+            "lines": [
+              "Guang Jisu Khrista ta guang kalum the",
+              "Tingkao banchra guai neila lusuan e;",
+              "Poubaomei kahim dai kandiu",
+              "Di khou chuzaengmei nai kandiu,",
+              "Khrista puanlou na. [3]"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "ngai-luzaam-204",
+      "number": 4,
+      "sourceNumber": 204,
+      "title": "Eden neihlaamei zion tyng puanzing",
+      "titleRongmei": "Eden neihlaamei zion tyng puanzing",
+      "search": {
+        "keywords": [
+          "Zion",
+          "Eden",
+          "No. 204"
+        ]
+      },
+      "content": {
+        "sections": [
+          {
+            "type": "verse",
+            "label": "Verse 1",
+            "lines": [
+              "Eden neila mei zion",
+              "Ting puan zing makpui ram,",
+              "Nzianna nkhuanc neh Poubaomei tyngmik;",
+              "Ravguangc latzan nam dai khou",
+              "Bw-neih gaanhmei nai dat lak khe’",
+              "Lauziuna riu tei rui",
+              "Tingsaeng gan bam puni"
+            ]
+          },
+          {
+            "type": "verse",
+            "label": "Verse 2",
+            "lines": [
+              "Chui mak mei na maan mei pri tei rui;",
+              "Paap phung mei ata ncham louna,",
+              "Alung laina guang nge",
+              "Aravguangc lalou o."
+            ]
+          },
+          {
+            "type": "verse",
+            "label": "Verse 3",
+            "lines": [
+              "Apu ram nzian thaimak khou rui",
+              "Kandih ramgai khou ai maeng du the",
+              "Ai rianc rana apu",
+              "Ta ning tou na kap be."
+            ]
+          },
+          {
+            "type": "verse",
+            "label": "Verse 4",
+            "lines": [
+              "Tingzin kei nruai guai rabam the;",
+              "Ai ni akai tingkao zuan ni the,",
+              "Ai amaan saeng lak khe",
+              "Akai zuan kan ni the."
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
