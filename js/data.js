@@ -40,7 +40,7 @@ function cleanLyricLine(value) {
     .replace(/&#39;|&apos;/gi, "'")
     .replace(/\u00a0/g, ' ')
     .replace(/\u0092/g, '’')
-    .replace(/<br\s*\/?\s*>/gi, ' ')
+    .replace(/<br\s*\/?\s*>/gi, '\n')
     .replace(/<[^>]*>/g, '');
   // Legacy imports use symbol/number sequences for lost chord/layout glyphs.
   // Clean the display only; the original stored lyric text remains untouched.
