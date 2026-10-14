@@ -25,18 +25,17 @@ function cleanLyricLine(value) {
     .replace(/&gt;/gi, '>')
     .replace(/&quot;/gi, '"')
     .replace(/&#39;|&apos;/gi, "'")
-    .replace(/\\u00a0/g, ' ')
-    .replace(/\\u0092/g, '’')
-    .replace(/<br\\s*\\/?\\s*>/gi, ' ')
+    .replace(/\u00a0/g, ' ')
+    .replace(/\u0092/g, '’')
+    .replace(/<br\s*\/?\s*>/gi, ' ')
     .replace(/<[^>]*>/g, '');
-  // The legacy SQLite song field uses symbol/number sequences as lost chord/layout glyphs.
-  // Strip those display artifacts without altering normal punctuation or the stored source text.
-  line = line
-    .replace(/(?:\\d+[!@#$%^&*+|<>~_{}]+[0-9]*|[!@#$%^&*+|<>~_{}]+[0-9]+|[!@#$%^&*+|~_{}]{2,}|[<>]+)/g, ' ')
-    .replace(/(^|\\s)[!@#$%^&*+|~_](?=\\s|$|[.,;:!?])/g, '$1')
-    .replace(/[ \\t]{2,}/g, ' ')
-    .replace(/[ \\t]+$/g, '');
-  return line;
+  // Legacy imports use symbol/number sequences for lost chord/layout glyphs.
+  // Clean the display only; the original stored lyric text remains untouched.
+  return line
+    .replace(/(?:\d+[!@#$%^&*+|<>~_{}]+[0-9]*|[!@#$%^&*+|<>~_{}]+[0-9]+|[!@#$%^&*+|~_{}]{2,}|[<>]+)/g, ' ')
+    .replace(/(^|\s)[!@#$%^&*+|~_](?=\s|$|[.,;:!?])/g, '$1')
+    .replace(/[ \t]{2,}/g, ' ')
+    .replace(/[ \t]+$/g, '');
 }
 
 function hasLines(lines) {
