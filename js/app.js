@@ -21,9 +21,7 @@ import { $, renderMiniLists, toast } from './ui.js';
 import { initSettings } from './settings.js';
 import { initOfflineLibrary } from './offline.js';
 
-const PAGE_SIZE = 60;
 let catalogSongs = [];
-let visibleSongCount = PAGE_SIZE;
 
 
 function songTitleParts(song) {
@@ -170,21 +168,23 @@ function renderBookDetails() {
   renderChangelog(book);
 }
 
-function renderSongTable(songs = getHymnsAlphabetically(), reset = false) {
+function renderSongTable(songs = getHymnsAlphabetically()) {
   const body = $('[data-song-table]');
   if (!body) return;
-  if (reset || songs !== catalogSongs) visibleSongCount = PAGE_SIZE;
   catalogSongs = songs;
   body.replaceChildren();
-  songs.slice(0, visibleSongCount).forEach(song => {
+  songs.forEach(song => {
     const row = document.createElement('tr');
     const number = createElement('td', 'table-number', song.number);
     const titleCell = document.createElement('td');
     appendSongTitle(titleCell, song, true);
+    if (String(song.sourceBook || '').startsWith('Legacy SQLite')) {
+      titleCell.append(createElement('small', 'song-title-source', `Legacy database record ${song.sourceNumber}`));
+    }
     const actionCell = createElement('td', 'table-action');
     const action = createElement('a', '', 'Read →');
     action.href = buildHymnURL(song);
-    action.setAttribute('aria-label', `Open song ${song.number}: ${song.title}`);
+    action.setAttribute('aria-label', `Open song ${song.number}: ${songTitleParts(song).primary}`);
     actionCell.append(action);
     row.append(number, titleCell, actionCell);
     body.append(row);
@@ -196,19 +196,11 @@ function renderSongTable(songs = getHymnsAlphabetically(), reset = false) {
     body.append(row);
   }
   const pageStatus = $('[data-catalog-page-status]');
+  if (pageStatus) pageStatus.textContent = songs.length
+    ? `${songs.length} songs. Sorted A–Z by title; scroll the table to browse or search to filter.`
+    : '';
   const more = $('[data-load-more]');
-  if (pageStatus) pageStatus.textContent = songs.length ? `Showing ${Math.min(visibleSongCount, songs.length)} of ${songs.length} songs.` : '';
-  if (more) more.hidden = visibleSongCount >= songs.length || !songs.length;
-}
-
-function initCatalogPaging() {
-  const more = $('[data-load-more]');
-  if (!more) return;
-  more.addEventListener('click', () => {
-    visibleSongCount += PAGE_SIZE;
-    renderSongTable(catalogSongs);
-    more.focus();
-  });
+  if (more) more.hidden = true;
 }
 
 function initSearch() {
@@ -303,7 +295,6 @@ function renderBookPage() {
   const book = getActiveBook();
   renderBookDetails();
   renderSongTable(getHymnsAlphabetically(), true);
-  initCatalogPaging();
   renderMiniLists();
   const latest = getHistory().find(recordKey => recordKey.startsWith(`${book.id}:`));
   const lastSong = getAllHymns().find(song => getRecordKey(song) === latest);
@@ -373,6 +364,12 @@ function renderReader() {
   $('[data-reader]').hidden = false;
   setText('[data-reader-book]', book.title);
   setText('[data-reader-number]', `Song ${song.number}`);
+  const sourceNumber = $('[data-reader-source-number]');
+  if (sourceNumber) {
+    const legacySource = String(song.sourceBook || '').startsWith('Legacy SQLite');
+    sourceNumber.hidden = !legacySource;
+    sourceNumber.textContent = legacySource ? `Legacy database record ${song.sourceNumber}; digital catalogue number ${song.number}.` : '';
+  }
   const readerTitle = $('[data-reader-title]');
   const titleParts = songTitleParts(song);
   setText('[data-reader-title]', titleParts.primary);
