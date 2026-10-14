@@ -1,4 +1,4 @@
-const CACHE = 'rongmei-songbooks-v22';
+const CACHE = 'rongmei-songbooks-v23';
 const DOWNLOAD_CACHE = 'rongmei-songbooks-downloads-v1';
 const SHELL = ['./', './index.html', './book.html', './hymn.html', './404.html', './policy.html', './css/main.css', './js/app.js', './js/data.js', './js/storage.js', './js/ui.js', './js/settings.js', './js/contact.js', './js/offline.js', './data/songbooks/index.json', './data/contact.json', './data/songbooks/ngai-luzaam/metadata.json', './data/songbooks/ngai-luzaam/songs.json', './assets/Rongmei%20Gospel%20song%20books.png', './assets/buanthlu-cover.png', './assets/icons/icon.svg', './assets/icons/icon-192.png', './assets/icons/icon-512.png', './manifest.webmanifest'];
 
@@ -27,11 +27,11 @@ async function registeredBookFiles() {
     const metadataResponse = await availableResponse(metadata);
     const data = await metadataResponse.json();
     const songFile = data.songs?.file;
-    const localSong = !data.songs?.url && typeof songFile === 'string' && /^[a-z0-9][a-z0-9._-]*\.json$/i.test(songFile) ? `./data/songbooks/${book.directory}/${songFile}` : null;
+    const localSong = !data.songs?.url && typeof songFile === 'string' && /^[a-z0-9][a-z0-9._-]*\.json$/i.test(songFile) ? `./data/songbooks/${book.directory}/${songFile}` : null;\n    const remoteSong = typeof data.songs?.url === 'string' && /^https?:\/\//i.test(data.songs.url) ? data.songs.url : null;
     const cover = typeof data.cover?.image === 'string' && !/^(?:[a-z]+:)?\/\//i.test(data.cover.image) ? `./${data.cover.image.replace(/^\.?\//, '')}` : null;
     const icon = typeof data.icon === 'string' && !/^(?:[a-z]+:)?\/\//i.test(data.icon) ? `./${data.icon.replace(/^\.?\//, '')}` : null;
     if (!localSong && !data.songs?.url) throw new Error(`No downloadable song data was found for ${book.directory}.`);
-    return [metadata, localSong, cover, icon].filter(Boolean);
+    return [metadata, localSong || remoteSong, cover, icon].filter(Boolean);
   }));
   return { books: books.length, files: resources.flat() };
 }
