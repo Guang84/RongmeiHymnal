@@ -23,7 +23,7 @@ function hasLines(lines) {
 
 function songSearchText(song) {
   const lyricLines = getSongSections(song).flatMap(section => section.lines);
-  return normalize([song.number, song.title, song.titleRongmei, song.rongmeiTitle, song.titleEnglish, song.englishTitle, song.title_rongmei, song.title_english, lyricLines.join(' '), ...(song.search?.keywords || [])].join(' '));
+  return normalize([song.number, song.title, song.titleRongmei, song.rongmeiTitle, song.titleEnglish, song.englishTitle, song.title_rongmei, song.title_english, song.sourceNumber, song.sourceBook, lyricLines.join(' '), ...(song.search?.keywords || [])].join(' '));
 }
 
 async function loadBookMetadata(entry) {
