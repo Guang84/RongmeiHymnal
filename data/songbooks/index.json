@@ -30,6 +30,13 @@
       "metadata": "metadata.json",
       "version": "1.1.0",
       "songCount": 36
+    },
+    {
+      "id": "ngai-luzaam",
+      "directory": "ngai-luzaam",
+      "metadata": "metadata.json",
+      "version": "1.0.0",
+      "songCount": 4
     }
   ]
 }
