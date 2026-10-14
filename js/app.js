@@ -21,7 +21,7 @@ import { $, renderMiniLists, toast } from './ui.js';
 import { initSettings } from './settings.js';
 import { initOfflineLibrary } from './offline.js';
 
-let catalogSongs = [];
+const PAGE_SIZE = 60;\nlet catalogSongs = [];\nlet visibleSongCount = PAGE_SIZE;\nlet catalogScrollInitialized = false;
 
 
 function songTitleParts(song) {
@@ -173,11 +173,22 @@ function renderSongTable(songs = getHymnsAlphabetically()) {
   if (!body) return;
   catalogSongs = songs;
   body.replaceChildren();
-  songs.forEach(song => {
+  songs.slice(0, visibleSongCount).forEach(song => {
     const row = document.createElement('tr');
     const number = createElement('td', 'table-number', song.number);
     const titleCell = document.createElement('td');
     appendSongTitle(titleCell, song, true);
+    const metaSummary = [
+      ['Chord', song.chord],
+      ['Beat', song.beat],
+      ['Author', song.author],
+      ['Meta 3', song.meta3],
+      ['Meta 4', song.meta4]
+    ].filter(([, value]) => value && String(value).trim());
+    if (metaSummary.length) {
+      titleCell.append(createElement('small', 'song-catalog-meta',
+        metaSummary.map(([label, value]) => `${label}: ${value}`).join(' · ')));
+    }
     if (String(song.sourceBook || '').startsWith('Legacy SQLite')) {
       titleCell.append(createElement('small', 'song-title-source', `Legacy database record ${song.sourceNumber}`));
     }
@@ -195,12 +206,34 @@ function renderSongTable(songs = getHymnsAlphabetically()) {
     row.firstChild.colSpan = 3;
     body.append(row);
   }
+  const shownCount = Math.min(visibleSongCount, songs.length);
   const pageStatus = $('[data-catalog-page-status]');
   if (pageStatus) pageStatus.textContent = songs.length
-    ? `${songs.length} songs. Sorted A–Z by title; scroll the table to browse or search to filter.`
-    : '';
+    ? `Showing ${shownCount} of ${songs.length} songs · sorted A–Z. Scroll down to load more.`
+    : 'No matching songs.';
   const more = $('[data-load-more]');
-  if (more) more.hidden = true;
+  if (more) {
+    more.hidden = shownCount >= songs.length || !songs.length;
+    more.textContent = shownCount >= songs.length ? 'All songs loaded' : `Load more songs (${Math.min(PAGE_SIZE, songs.length - shownCount)} more)`;
+  }
+}
+
+function loadMoreCatalogSongs() {
+  if (visibleSongCount >= catalogSongs.length) return;
+  visibleSongCount = Math.min(catalogSongs.length, visibleSongCount + PAGE_SIZE);
+  renderSongTable(catalogSongs);
+}
+
+function initCatalogInfiniteScroll() {
+  if (catalogScrollInitialized) return;
+  const wrap = $('.table-wrap');
+  const more = $('[data-load-more]');
+  if (!wrap) return;
+  catalogScrollInitialized = true;
+  wrap.addEventListener('scroll', () => {
+    if (wrap.scrollTop + wrap.clientHeight >= wrap.scrollHeight - 180) loadMoreCatalogSongs();
+  }, { passive: true });
+  more?.addEventListener('click', loadMoreCatalogSongs);
 }
 
 function initSearch() {
@@ -379,6 +412,23 @@ function renderReader() {
     const secondary = createElement('p', 'song-title-secondary reader-title-secondary', titleParts.secondary);
     secondary.dataset.readerTitleSecondary = '';
     readerTitle.insertAdjacentElement('afterend', secondary);
+  }
+  const metadataBlock = $('[data-song-metadata]');
+  if (metadataBlock) {
+    metadataBlock.replaceChildren();
+    const items = [
+      ['Chord', song.chord],
+      ['Beat', song.beat],
+      ['Author', song.author],
+      ['Meta 3', song.meta3],
+      ['Meta 4', song.meta4]
+    ].filter(([, value]) => value && String(value).trim());
+    items.forEach(([label, value]) => {
+      const item = document.createElement('div');
+      item.append(createElement('dt', '', label), createElement('dd', '', String(value).trim()));
+      metadataBlock.append(item);
+    });
+    metadataBlock.hidden = !items.length;
   }
   setText('[data-verification]', song.verification?.note || (song.verification?.status === 'verified' ? 'Verified song text' : `${book.title} digital edition`));
   document.title = `${song.title} | ${book.title}`;
