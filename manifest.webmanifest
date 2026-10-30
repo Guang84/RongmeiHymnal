@@ -16,8 +16,14 @@
   "background_color": "#f4f0e8",
   "icons": [
     {
-      "src": "https://raw.githubusercontent.com/Guang84/Guang84.github.io/main/assets/brand/glab-mark-256.png",
-      "sizes": "256x256",
+      "src": "./assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icons/icon-512.png",
+      "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     }

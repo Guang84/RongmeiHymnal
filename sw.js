@@ -1,6 +1,6 @@
-const CACHE = 'rongmei-songbooks-v24';
+const CACHE = 'rongmei-songbooks-v25';
 const DOWNLOAD_CACHE = 'rongmei-songbooks-downloads-v1';
-const SHELL = ['./', './index.html', './book.html', './hymn.html', './404.html', './policy.html', './css/main.css', './js/app.js', './js/data.js', './js/storage.js', './js/ui.js', './js/settings.js', './js/contact.js', './js/offline.js', './data/songbooks/index.json', './data/contact.json', './data/songbooks/ngai-luzaam/metadata.json', './data/songbooks/ngai-luzaam/songs.json', './assets/Rongmei%20Gospel%20song%20books.png', './assets/buanthlu-cover.png', './assets/icons/icon.svg', './assets/icons/icon-192.png', './assets/icons/icon-512.png', './manifest.webmanifest'];
+const SHELL = ['./', './index.html', './book.html', './hymn.html', './404.html', './policy.html', './css/main.css', './js/app.js', './js/data.js', './js/search-core.js', './js/storage.js', './js/ui.js', './js/settings.js', './js/contact.js', './js/offline.js', './data/songbooks/index.json', './data/contact.json', './data/songbooks/ngai-luzaam/metadata.json', './data/songbooks/ngai-luzaam/songs.json', './assets/Rongmei%20Gospel%20song%20books.png', './assets/buanthlu-cover.png', './assets/icons/icon.svg', './assets/icons/icon-192.png', './assets/icons/icon-512.png', './manifest.webmanifest'];
 
 async function notifyClients(message) {
   const clients = await self.clients.matchAll({ type: 'window' });

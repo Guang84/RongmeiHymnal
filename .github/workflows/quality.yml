@@ -1,0 +1,27 @@
+name: Quality checks
+
+on:
+  push:
+    branches: [main, "upgrade/**"]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Test search and editorial status helpers
+        run: npm test
+      - name: Validate locally stored songbooks
+        run: npm run validate:data
+      - name: Validate all songbook sources, including remote datasets
+        run: npm run validate:data:remote
