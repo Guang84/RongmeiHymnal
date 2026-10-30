@@ -39,7 +39,7 @@ export function addHistory(id) {
 export function getSettings() {
   const settings = {
     ...{
-      font: 18,
+      font: 21,
       spacing: 'normal',
       width: 'normal',
       // A songbook should open like a page, regardless of the device theme.

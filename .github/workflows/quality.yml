@@ -1,0 +1,37 @@
+name: Quality checks
+
+on:
+  push:
+    branches: [main, "upgrade/**"]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check JavaScript syntax and web manifest
+        run: |
+          node --check js/app.js
+          node --check js/data.js
+          node --check js/search-core.js
+          node --check js/settings.js
+          node --check js/storage.js
+          node --check sw.js
+          node --check scripts/validate-data.mjs
+          node -e "JSON.parse(require('node:fs').readFileSync('manifest.webmanifest', 'utf8'))"
+      - name: Test search and editorial status helpers
+        run: npm test
+      - name: Validate locally stored songbooks
+        run: npm run validate:data
+      - name: Validate all songbook sources, including remote datasets
+        run: npm run validate:data:remote

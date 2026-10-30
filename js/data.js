@@ -1,3 +1,5 @@
+import { matchesSearch, normalizeSearch } from './search-core.js';
+
 const LIBRARY_URL = 'data/songbooks/index.json';
 
 let library = null;
@@ -5,8 +7,9 @@ let activeBook = null;
 let records = [];
 let searchIndex = [];
 const bookSongCache = new Map();
+const bookSongRequests = new Map();
 
-const normalize = value => String(value ?? '').normalize('NFKC').toLocaleLowerCase().replace(/\s+/g, ' ').trim();
+const normalize = normalizeSearch;
 const safeDirectory = value => typeof value === 'string' && /^[a-z0-9][a-z0-9-]*$/i.test(value);
 const safeFile = value => typeof value === 'string' && /^[a-z0-9][a-z0-9._-]*\.json$/i.test(value);
 const localBookURL = (book, file) => `data/songbooks/${encodeURIComponent(book.directory)}/${encodeURIComponent(file)}`;
@@ -57,7 +60,7 @@ function hasLines(lines) {
 
 function songSearchText(song) {
   const lyricLines = getSongSections(song).flatMap(section => section.lines);
-  return normalize([song.number, song.title, song.titleRongmei, song.rongmeiTitle, song.titleEnglish, song.englishTitle, song.title_rongmei, song.title_english, song.sourceNumber, song.sourceBook, lyricLines.join(' '), ...(song.search?.keywords || [])].join(' '));
+  return normalize([song.number, song.title, song.titleRongmei, song.rongmeiTitle, song.titleEnglish, song.englishTitle, song.title_rongmei, song.title_english, song.sourceNumber, song.sourceBook, song.author, song.chord, song.beat, song.meta3, song.meta4, lyricLines.join(' '), ...(song.search?.keywords || [])].join(' '));
 }
 
 async function loadBookMetadata(entry) {
@@ -76,19 +79,28 @@ async function loadBookMetadata(entry) {
 
 async function loadSongsForBook(book) {
   if (bookSongCache.has(book.id)) return bookSongCache.get(book.id);
-  const externalURL = book.songs?.url?.trim();
-  const sourceURL = externalURL || localBookURL(book, book.songs?.file || 'songs.json');
-  const version = encodeURIComponent(book.songs?.updatedAt || book.version || 'latest');
-  const versionedURL = `${sourceURL}${sourceURL.includes('?') ? '&' : '?'}v=${version}`;
-  const data = await fetchJSON(versionedURL, `songs for ${book.title}`);
-  validateSongsData(data, book);
-  const result = {
-    songs: [...data.songs].sort((a, b) => a.number - b.number),
-    sourceURL,
-    updatedAt: data.updatedAt || book.updatedAt
-  };
-  bookSongCache.set(book.id, result);
-  return result;
+  if (bookSongRequests.has(book.id)) return bookSongRequests.get(book.id);
+  const request = (async () => {
+    const externalURL = book.songs?.url?.trim();
+    const sourceURL = externalURL || localBookURL(book, book.songs?.file || 'songs.json');
+    const version = encodeURIComponent(book.songs?.updatedAt || book.version || 'latest');
+    const versionedURL = `${sourceURL}${sourceURL.includes('?') ? '&' : '?'}v=${version}`;
+    const data = await fetchJSON(versionedURL, `songs for ${book.title}`);
+    validateSongsData(data, book);
+    const result = {
+      songs: [...data.songs].sort((a, b) => a.number - b.number),
+      sourceURL,
+      updatedAt: data.updatedAt || book.updatedAt
+    };
+    bookSongCache.set(book.id, result);
+    return result;
+  })();
+  bookSongRequests.set(book.id, request);
+  try {
+    return await request;
+  } finally {
+    bookSongRequests.delete(book.id);
+  }
 }
 
 export async function loadLibrary() {
@@ -235,18 +247,28 @@ export const buildHymnURL = (song, book = activeBook) => `hymn.html?book=${encod
 export function searchHymns(query) {
   const needle = normalize(query);
   if (!needle) return [];
-  return searchIndex.filter(item => item.searchableText.includes(needle)).map(item => item.song);
+  return searchIndex.filter(item => matchesSearch(needle, item.searchableText)).map(item => item.song);
 }
 
-/** Search the full library, loading each book only once during the current page visit. */
+/** Search every available book and keep successful results if a source is offline. */
 export async function searchAcrossBooks(query) {
   const needle = normalize(query);
-  if (!needle) return [];
-  const settled = await Promise.allSettled(getBooks().map(async book => ({ book, ...(await loadSongsForBook(book)) })));
+  if (!needle) return { results: [], searchedBooks: 0, failedBooks: [] };
+  const books = getBooks();
+  const settled = await Promise.allSettled(books.map(async book => ({
+    book,
+    ...(await loadSongsForBook(book))
+  })));
   const sources = settled.filter(result => result.status === 'fulfilled').map(result => result.value);
-  return sources.flatMap(({ book, songs }) => songs
-    .filter(song => songSearchText(song).includes(needle))
+  const failedBooks = settled.map((result, index) => result.status === 'rejected' ? {
+    id: books[index].id,
+    title: books[index].title,
+    reason: result.reason instanceof Error ? result.reason.message : String(result.reason)
+  } : null).filter(Boolean);
+  const results = sources.flatMap(({ book, songs }) => songs
+    .filter(song => matchesSearch(needle, songSearchText(song)))
     .map(song => ({ book, song })));
+  return { results, searchedBooks: sources.length, failedBooks };
 }
 
 export function getHymnsAlphabetically() {

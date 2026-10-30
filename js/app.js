@@ -17,6 +17,7 @@ import {
   searchHymns
 } from './data.js';
 import { addHistory, getFavorites, getHistory, toggleFavorite } from './storage.js';
+import { verificationMessage } from './search-core.js';
 import { $, renderMiniLists, toast } from './ui.js';
 import { initSettings } from './settings.js';
 import { initOfflineLibrary } from './offline.js';
@@ -212,7 +213,7 @@ function renderSongTable(songs = getHymnsAlphabetically()) {
   const shownCount = Math.min(visibleSongCount, songs.length);
   const pageStatus = $('[data-catalog-page-status]');
   if (pageStatus) pageStatus.textContent = songs.length
-    ? `Showing ${shownCount} of ${songs.length} songs · sorted A–Z. Scroll down to load more.`
+    ? `Showing ${shownCount} of ${songs.length} songs · sorted A–Z. Use “Load more” to continue.`
     : 'No matching songs.';
   const more = $('[data-load-more]');
   if (more) {
@@ -229,14 +230,11 @@ function loadMoreCatalogSongs() {
 
 function initCatalogInfiniteScroll() {
   if (catalogScrollInitialized) return;
-  const wrap = $('.table-wrap');
   const more = $('[data-load-more]');
-  if (!wrap) return;
+  if (!more) return;
   catalogScrollInitialized = true;
-  wrap.addEventListener('scroll', () => {
-    if (wrap.scrollTop + wrap.clientHeight >= wrap.scrollHeight - 180) loadMoreCatalogSongs();
-  }, { passive: true });
-  more?.addEventListener('click', loadMoreCatalogSongs);
+  // Keep the catalogue in the document's natural scroll flow on touch screens.
+  more.addEventListener('click', loadMoreCatalogSongs);
 }
 
 function initSearch() {
@@ -295,18 +293,25 @@ function initGlobalSearch() {
     const currentRequest = ++request;
     if (!query) {
       status.textContent = '';
+      status.dataset.state = '';
       renderGlobalSearchResults([], '');
       return;
     }
     status.textContent = 'Searching all songbooks…';
     try {
-      const matches = await searchAcrossBooks(query);
+      const search = await searchAcrossBooks(query);
       if (currentRequest !== request) return;
-      status.textContent = `${matches.length} matching song${matches.length === 1 ? '' : 's'} across ${getBooks().length} songbooks.`;
-      renderGlobalSearchResults(matches, query);
+      const { results, searchedBooks, failedBooks } = search;
+      const resultLabel = `${results.length} matching song${results.length === 1 ? '' : 's'} from ${searchedBooks} of ${getBooks().length} songbooks.`;
+      status.textContent = failedBooks.length
+        ? `${resultLabel} Unavailable: ${failedBooks.map(book => book.title).join(', ')}. Some results may be missing.`
+        : resultLabel;
+      status.dataset.state = failedBooks.length ? 'partial' : 'complete';
+      renderGlobalSearchResults(results, query);
     } catch {
       if (currentRequest !== request) return;
-      status.textContent = 'Some songbooks could not be searched. Please try again.';
+      status.textContent = 'The library search could not be completed. Please try again.';
+      status.dataset.state = 'error';
       renderGlobalSearchResults([], query);
     }
   };
@@ -339,7 +344,8 @@ function renderBookPage() {
   const lastSong = getAllHymns().find(song => getRecordKey(song) === latest);
   if (lastSong) {
     $('[data-continue-section]').hidden = false;
-    setText('[data-continue-title]', `${lastSong.number} · ${lastSong.title}`);
+    const title = songTitleParts(lastSong);
+    setText('[data-continue-title]', `${lastSong.number} · ${title.primary}`);
     $('[data-continue-link]').href = buildHymnURL(lastSong);
   }
   initSearch();
@@ -377,11 +383,21 @@ function initPresentationMode() {
     button.setAttribute('aria-pressed', String(enabled));
     button.textContent = enabled ? 'Exit presentation' : 'Present';
     exitButton?.setAttribute('aria-hidden', String(!enabled));
+    if (enabled && document.documentElement.requestFullscreen && !document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(() => {
+        // Keep the focused presentation layout if fullscreen is unavailable.
+      });
+    } else if (!enabled && document.fullscreenElement && document.exitFullscreen) {
+      document.exitFullscreen().catch(() => {});
+    }
   };
   button.addEventListener('click', toggle);
   exitButton?.addEventListener('click', () => toggle(false));
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && document.body.classList.contains('presentation-mode')) toggle(false);
+  });
+  document.addEventListener('fullscreenchange', () => {
+    if (!document.fullscreenElement && document.body.classList.contains('presentation-mode')) toggle(false);
   });
   return toggle;
 }
@@ -405,9 +421,13 @@ function renderReader() {
   setText('[data-reader-number]', `Song ${song.number}`);
   const sourceNumber = $('[data-reader-source-number]');
   if (sourceNumber) {
-    const legacySource = String(song.sourceBook || '').startsWith('Legacy SQLite');
-    sourceNumber.hidden = !legacySource;
-    sourceNumber.textContent = legacySource ? `Legacy database record ${song.sourceNumber}; digital catalogue number ${song.number}.` : '';
+    const sourceDetails = [];
+    if (song.sourceBook) sourceDetails.push(`Source book: ${song.sourceBook}`);
+    if (song.sourceNumber !== undefined && song.sourceNumber !== null && String(song.sourceNumber).trim()) {
+      sourceDetails.push(`Printed/source number: ${song.sourceNumber}`);
+    }
+    sourceNumber.hidden = sourceDetails.length === 0;
+    sourceNumber.textContent = sourceDetails.join(' · ');
   }
   const readerTitle = $('[data-reader-title]');
   const titleParts = songTitleParts(song);
@@ -436,8 +456,8 @@ function renderReader() {
     });
     metadataBlock.hidden = !items.length;
   }
-  setText('[data-verification]', song.verification?.note || (song.verification?.status === 'verified' ? 'Verified song text' : `${book.title} digital edition`));
-  document.title = `${song.title} | ${book.title}`;
+  setText('[data-verification]', verificationMessage(song, book.title));
+  document.title = `${titleParts.primary || song.title} | ${book.title}`;
   renderLyrics(song);
   const favorite = $('[data-favorite-button]');
   const recordKey = getRecordKey(song);
@@ -481,7 +501,7 @@ function renderReader() {
 
 function initKeys() {
   document.addEventListener('keydown', event => {
-    if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement.tagName)) return;
+    if (['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName)) return;
     if (event.key === '/' && $('[data-search-input]')) {
       event.preventDefault();
       $('[data-search-input]').focus();

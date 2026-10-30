@@ -1,0 +1,11 @@
+{
+  "name": "rongmei-hymnal",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "validate:data": "node scripts/validate-data.mjs",
+    "validate:data:remote": "node scripts/validate-data.mjs --all"
+  }
+}
