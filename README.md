@@ -31,7 +31,7 @@ data/Products/Rongmei Hymnal/
     └── songs/<number>-<title-slug>/song.json
 ```
 
-The application first loads the manifest and lightweight book indexes. It fetches an individual `song.json` only when a reader opens that song or selects a language. This keeps the initial page load small and avoids downloading every lyric file just to browse the library.
+The application first loads the manifest and lightweight book indexes. It fetches an individual `song.json` only when a reader opens that song or selects a language. Catalogue search uses titles and numbers immediately; full-text lyric search is an explicit per-songbook action that loads that collection's individual song records only when requested. This keeps the initial page load small and avoids downloading every lyric file just to browse the library.
 
 The app pins its data source to commit `83a5b3cbde08e38feab473773291dfa24da18156` so that the application release and its song data remain reproducible. A future data release should update the pinned commit and run the full remote validation.
 
