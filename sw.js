@@ -1,5 +1,5 @@
 const APP_CACHE_PREFIX = 'glab-rongmei-hymnal-';
-const CACHE = 'glab-rongmei-hymnal-shell-v26';
+const CACHE = 'glab-rongmei-hymnal-shell-v27';
 const DOWNLOAD_CACHE = 'glab-rongmei-hymnal-offline-v2';
 const DATA_CACHE = 'glab-rongmei-hymnal-data-v1';
 const LEGACY_CACHES = ['rongmei-songbooks-v25', 'rongmei-songbooks-downloads-v1'];
