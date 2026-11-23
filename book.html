@@ -13,6 +13,19 @@
     <section class="continue-strip" data-continue-section hidden><div><p class="eyebrow">Continue reading</p><h2 data-continue-title></h2></div><a class="button button-accent" data-continue-link href="#">Continue <span>→</span></a></section>
     <section class="song-catalog" aria-labelledby="song-table-heading"><div class="section-heading selected-book-heading"><div><p class="eyebrow">Song list</p><h2 id="song-table-heading">Browse every song</h2></div><p class="catalog-note">Browse by digital song number or alphabetical title. Rongmei and English titles are shown where present in the source index. Open a song to load its full language and lyric record.</p></div><form class="search-form" data-search-form role="search"><label class="sr-only" for="song-search">Search this songbook</label><span class="search-icon">⌕</span><input autocomplete="off" data-search-input id="song-search" placeholder="Search by song number or title" type="search"><button aria-label="Clear search" class="clear-button" data-clear-search hidden type="button">×</button></form><div class="search-status" data-search-status aria-live="polite"></div><div class="table-wrap"><table class="hymn-table"><caption class="sr-only">Songs ordered alphabetically by title</caption><thead><tr><th scope="col">No.</th><th scope="col">Song</th><th scope="col"><span class="sr-only">Open</span></th></tr></thead><tbody data-song-table><tr><td class="loading-state" colspan="3">Loading songs…</td></tr></tbody></table></div><div class="catalog-pagination"><p data-catalog-page-status aria-live="polite"></p><button class="button button-quiet" data-load-more type="button">Load more songs</button></div></section>
     <section class="book-description"><p class="eyebrow">About this songbook</p><p data-active-book-description></p></section>
+    <section class="book-edition-panel" aria-labelledby="book-edition-heading">
+      <div class="section-heading"><div><p class="eyebrow">Publication record</p><h2 id="book-edition-heading">Edition and source details</h2></div><p class="catalog-note">Digital edition information is kept separate from the original printed publication details.</p></div>
+      <dl class="book-edition-grid">
+        <div><dt>Digital edition</dt><dd data-book-edition-version>—</dd></div>
+        <div><dt>Last content update</dt><dd data-book-edition-updated>—</dd></div>
+        <div><dt>Default language</dt><dd data-book-edition-language>—</dd></div>
+        <div><dt>Digital editor</dt><dd data-book-edition-editor>—</dd></div>
+        <div><dt>Original compiler</dt><dd data-book-edition-compiler>—</dd></div>
+        <div><dt>Original publisher</dt><dd data-book-edition-publisher>—</dd></div>
+      </dl>
+      <p class="rights-note" data-book-edition-rights></p>
+      <p class="rights-note">Editorial review and rights status are recorded per song. Opening a song shows the status for its selected language.</p>
+    </section>
     <details class="book-changelog" data-book-changelog hidden><summary>Edition notes and recent updates</summary><ul data-book-changelog-list></ul></details>
 
     <div class="home-columns book-personal-lists"><section class="list-section"><div class="section-heading"><h2>Recently viewed</h2></div><div class="mini-list" data-history-list><p class="empty-state">No recently viewed songs in this book yet.</p></div></section><section class="list-section"><div class="section-heading"><h2>Favorites</h2></div><div class="mini-list" data-favorites-list><p class="empty-state">No favorite songs in this book yet.</p></div></section></div>
