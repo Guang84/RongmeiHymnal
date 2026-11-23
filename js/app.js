@@ -589,6 +589,8 @@ async function renderReader() {
     const link = $(selector);
     if (item) {
       link.href = buildHymnURL(item);
+      const selectedLanguage = new URLSearchParams(location.search).get('lang');
+      if (selectedLanguage) link.href += '&lang=' + encodeURIComponent(selectedLanguage);
       link.removeAttribute('aria-disabled');
       setText(label, item.number + ' · ' + item.title);
     } else {
