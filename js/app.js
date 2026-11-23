@@ -164,6 +164,13 @@ function renderBookDetails() {
   setText('[data-active-book-language]', book.language);
   setText('[data-active-song-count]', book.songCount);
   setText('[data-active-book-updated]', book.updatedAt);
+  setText('[data-book-edition-version]', book.contentVersion || '—');
+  setText('[data-book-edition-updated]', book.updatedAt || '—');
+  setText('[data-book-edition-language]', book.defaultLanguage || book.language || '—');
+  setText('[data-book-edition-editor]', book.credits?.editor || 'Not recorded');
+  setText('[data-book-edition-compiler]', book.credits?.compiledBy || 'Not recorded');
+  setText('[data-book-edition-publisher]', book.credits?.publisher || 'Not recorded');
+  setText('[data-book-edition-rights]', book.credits?.rights || 'Rights information is not recorded in the presentation metadata.');
   const cover = $('[data-active-cover]');
   if (cover) {
     cover.src = book.coverImage || 'assets/Rongmei Gospel song books.png';
