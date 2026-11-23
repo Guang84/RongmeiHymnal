@@ -13,6 +13,7 @@ import {
   getSongSections,
   loadBook,
   loadLibrary,
+  loadSong,
   searchAcrossBooks,
   searchHymns
 } from './data.js';
@@ -29,9 +30,9 @@ let catalogScrollInitialized = false;
 
 
 function songTitleParts(song) {
-  const rongmei = song?.titleRongmei || song?.rongmeiTitle || song?.title_rongmei || song?.title || '';
-  const english = song?.titleEnglish || song?.englishTitle || song?.title_english || song?.titleEnglishTitle || '';
-  return { primary: rongmei || english, secondary: english && english !== rongmei ? english : '' };
+  const primary = song?.title || song?.titleRongmei || song?.titleEnglish || '';
+  const alternate = song?.language === 'english' ? song?.titleRongmei : song?.titleEnglish;
+  return { primary, secondary: alternate && alternate !== primary ? alternate : '' };
 }
 function appendSongTitle(parent, song, link = false) {
   const parts = songTitleParts(song);
@@ -108,7 +109,7 @@ function renderBookList() {
       createElement('span', 'book-card-label', 'Songbook'),
       createElement('strong', '', book.title),
       createElement('small', '', book.subtitle || book.language || 'Digital songbook'),
-      createElement('span', 'book-card-credit', `Edited by ${book.credits.editor}`),
+      createElement('span', 'book-card-credit', 'Digital edition · ' + (book.credits?.editor || 'GLab')),
       createElement('span', 'book-card-open', `${book.songCount || 'View'} songs  →`)
     );
     link.append(image, content);
@@ -126,9 +127,12 @@ function renderBookFooter(book) {
   setText('[data-book-rights]', book.credits.rights);
   const source = $('[data-book-source]');
   if (source) {
-    const externalURL = book.songs?.url?.trim();
+    const externalURL = book.sourceBookURL;
     source.hidden = !externalURL;
-    if (externalURL) source.href = externalURL;
+    if (externalURL) {
+      source.href = externalURL;
+      source.textContent = 'Collection index ↗';
+    }
   }
 }
 
@@ -182,20 +186,7 @@ function renderSongTable(songs = getHymnsAlphabetically()) {
     const number = createElement('td', 'table-number', song.number);
     const titleCell = document.createElement('td');
     appendSongTitle(titleCell, song, true);
-    const metaSummary = [
-      ['Chord', song.chord],
-      ['Beat', song.beat],
-      ['Author', song.author],
-      ['Meta 3', song.meta3],
-      ['Meta 4', song.meta4]
-    ].filter(([, value]) => value && String(value).trim());
-    if (metaSummary.length) {
-      titleCell.append(createElement('small', 'song-catalog-meta',
-        metaSummary.map(([label, value]) => `${label}: ${value}`).join(' · ')));
-    }
-    if (String(song.sourceBook || '').startsWith('Legacy SQLite')) {
-      titleCell.append(createElement('small', 'song-title-source', `Legacy database record ${song.sourceNumber}`));
-    }
+    titleCell.append(createElement('small', 'song-catalog-meta', 'Digital song ' + String(song.number).padStart(3, '0')));
     const actionCell = createElement('td', 'table-action');
     const action = createElement('a', '', 'Read →');
     action.href = buildHymnURL(song);
@@ -247,7 +238,7 @@ function initSearch() {
     clear.hidden = !query;
     const matches = searchHymns(query);
     visibleSongCount = PAGE_SIZE;
-    status.textContent = query ? `${matches.length} matching song${matches.length === 1 ? '' : 's'} in ${getActiveBook().title}` : '';
+    status.textContent = query ? `${matches.length} title/number match${matches.length === 1 ? '' : 'es'} in ${getActiveBook().title}` : '';
     const matchedIds = new Set(matches.map(song => song.id));
     renderSongTable(query ? getHymnsAlphabetically().filter(song => matchedIds.has(song.id)) : getHymnsAlphabetically());
   });
@@ -297,12 +288,12 @@ function initGlobalSearch() {
       renderGlobalSearchResults([], '');
       return;
     }
-    status.textContent = 'Searching all songbooks…';
+    status.textContent = 'Searching song titles and numbers across the library…';
     try {
       const search = await searchAcrossBooks(query);
       if (currentRequest !== request) return;
       const { results, searchedBooks, failedBooks } = search;
-      const resultLabel = `${results.length} matching song${results.length === 1 ? '' : 's'} from ${searchedBooks} of ${getBooks().length} songbooks.`;
+      const resultLabel = `${results.length} matching title/number result${results.length === 1 ? '' : 's'} from ${searchedBooks} songbooks.`;
       status.textContent = failedBooks.length
         ? `${resultLabel} Unavailable: ${failedBooks.map(book => book.title).join(', ')}. Some results may be missing.`
         : resultLabel;
@@ -357,16 +348,22 @@ function renderLyrics(song) {
   const sections = getSongSections(song);
   lyrics.replaceChildren();
   if (outline) outline.replaceChildren();
+  if (!sections.length || !sections.some(section => section.lines.some(line => line.trim()))) {
+    lyrics.append(createElement('p', 'empty-state lyrics-unavailable',
+      'Lyrics for this language were not included in the supplied source. The available title is retained.'));
+    if (outline) outline.hidden = true;
+    return;
+  }
   sections.forEach((section, index) => {
-    const block = createElement('section', `song-section song-section--${section.type}`);
-    block.id = `song-section-${index + 1}`;
-    block.setAttribute('aria-label', section.label || `Song section ${index + 1}`);
+    const block = createElement('section', 'song-section song-section--' + section.type);
+    block.id = 'song-section-' + (index + 1);
+    block.setAttribute('aria-label', section.label || 'Song text');
     if (section.label) block.append(createElement('h2', 'song-section-label', section.label));
     section.lines.forEach(line => block.append(createElement('p', '', line)));
     lyrics.append(block);
     if (outline && section.label && !['frontmatter', 'attribution'].includes(section.type)) {
-      const link = createElement('a', `song-outline-link song-outline-link--${section.type}`, section.label);
-      link.href = `#${block.id}`;
+      const link = createElement('a', 'song-outline-link song-outline-link--' + section.type, section.label);
+      link.href = '#' + block.id;
       outline.append(link);
     }
   });
@@ -402,53 +399,38 @@ function initPresentationMode() {
   return toggle;
 }
 
-function renderReader() {
-  const book = getActiveBook();
-  applyBookTheme(book);
-  const params = new URLSearchParams(location.search);
-  const number = params.get('number');
-  const song = number ? getHymnByNumber(number) : params.has('random') ? getAllHymns()[Math.floor(Math.random() * getAllHymns().length)] : null;
-  if (!song) {
-    $('[data-reader-error]').hidden = false;
-    return;
-  }
-  const bookURL = buildBookURL(book);
-  $('[data-reader-back]').href = bookURL;
-  $('[data-book-home]').href = bookURL;
-  addHistory(getRecordKey(song));
-  $('[data-reader]').hidden = false;
-  setText('[data-reader-book]', book.title);
-  setText('[data-reader-number]', `Song ${song.number}`);
+function renderSongContent(song, book) {
   const sourceNumber = $('[data-reader-source-number]');
   if (sourceNumber) {
     const sourceDetails = [];
-    if (song.sourceBook) sourceDetails.push(`Source book: ${song.sourceBook}`);
-    if (song.sourceNumber !== undefined && song.sourceNumber !== null && String(song.sourceNumber).trim()) {
-      sourceDetails.push(`Printed/source number: ${song.sourceNumber}`);
+    if (song.sourceBook) sourceDetails.push('Source book: ' + song.sourceBook);
+    if (song.sourceNumber !== undefined && song.sourceNumber !== null) {
+      sourceDetails.push('Printed number: ' + song.sourceNumber);
     }
-    sourceNumber.hidden = sourceDetails.length === 0;
+    sourceNumber.hidden = !sourceDetails.length;
     sourceNumber.textContent = sourceDetails.join(' · ');
   }
+
   const readerTitle = $('[data-reader-title]');
   const titleParts = songTitleParts(song);
   setText('[data-reader-title]', titleParts.primary);
-  const priorSecondary = $('[data-reader-title-secondary]');
-  priorSecondary?.remove();
+  $('[data-reader-title-secondary]')?.remove();
   if (titleParts.secondary && readerTitle) {
     const secondary = createElement('p', 'song-title-secondary reader-title-secondary', titleParts.secondary);
     secondary.dataset.readerTitleSecondary = '';
     readerTitle.insertAdjacentElement('afterend', secondary);
   }
+
   const metadataBlock = $('[data-song-metadata]');
   if (metadataBlock) {
     metadataBlock.replaceChildren();
+    const details = song.details || {};
     const items = [
-      ['Chord', song.chord],
-      ['Beat', song.beat],
-      ['Author', song.author],
-      ['Meta 3', song.meta3],
-      ['Meta 4', song.meta4]
-    ].filter(([, value]) => value && String(value).trim());
+      ['Author', details.author], ['Composer', details.composer],
+      ['Translator', song.translator], ['Arranger', details.arranger],
+      ['Chord', details.chord], ['Key', details.key], ['Beat', details.beat],
+      ['Meter', details.meter], ['Tune', details.tune]
+    ].filter(([, value]) => value !== null && value !== undefined && String(value).trim());
     items.forEach(([label, value]) => {
       const item = document.createElement('div');
       item.append(createElement('dt', '', label), createElement('dd', '', String(value).trim()));
@@ -456,33 +438,110 @@ function renderReader() {
     });
     metadataBlock.hidden = !items.length;
   }
+
   setText('[data-verification]', verificationMessage(song, book.title));
-  document.title = `${titleParts.primary || song.title} | ${book.title}`;
+  const rightsNode = $('[data-rights-status]');
+  if (rightsNode) {
+    const languageRights = song.rights?.languageRights?.[song.language];
+    const status = languageRights?.status || song.rights?.status || 'unknown';
+    const labels = {
+      unknown: 'Rights information has not yet been verified.',
+      pending: 'Publication permission is pending confirmation.',
+      licensed: 'A licence is recorded for this content.',
+      public_domain_verified: 'Public-domain status is recorded for this content.',
+      restricted: 'This content has restricted permitted uses.'
+    };
+    rightsNode.textContent = labels[status] || 'Rights status: ' + status.replace(/[_-]+/g, ' ') + '.';
+  }
+  document.title = (titleParts.primary || song.title) + ' | ' + book.title;
   renderLyrics(song);
+}
+
+async function renderReader() {
+  const book = getActiveBook();
+  applyBookTheme(book);
+  const params = new URLSearchParams(location.search);
+  const number = params.get('number');
+  const descriptor = number
+    ? getHymnByNumber(number)
+    : params.has('random')
+      ? getAllHymns()[Math.floor(Math.random() * getAllHymns().length)]
+      : null;
+  if (!descriptor) {
+    $('[data-reader-error]').hidden = false;
+    return;
+  }
+
+  const song = await loadSong(descriptor, params.get('lang'));
+  const bookURL = buildBookURL(book);
+  $('[data-reader-back]').href = bookURL;
+  $('[data-book-home]').href = bookURL;
+  addHistory(getRecordKey(song));
+  $('[data-reader]').hidden = false;
+  setText('[data-reader-book]', book.title);
+  setText('[data-reader-number]', 'Song ' + song.number);
+
+  const languageControl = $('[data-language-control]');
+  const languageSelect = $('[data-language-select]');
+  if (languageControl && languageSelect) {
+    languageSelect.replaceChildren();
+    song.availableLanguages.forEach(language => {
+      const option = document.createElement('option');
+      option.value = language.id;
+      option.textContent = language.title + (language.contentStatus === 'title_only' ? ' · title only' : '');
+      languageSelect.append(option);
+    });
+    languageSelect.value = song.language;
+    languageControl.hidden = song.availableLanguages.length < 2;
+    languageSelect.addEventListener('change', async () => {
+      languageSelect.disabled = true;
+      try {
+        const localizedSong = await loadSong(descriptor, languageSelect.value);
+        renderSongContent(localizedSong, book);
+        const nextURL = new URL(location.href);
+        nextURL.searchParams.set('lang', localizedSong.language);
+        history.replaceState({}, '', nextURL);
+      } catch (error) {
+        console.error('Unable to load selected song language', error);
+        toast('That language version could not be loaded.');
+      } finally {
+        languageSelect.disabled = false;
+      }
+    });
+  }
+
+  renderSongContent(song, book);
   const favorite = $('[data-favorite-button]');
   const recordKey = getRecordKey(song);
-  const updateFavorite = () => { favorite.textContent = getFavorites().includes(recordKey) ? '★ Favorited' : '☆ Favorite'; };
+  const updateFavorite = () => {
+    favorite.textContent = getFavorites().includes(recordKey) ? '★ Favorited' : '☆ Favorite';
+  };
   updateFavorite();
   favorite.addEventListener('click', () => {
     const active = toggleFavorite(recordKey);
     updateFavorite();
     toast(active ? 'Added to favorites' : 'Removed from favorites');
   });
-  const previous = getPreviousHymn(song);
-  const next = getNextHymn(song);
+
+  const previous = getPreviousHymn(descriptor);
+  const next = getNextHymn(descriptor);
   $('[data-reader-nav]').hidden = false;
-  for (const [selector, item, label] of [['[data-previous]', previous, '[data-previous-label]'], ['[data-next]', next, '[data-next-label]']]) {
+  for (const [selector, item, label] of [
+    ['[data-previous]', previous, '[data-previous-label]'],
+    ['[data-next]', next, '[data-next-label]']
+  ]) {
     const link = $(selector);
     if (item) {
       link.href = buildHymnURL(item);
       link.removeAttribute('aria-disabled');
-      setText(label, `${item.number} · ${item.title}`);
+      setText(label, item.number + ' · ' + item.title);
     } else {
       link.setAttribute('aria-disabled', 'true');
       link.removeAttribute('href');
       setText(label, 'End of songbook');
     }
   }
+
   renderBookFooter(book);
   initPresentationMode();
   $('[data-share-button]').addEventListener('click', async () => {
