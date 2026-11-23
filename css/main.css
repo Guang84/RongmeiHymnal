@@ -1678,3 +1678,40 @@ html { font-size: var(--ui-font-size, 16px); }
 @media (max-width: 420px) {
   .book-edition-grid { grid-template-columns: 1fr; }
 }
+
+.glab-project-credit {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 720px);
+  justify-content: center;
+  align-items: center;
+  gap: clamp(24px, 5vw, 54px);
+  padding: clamp(46px, 7vw, 84px) 20px;
+  border-top: 1px solid var(--line);
+  background: color-mix(in srgb, var(--green) 5%, var(--bg));
+}
+.glab-project-mark {
+  width: 92px;
+  height: 92px;
+  display: grid;
+  place-items: center;
+}
+.glab-project-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.glab-project-copy h2 {
+  max-width: 20ch;
+  margin: 0 0 14px;
+  font: 500 clamp(1.8rem, 4vw, 2.7rem)/1.08 Newsreader, serif;
+}
+.glab-project-copy p:not(.eyebrow) {
+  max-width: 65ch;
+  color: var(--muted);
+  line-height: 1.7;
+}
+@media (max-width: 600px) {
+  .glab-project-credit { grid-template-columns: 1fr; gap: 16px; }
+  .glab-project-mark { width: 68px; height: 68px; }
+}
