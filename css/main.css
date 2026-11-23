@@ -1307,9 +1307,6 @@ body.presentation-mode .presentation-exit:hover { border-color: var(--accent); c
 
 
 
- 14% { transform: scale(1.08); } 28% { transform: scale(1); } 42% { transform: scale(1.12); } 70% { transform: scale(1); } }
- 100% { transform: translateX(290%); } }
-@media (prefers-reduced-motion: reduce) { .app-loader-logo,   }
 @media (max-width: 640px) { .brand-mark-image { width: 34px; height: 34px; } .song-title-secondary { font-size: .82em; } }
 
 
