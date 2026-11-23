@@ -1,3 +1,4 @@
+# Temporary export workflow for creating the requested download bundle.
 name: Export Rongmei Hymnal songbooks
 
 on:
@@ -22,11 +23,11 @@ jobs:
           mkdir -p export/RongmeiHymnal-All-Songbooks/songs
           cp data/songbooks/ngai-luzaam/songs.json export/RongmeiHymnal-All-Songbooks/songs/ngai-luzaam.json
           cp data/songbooks/vbs-songs/songs.json export/RongmeiHymnal-All-Songbooks/songs/vbs-songs.json
-          curl --fail --location --retry 3 --retry-all-errors \
-            https://raw.githubusercontent.com/Guang84/Guang84.github.io/main/data/RongmeiHymnal/buanthanhlu/songs.json \
+          curl --fail --location --retry 3 --retry-all-errors \\
+            https://raw.githubusercontent.com/Guang84/Guang84.github.io/main/data/RongmeiHymnal/buanthanhlu/songs.json \\
             --output export/RongmeiHymnal-All-Songbooks/songs/buanthanhlu.json
-          curl --fail --location --retry 3 --retry-all-errors \
-            https://raw.githubusercontent.com/Guang84/Guang84.github.io/main/data/RongmeiHymnal/hymdaihlu/songs.json \
+          curl --fail --location --retry 3 --retry-all-errors \\
+            https://raw.githubusercontent.com/Guang84/Guang84.github.io/main/data/RongmeiHymnal/hymdaihlu/songs.json \\
             --output export/RongmeiHymnal-All-Songbooks/songs/hymdaihlu.json
 
       - name: Validate all collections
@@ -65,13 +66,7 @@ jobs:
               ids.add(song.id);
               numbers.add(song.number);
             }
-            manifest.push({
-              file,
-              songCount: data.songs.length,
-              contentVersion: data.contentVersion ?? null,
-              updatedAt: data.updatedAt ?? null,
-              sha256: crypto.createHash('sha256').update(raw).digest('hex')
-            });
+            manifest.push({ file, songCount: data.songs.length, contentVersion: data.contentVersion ?? null, updatedAt: data.updatedAt ?? null, sha256: crypto.createHash('sha256').update(raw).digest('hex') });
             console.log('PASS ' + file + ': ' + data.songs.length + ' songs; JSON, IDs, numbers and lyric content checked');
           }
           fs.writeFileSync('export/RongmeiHymnal-All-Songbooks/manifest.json', JSON.stringify({
@@ -79,7 +74,7 @@ jobs:
             createdAt: new Date().toISOString(),
             totalSongs: manifest.reduce((sum, item) => sum + item.songCount, 0),
             collections: manifest
-          }, null, 2) + '\n');
+          }, null, 2) + '\\n');
           NODE
 
       - name: Add export notes
