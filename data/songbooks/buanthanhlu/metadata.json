@@ -36,9 +36,6 @@
     }
   ],
   "songs": {
-    "file": "",
-    "url": "https://raw.githubusercontent.com/Guang84/Guang84.github.io/refs/heads/main/data/RongmeiHymnal/buanthanhlu/songs.json",
-    "count": 305,
-    "updatedAt": "2026-08-31"
+    "count": 305
   }
 }
