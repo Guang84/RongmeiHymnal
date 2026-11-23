@@ -242,6 +242,7 @@ function initSearch() {
   const clear = $('[data-clear-search]');
   const lyricsButton = $('[data-search-lyrics]');
   if (!input || !status || !clear) return;
+  $('[data-search-form]')?.addEventListener('submit', event => event.preventDefault());
   let request = 0;
 
   input.addEventListener('input', () => {
