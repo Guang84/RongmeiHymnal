@@ -76,13 +76,13 @@ export function initOfflineLibrary() {
       progress.hidden = true;
       remove.hidden = !data.completed;
       const errorMessage = data.error || (data.failed ? `Saved with ${data.failed} item(s) unavailable. Try again when connected.` : '');
-      setStatus(errorMessage || `Offline library is ready. ${data.books} songbooks and all app features will work without internet.`, errorMessage ? 'warning' : 'ready');
+      setStatus(errorMessage || `Offline library is ready: ${data.books} collections and ${data.songCount || 'all'} individual song records saved on this device.`, errorMessage ? 'warning' : 'ready');
       toast(data.failed ? 'Offline download partly completed' : 'Offline library downloaded');
       updateStorageEstimate();
     }
     if (data.type === 'OFFLINE_STATUS') {
       remove.hidden = !data.count;
-      setStatus(data.downloaded ? `Offline library ready: ${data.books} songbooks and ${data.count} app files saved on this device.` : data.count ? `Offline download is incomplete (${data.count} of ${data.total} files). Connect to the internet and download again.` : 'Download once, then read and search songs without internet.', data.downloaded ? 'ready' : data.count ? 'warning' : '');
+      setStatus(data.downloaded ? `Offline library ready: ${data.books} collections, ${data.songCount || 'all'} songs and ${data.count} resources saved on this device.` : data.count ? `Offline download is incomplete (${data.count} of ${data.total} resources). Connect to the internet and download again.` : 'Download the complete collection once, then read individual songs without internet.', data.downloaded ? 'ready' : data.count ? 'warning' : '');
     }
     if (data.type === 'OFFLINE_CLEARED') {
       remove.hidden = true;
