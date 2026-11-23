@@ -12,6 +12,7 @@ const libraryIndex = {
 };
 const collection = { bookId: 'sample-book', songCount: 1, path: 'sample-book/book.json' };
 const book = {
+  id: 'sample-book',
   schemaVersion: '2.1',
   bookId: 'sample-book',
   title: 'Sample Book',
