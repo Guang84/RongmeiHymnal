@@ -249,7 +249,9 @@ function initSearch() {
     const query = input.value.trim();
     request += 1;
     clear.hidden = !query;
+    clear.disabled = false;
     if (lyricsButton) lyricsButton.disabled = !query;
+    status.dataset.state = '';
     const matches = searchHymns(query);
     visibleSongCount = PAGE_SIZE;
     status.textContent = query
@@ -685,8 +687,12 @@ function initServiceWorker() {
       }
     };
     const reloadForUpdate = () => {
+      if (!registration.waiting) {
+        location.reload();
+        return;
+      }
       navigator.serviceWorker.addEventListener('controllerchange', () => location.reload(), { once: true });
-      registration.waiting?.postMessage({ type: 'SKIP_WAITING' });
+      registration.waiting.postMessage({ type: 'SKIP_WAITING' });
     };
     const showUpdate = () => {
       if (updateScheduled) return;
