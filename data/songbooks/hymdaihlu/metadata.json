@@ -45,9 +45,6 @@
     }
   ],
   "songs": {
-    "file": "",
-    "url": "https://raw.githubusercontent.com/Guang84/Guang84.github.io/refs/heads/main/data/RongmeiHymnal/hymdaihlu/songs.json",
-    "count": 930,
-    "updatedAt": "2026-10-14"
+    "count": 930
   }
 }
