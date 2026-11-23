@@ -1715,3 +1715,22 @@ html { font-size: var(--ui-font-size, 16px); }
   .glab-project-credit { grid-template-columns: 1fr; gap: 16px; }
   .glab-project-mark { width: 68px; height: 68px; }
 }
+
+.catalog-lyric-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+.catalog-lyric-search span {
+  color: var(--muted);
+  font-size: .76rem;
+  line-height: 1.45;
+}
+.catalog-lyric-search button:disabled {
+  opacity: .48;
+  cursor: not-allowed;
+}
+@media (max-width: 560px) {
+  .catalog-lyric-search { align-items: flex-start; flex-direction: column; gap: 7px; }
+}
