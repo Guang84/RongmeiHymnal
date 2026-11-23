@@ -147,31 +147,75 @@ export async function loadBook(bookId) {
   return records;
 }
 
+async function loadRawSong(descriptor) {
+  const book = getBooks().find(item => item.id === descriptor.bookId) || activeBook;
+  if (!book || !safeSongPath(descriptor.path)) throw new Error('invalid song source path');
+  const cacheKey = book.id + ':' + descriptor.id;
+  if (songCache.has(cacheKey)) return songCache.get(cacheKey);
+  let request = songRequests.get(cacheKey);
+  if (!request) {
+    const url = dataURL(book.sourceBaseURL, descriptor.path);
+    request = fetchJSON(url, 'song ' + descriptor.number + ' from ' + book.title)
+      .then(data => {
+        validateSongDocument(data, book, descriptor);
+        songCache.set(cacheKey, data.song);
+        return data.song;
+      })
+      .finally(() => songRequests.delete(cacheKey));
+    songRequests.set(cacheKey, request);
+  }
+  return request;
+}
+
 export async function loadSong(songOrNumber, language) {
   const descriptor = typeof songOrNumber === 'object'
     ? songOrNumber
     : records.find(item => item.number === Number(songOrNumber));
   if (!descriptor) throw new Error('song not found in the selected songbook');
   const book = getBooks().find(item => item.id === descriptor.bookId) || activeBook;
-  if (!book || !safeSongPath(descriptor.path)) throw new Error('invalid song source path');
-  const url = dataURL(book.sourceBaseURL, descriptor.path);
-  const cacheKey = book.id + ':' + descriptor.id;
-  let raw = songCache.get(cacheKey);
-  if (!raw) {
-    let request = songRequests.get(cacheKey);
-    if (!request) {
-      request = fetchJSON(url, 'song ' + descriptor.number + ' from ' + book.title)
-        .then(data => {
-          validateSongDocument(data, book, descriptor);
-          songCache.set(cacheKey, data.song);
-          return data.song;
-        })
-        .finally(() => songRequests.delete(cacheKey));
-      songRequests.set(cacheKey, request);
-    }
-    raw = await request;
-  }
+  const raw = await loadRawSong(descriptor);
   return normalizeSongRecord(raw, book, language);
+}
+
+/** Explicit, progress-reporting lyric search. It downloads this collection's song files only after the reader requests it. */
+export async function searchLyricsInBook(query, onProgress) {
+  const needle = normalize(query);
+  if (!needle) return { results: [], completed: 0, total: records.length, failed: 0 };
+  const descriptors = records.slice();
+  const results = [];
+  let cursor = 0;
+  let completed = 0;
+  let failed = 0;
+  const worker = async () => {
+    while (cursor < descriptors.length) {
+      const descriptor = descriptors[cursor++];
+      try {
+        const raw = await loadRawSong(descriptor);
+        const lyricText = Object.values(raw.languages || {}).flatMap(language => {
+          const content = language?.content;
+          if (Array.isArray(content?.lines)) return content.lines;
+          if (Array.isArray(content?.sections)) return content.sections.flatMap(section => section.lines || []);
+          return [];
+        });
+        const source = raw.source || {};
+        const details = raw.details || {};
+        const titles = Object.values(raw.languages || {}).map(language => language?.title || '');
+        const searchable = normalize([
+          raw.number, source.printedNumber, source.sourceBook, details.author,
+          details.composer, details.arranger, details.chord, details.key,
+          details.beat, details.meter, details.tune, ...titles,
+          ...lyricText, ...(raw.search?.keywords || [])
+        ].join(' '));
+        if (matchesSearch(needle, searchable)) results.push(descriptor);
+      } catch {
+        failed += 1;
+      }
+      completed += 1;
+      if (typeof onProgress === 'function') onProgress(completed, descriptors.length, failed);
+    }
+  };
+  await Promise.all(Array.from({ length: 8 }, () => worker()));
+  return { results, completed, total: descriptors.length, failed };
 }
 
 function normalizeSongRecord(raw, book, requestedLanguage) {
