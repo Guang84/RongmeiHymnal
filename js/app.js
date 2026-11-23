@@ -607,7 +607,7 @@ async function init() {
       return;
     }
     await loadBook(selectedBookId());
-    document.body.dataset.page === 'book' ? renderBookPage() : renderReader();
+    document.body.dataset.page === 'book' ? renderBookPage() : await renderReader();
   } catch (error) {
     renderLoadError(error);
   } finally {
@@ -639,11 +639,10 @@ function initServiceWorker() {
       updateScheduled = true;
       const node = $('[data-update]');
       if (node) {
-        node.firstChild.textContent = 'A newer version is ready. Refreshing…';
+        node.firstChild.textContent = 'A newer version is ready. Refresh when you are finished reading.';
         node.hidden = false;
         node.querySelector('button')?.addEventListener('click', reloadForUpdate, { once: true });
       }
-      setTimeout(reloadForUpdate, 500);
     };
     if (registration.waiting) showUpdate();
     registration.addEventListener('updatefound', () => {
@@ -661,8 +660,7 @@ function initServiceWorker() {
       else console.warn(`A background request failed while online: ${event.data.url || 'unknown resource'}`);
     }
     if (event.data?.type === 'LIBRARY_UPDATED') {
-      toast('New library content found. Refreshing…');
-      setTimeout(() => location.reload(), 500);
+      toast('New library data is available. Refresh when convenient.');
     }
     if (event.data?.type === 'LIBRARY_REFRESH_FAILED' && navigator.onLine) console.warn(`Library refresh failed: ${event.data.message || 'unknown error'}`);
     if (event.data?.type === 'CACHE_WARNING') console.warn(`${event.data.count} app files could not be saved for offline use.`);
