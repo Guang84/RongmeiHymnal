@@ -36,9 +36,6 @@
     }
   ],
   "songs": {
-    "file": "songs.json",
-    "url": "",
-    "count": 36,
-    "updatedAt": "2026-08-31"
+    "count": 36
   }
 }
