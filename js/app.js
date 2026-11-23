@@ -15,7 +15,8 @@ import {
   loadLibrary,
   loadSong,
   searchAcrossBooks,
-  searchHymns
+  searchHymns,
+  searchLyricsInBook
 } from './data.js';
 import { addHistory, getFavorites, getHistory, toggleFavorite } from './storage.js';
 import { verificationMessage } from './search-core.js';
@@ -239,20 +240,65 @@ function initSearch() {
   const input = $('[data-search-input]');
   const status = $('[data-search-status]');
   const clear = $('[data-clear-search]');
+  const lyricsButton = $('[data-search-lyrics]');
   if (!input || !status || !clear) return;
+  let request = 0;
+
   input.addEventListener('input', () => {
     const query = input.value.trim();
+    request += 1;
     clear.hidden = !query;
+    if (lyricsButton) lyricsButton.disabled = !query;
     const matches = searchHymns(query);
     visibleSongCount = PAGE_SIZE;
-    status.textContent = query ? `${matches.length} title/number match${matches.length === 1 ? '' : 'es'} in ${getActiveBook().title}` : '';
+    status.textContent = query
+      ? matches.length + ' title/number match' + (matches.length === 1 ? '' : 'es') + ' in ' + getActiveBook().title + '. Use “Search lyrics too” to search the full song text.'
+      : '';
     const matchedIds = new Set(matches.map(song => song.id));
     renderSongTable(query ? getHymnsAlphabetically().filter(song => matchedIds.has(song.id)) : getHymnsAlphabetically());
   });
+
   clear.addEventListener('click', () => {
     input.value = '';
     input.dispatchEvent(new Event('input'));
     input.focus();
+  });
+
+  lyricsButton?.addEventListener('click', async () => {
+    const query = input.value.trim();
+    if (!query) return;
+    const currentRequest = ++request;
+    lyricsButton.disabled = true;
+    clear.disabled = true;
+    status.textContent = 'Searching individual song records… 0 of ' + getAllHymns().length;
+    try {
+      const result = await searchLyricsInBook(query, (completed, total, failed) => {
+        if (currentRequest === request) {
+          status.textContent = 'Searching song text… ' + completed + ' of ' + total
+            + (failed ? ' · ' + failed + ' unavailable' : '');
+        }
+      });
+      if (currentRequest !== request || input.value.trim() !== query) return;
+      const titleMatches = searchHymns(query);
+      const matchedIds = new Set([...titleMatches, ...result.results].map(song => song.id));
+      const matches = getHymnsAlphabetically().filter(song => matchedIds.has(song.id));
+      visibleSongCount = PAGE_SIZE;
+      renderSongTable(matches);
+      status.textContent = matches.length + ' matching song' + (matches.length === 1 ? '' : 's')
+        + ' in ' + getActiveBook().title + '. Searched ' + result.completed + ' of ' + result.total
+        + ' song records' + (result.failed ? '; ' + result.failed + ' could not be loaded.' : '.');
+    } catch (error) {
+      if (currentRequest === request) {
+        console.error('Lyric search failed', error);
+        status.textContent = 'Lyric search could not be completed. Check the connection and try again.';
+        status.dataset.state = 'error';
+      }
+    } finally {
+      if (currentRequest === request) {
+        lyricsButton.disabled = false;
+        clear.disabled = false;
+      }
+    }
   });
 }
 
