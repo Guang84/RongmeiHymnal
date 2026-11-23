@@ -1,41 +1,48 @@
 {
-  "schemaVersion": "2.0",
+  "schemaVersion": "3.0",
+  "dataSource": {
+    "repository": "Guang84/Guang84.github.io",
+    "commit": "83a5b3cbde08e38feab473773291dfa24da18156",
+    "baseUrl": "https://raw.githubusercontent.com/Guang84/Guang84.github.io/83a5b3cbde08e38feab473773291dfa24da18156/data/Products/Rongmei%20Hymnal",
+    "manifestUrl": "https://raw.githubusercontent.com/Guang84/Guang84.github.io/83a5b3cbde08e38feab473773291dfa24da18156/data/Products/Rongmei%20Hymnal/manifest.json",
+    "schemaVersion": "2.1",
+    "loading": "book-index-first; individual-song-on-demand"
+  },
   "library": {
     "name": "Rongmei Hymnal",
-    "eyebrow": "A digital library for singing communities",
-    "title": "Rongmei songs, gathered for every generation.",
-    "intro": "Explore Rongmei gospel songbooks in a simple digital library made for worship, learning, and singing together. Search across the collection or open a book and read each song in a clear, focused view.",
+    "eyebrow": "A GLab digital library for worship and community singing",
+    "title": "Rongmei songs, gathered for worship, learning and generations to come.",
+    "intro": "Explore Rongmei gospel songbooks and selected English hymn collections in one searchable digital library. Find songs by title or number, open individual hymns, and read in a clear, adjustable format on desktop or mobile.",
     "heroImage": "assets/Rongmei Gospel song books.png",
-    "heroImageAlt": "Illustration for Rongmei Hymnal",
-    "about": "Rongmei Hymnal helps preserve and share the songs that carry faith, language, and community memory. Each songbook remains a distinct, carefully credited collection, with its editorial, publication, source, and rights information kept alongside the songs."
+    "heroImageAlt": "Rongmei Hymnal digital songbook library",
+    "about": "Rongmei Hymnal brings together digital editions of Rongmei gospel songbooks and selected English hymn collections. Each collection retains its own identity, source details, contributor credits, editorial notes and rights information. Developed by GLab Enterprise, the project aims to make these collections easier to explore and read while respecting the people and communities responsible for the original works.",
+    "developer": "GLab Enterprise",
+    "developerUrl": "https://guang84.github.io/",
+    "projectUrl": "https://github.com/Guang84/RongmeiHymnal"
   },
   "books": [
     {
       "id": "buanthanhlu",
       "directory": "buanthanhlu",
       "metadata": "metadata.json",
-      "version": "2.1.0",
       "songCount": 305
     },
     {
       "id": "hymdaihlu",
       "directory": "hymdaihlu",
       "metadata": "metadata.json",
-      "version": "1.3.0",
       "songCount": 930
     },
     {
       "id": "vbs-songs",
       "directory": "vbs-songs",
       "metadata": "metadata.json",
-      "version": "1.1.0",
       "songCount": 36
     },
     {
       "id": "ngai-luzaam",
       "directory": "ngai-luzaam",
       "metadata": "metadata.json",
-      "version": "1.3.0",
       "songCount": 294
     }
   ]

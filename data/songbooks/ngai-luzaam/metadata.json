@@ -20,7 +20,7 @@
     "description": "This edition combines 250 song pages transcribed from the supplied PDF (printed numbers 1–257, with seven numbers absent from the supplied file) and 44 additional SQLite records that did not have a high-confidence match to the PDF. The DB-only records retain their legacy record numbers; some unusual source placeholders or spellings may still need proofreading."
   },
   "credits": {
-    "editor": "Guang84 · GLab",
+    "editor": "GLab · Digital edition",
     "compiledBy": "Digitized from the supplied Khristian Luzaam PDF and hymnal_1_2_3.db; partial editorial review",
     "publisher": "Original publication details not yet verified",
     "year": "Digital edition · 2026",
@@ -45,8 +45,6 @@
     }
   ],
   "songs": {
-    "file": "songs.json",
-    "count": 294,
-    "updatedAt": "2026-10-14"
+    "count": 294
   }
 }

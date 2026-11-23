@@ -1591,3 +1591,146 @@ html { font-size: var(--ui-font-size, 16px); }
   .reader-heading h1 { font-size: clamp(2.1rem, 8vw, 3rem); }
 }
 @media (prefers-reduced-motion: reduce) { .reader, .reader-actions, .reader-type-controls { scroll-behavior: auto; transition: none; } }
+
+/* Schema 2.1 reader and GLab product identity. */
+.language-control {
+  display: inline-grid;
+  gap: 6px;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 600;
+}
+.language-control select {
+  min-width: 190px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 9px 12px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+}
+.language-control select:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  outline-offset: 2px;
+}
+.rights-note {
+  margin: 9px 0 0;
+  max-width: 65ch;
+  color: var(--muted);
+  font-size: .76rem;
+  line-height: 1.55;
+}
+.lyrics-unavailable {
+  padding: 24px;
+  border-left: 3px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 7%, var(--reader));
+}
+.app-loader-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+.app-loader-label {
+  font-size: .78rem;
+  letter-spacing: .04em;
+}
+.song-catalog-meta {
+  display: block;
+  color: var(--muted);
+  font-size: .72rem;
+  margin-top: 5px;
+}
+@media (max-width: 700px) {
+  .language-control { width: 100%; }
+  .language-control select { width: 100%; }
+}
+
+.book-edition-panel {
+  margin: 42px 0 12px;
+  padding: clamp(22px, 4vw, 34px);
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+.book-edition-panel .section-heading { gap: 24px; }
+.book-edition-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px 28px;
+  margin: 24px 0;
+}
+.book-edition-grid div { min-width: 0; }
+.book-edition-grid dt {
+  color: var(--muted);
+  font-size: .7rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.book-edition-grid dd {
+  margin: 5px 0 0;
+  color: var(--ink);
+  font: 500 1.05rem/1.35 Newsreader, serif;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 700px) {
+  .book-edition-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+}
+@media (max-width: 420px) {
+  .book-edition-grid { grid-template-columns: 1fr; }
+}
+
+.glab-project-credit {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 720px);
+  justify-content: center;
+  align-items: center;
+  gap: clamp(24px, 5vw, 54px);
+  padding: clamp(46px, 7vw, 84px) 20px;
+  border-top: 1px solid var(--line);
+  background: color-mix(in srgb, var(--green) 5%, var(--bg));
+}
+.glab-project-mark {
+  width: 92px;
+  height: 92px;
+  display: grid;
+  place-items: center;
+}
+.glab-project-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.glab-project-copy h2 {
+  max-width: 20ch;
+  margin: 0 0 14px;
+  font: 500 clamp(1.8rem, 4vw, 2.7rem)/1.08 Newsreader, serif;
+}
+.glab-project-copy p:not(.eyebrow) {
+  max-width: 65ch;
+  color: var(--muted);
+  line-height: 1.7;
+}
+@media (max-width: 600px) {
+  .glab-project-credit { grid-template-columns: 1fr; gap: 16px; }
+  .glab-project-mark { width: 68px; height: 68px; }
+}
+
+.catalog-lyric-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+.catalog-lyric-search span {
+  color: var(--muted);
+  font-size: .76rem;
+  line-height: 1.45;
+}
+.catalog-lyric-search button:disabled {
+  opacity: .48;
+  cursor: not-allowed;
+}
+@media (max-width: 560px) {
+  .catalog-lyric-search { align-items: flex-start; flex-direction: column; gap: 7px; }
+}

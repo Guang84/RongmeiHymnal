@@ -24,3 +24,6 @@ test('incomplete transcriptions are identified', () => {
 test('correction requests are not represented as approved editions', () => {
   assert.match(verificationMessage({ verification: { status: 'needs_correction' } }), /Correction requested/);
 });
+test('Schema 2.1 not_reviewed records are clearly marked as pending editorial review', () => {
+  assert.match(verificationMessage({ editorial: { status: 'not_reviewed' }, verification: { status: 'not_reviewed' } }, 'Hymdaihlu'), /Not yet editor-reviewed/);
+});

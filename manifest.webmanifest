@@ -6,7 +6,7 @@
   "id": "./index.html",
   "display": "standalone",
   "orientation": "any",
-  "description": "Install the Rongmei songbook library and read, search, and save songs offline.",
+  "description": "A digital hymn library developed by GLab Enterprise. Browse Rongmei songbooks and read individual songs online or offline.",
   "categories": [
     "books",
     "education",

@@ -15,15 +15,15 @@
     "accentSoft": "#f1d6a8"
   },
   "intro": {
-    "summary": "A growing collection of public-domain English hymns and traditional spirituals suitable for Vacation Bible School, Sunday school, and group singing.",
-    "description": "Sing familiar songs about faith, creation, joy, courage, and the life of Jesus. This edition intentionally includes only older public-domain texts and traditional songs with no known modern lyric additions."
+    "summary": "A collection of English hymns and traditional songs selected for Vacation Bible School, Sunday school, and group singing.",
+    "description": "Sing familiar songs about faith, creation, joy, courage, and the life of Jesus. The digital records preserve available source text and identify rights information separately for each song and language."
   },
   "credits": {
-    "editor": "Rongmei Hymnal Editorial Team",
-    "compiledBy": "Public-domain children’s hymn and spiritual sources",
-    "publisher": "Rongmei Hymnal",
+    "editor": "GLab · Digital edition",
+    "compiledBy": "Selected English hymn and traditional-song sources",
+    "publisher": "Original publishers vary; see individual source records.",
     "year": "2026",
-    "rights": "Included texts are public-domain hymns or traditional spirituals. Modern arrangements, recordings, and later lyric additions may have separate rights."
+    "rights": "The Schema 2.1 song records currently mark rights as unknown. Verify each text, translation, arrangement and intended use before public redistribution; modern recordings and arrangements may have separate rights."
   },
   "changelog": [
     {
@@ -36,9 +36,6 @@
     }
   ],
   "songs": {
-    "file": "songs.json",
-    "url": "",
-    "count": 36,
-    "updatedAt": "2026-08-31"
+    "count": 36
   }
 }
