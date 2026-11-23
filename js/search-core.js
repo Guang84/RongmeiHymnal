@@ -20,7 +20,7 @@ export function verificationMessage(song, bookTitle = 'this songbook') {
     return `Correction requested; not approved as a final edition${suffix}`;
   if (['incomplete', 'source-incomplete', 'transcription-incomplete'].includes(status))
     return `Source transcription incomplete${suffix}`;
-  if (['pending', 'needs-review', 'awaiting-review', 'unverified'].includes(status))
+  if (['pending', 'needs-review', 'awaiting-review', 'unverified', 'not-reviewed'].includes(status))
     return `Not yet editor-reviewed${suffix}`;
   return note || `Editorial status not recorded for ${bookTitle}.`;
 }
