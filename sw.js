@@ -156,7 +156,9 @@ async function downloadLibrary(source) {
         failed.push(url);
       }
       completed += 1;
-      source?.postMessage({ type: 'OFFLINE_PROGRESS', completed, total: files.length });
+      if (completed % 10 === 0 || completed === files.length) {
+        source?.postMessage({ type: 'OFFLINE_PROGRESS', completed, total: files.length });
+      }
     }
   };
   await Promise.all(Array.from({ length: 8 }, () => worker()));
