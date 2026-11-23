@@ -1,0 +1,123 @@
+name: Export Rongmei Hymnal songbooks
+
+on:
+  push:
+    branches:
+      - upgrade/export-songbook-json-bundle
+
+permissions:
+  contents: read
+
+jobs:
+  export-songbooks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Rongmei Hymnal repository
+        uses: actions/checkout@v4
+
+      - name: Prepare song JSON files
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p export/RongmeiHymnal-All-Songbooks/songs
+          cp data/songbooks/ngai-luzaam/songs.json export/RongmeiHymnal-All-Songbooks/songs/ngai-luzaam.json
+          cp data/songbooks/vbs-songs/songs.json export/RongmeiHymnal-All-Songbooks/songs/vbs-songs.json
+          curl --fail --location --retry 3 --retry-all-errors \
+            https://raw.githubusercontent.com/Guang84/Guang84.github.io/main/data/RongmeiHymnal/buanthanhlu/songs.json \
+            --output export/RongmeiHymnal-All-Songbooks/songs/buanthanhlu.json
+          curl --fail --location --retry 3 --retry-all-errors \
+            https://raw.githubusercontent.com/Guang84/Guang84.github.io/main/data/RongmeiHymnal/hymdaihlu/songs.json \
+            --output export/RongmeiHymnal-All-Songbooks/songs/hymdaihlu.json
+
+      - name: Validate all collections
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import crypto from 'node:crypto';
+          const root = 'export/RongmeiHymnal-All-Songbooks/songs';
+          const expected = {
+            'buanthanhlu.json': 305,
+            'hymdaihlu.json': 930,
+            'ngai-luzaam.json': 294,
+            'vbs-songs.json': 36
+          };
+          const manifest = [];
+          for (const [file, count] of Object.entries(expected)) {
+            const path = root + '/' + file;
+            const raw = fs.readFileSync(path);
+            const data = JSON.parse(raw.toString('utf8'));
+            if (!Array.isArray(data.songs) || data.songs.length !== count) {
+              throw new Error(file + ': expected ' + count + ' songs, got ' + (data.songs?.length ?? 'invalid'));
+            }
+            const ids = new Set();
+            const numbers = new Set();
+            for (const [i, song] of data.songs.entries()) {
+              if (!song || typeof song.id !== 'string' || !song.id.trim()) throw new Error(file + ': missing ID at ' + (i + 1));
+              if (ids.has(song.id)) throw new Error(file + ': duplicate ID ' + song.id);
+              if (!Number.isInteger(song.number) || song.number < 1) throw new Error(file + ': invalid number at ' + (i + 1));
+              if (numbers.has(song.number)) throw new Error(file + ': duplicate digital number ' + song.number);
+              if (typeof song.title !== 'string' || !song.title.trim()) throw new Error(file + ': missing title at ' + (i + 1));
+              const lyrics = Array.isArray(song.content?.lines) && song.content.lines.length > 0;
+              const sections = Array.isArray(song.content?.sections) && song.content.sections.some(section => Array.isArray(section.lines) && section.lines.length > 0);
+              if (!lyrics && !sections) throw new Error(file + ': missing lyric content at ' + (i + 1));
+              ids.add(song.id);
+              numbers.add(song.number);
+            }
+            manifest.push({
+              file,
+              songCount: data.songs.length,
+              contentVersion: data.contentVersion ?? null,
+              updatedAt: data.updatedAt ?? null,
+              sha256: crypto.createHash('sha256').update(raw).digest('hex')
+            });
+            console.log('PASS ' + file + ': ' + data.songs.length + ' songs; JSON, IDs, numbers and lyric content checked');
+          }
+          fs.writeFileSync('export/RongmeiHymnal-All-Songbooks/manifest.json', JSON.stringify({
+            title: 'Rongmei Hymnal — Song Data Export',
+            createdAt: new Date().toISOString(),
+            totalSongs: manifest.reduce((sum, item) => sum + item.songCount, 0),
+            collections: manifest
+          }, null, 2) + '\n');
+          NODE
+
+      - name: Add export notes
+        shell: bash
+        run: |
+          cat > export/RongmeiHymnal-All-Songbooks/README.txt <<'EOF'
+          RONGMEI HYMNAL — COMPLETE SONG DATA EXPORT
+
+          Each collection is provided as an independent JSON file under songs/.
+          The files contain the song records and lyric content as stored in the
+          source repositories. No song text has been rewritten or re-formatted.
+
+          Collections:
+            buanthanhlu.json  — 305 songs
+            hymdaihlu.json    — 930 songs
+            ngai-luzaam.json  — 294 songs
+            vbs-songs.json    — 36 songs
+            Total             — 1,565 songs
+
+          See manifest.json for source versions, update dates and SHA-256 hashes.
+
+          Software licensing does not automatically grant rights to song lyrics,
+          translations, arrangements, or printed songbook content. Check the
+          applicable rights and permissions before republishing or distributing
+          these files.
+          EOF
+
+      - name: Create ZIP archive
+        shell: bash
+        run: |
+          cd export
+          zip -qr RongmeiHymnal-All-Songbooks.zip RongmeiHymnal-All-Songbooks
+          unzip -t RongmeiHymnal-All-Songbooks.zip
+
+      - name: Upload ZIP artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: RongmeiHymnal-All-Songbooks
+          path: export/RongmeiHymnal-All-Songbooks.zip
+          if-no-files-found: error
+          retention-days: 1
