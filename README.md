@@ -71,6 +71,12 @@ npm run validate:data:remote
 - `npm run validate:data` checks the local application index and collection presentation metadata.
 - `npm run validate:data:remote` checks the pinned external manifest, all four book indexes, and all 1,565 individual song documents.
 
+## Shared GLab Loader
+
+The home, songbook and hymn-reader interfaces use the shared **GLab Loader v1.0.1** package from the GLab Assets repository. The CSS and JavaScript URLs are pinned to asset commit `15d1604029e803961ae9b3c8290cc1e3231d0869` to keep its CSS and JavaScript on the same validated release (v1.0.1). The application creates the `GLabLoader` instance and controls its show/hide lifecycle around startup and data loading.
+
+The shared source of truth is [GLab Loader](https://github.com/Guang84/Glab-assets/tree/15d1604029e803961ae9b3c8290cc1e3231d0869/shared/GLab-loader). To roll out a fix, publish and validate a new loader release in GLab Assets, then update the shared asset commit reference in each authorised GLab application. Keeping the CSS and JavaScript commit-pinned prevents applications from silently receiving mismatched component files. The loader is a progressive enhancement: if the shared asset host is unavailable, the application itself must continue to initialise without the overlay. The core app remains usable offline; the externally hosted loader may not appear when the browser is offline and has no cached copy.
+
 ## Offline and PWA behaviour
 
 The offline download explicitly saves the application shell, collection indexes and individual song records. The service worker uses a Rongmei Hymnal-specific cache namespace and only removes its own obsolete caches; it must not delete caches belonging to other GLab projects hosted on the same origin.
