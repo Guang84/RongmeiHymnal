@@ -655,22 +655,39 @@ function renderLoadError(error) {
 }
 
 async function init() {
-  initSettings();
-  initOfflineLibrary();
-  initKeys();
   try {
-    await loadLibrary();
-    if (document.body.dataset.page === 'home') {
-      renderHome();
-      return;
+    initSettings();
+    const pageLabel = document.body.dataset.page === 'reader'
+      ? 'Opening song…'
+      : document.body.dataset.page === 'book'
+        ? 'Opening songbook…'
+        : 'Opening Rongmei Hymnal…';
+    const loader = typeof window.GLabLoader === 'function'
+      ? new window.GLabLoader({
+          message: pageLabel,
+          theme: document.body.classList.contains('dark') ? 'dark' : 'light',
+          timeoutMs: 15000
+        })
+      : null;
+    loader?.show();
+    initOfflineLibrary();
+    initKeys();
+
+    try {
+      await loadLibrary();
+      if (document.body.dataset.page === 'home') {
+        renderHome();
+        return;
+      }
+      await loadBook(selectedBookId());
+      document.body.dataset.page === 'book' ? renderBookPage() : await renderReader();
+    } catch (error) {
+      renderLoadError(error);
+    } finally {
+      loader?.hide();
     }
-    await loadBook(selectedBookId());
-    document.body.dataset.page === 'book' ? renderBookPage() : await renderReader();
   } catch (error) {
     renderLoadError(error);
-  } finally {
-    document.querySelector('[data-app-loader]')?.classList.add('is-hidden');
-    document.body.classList.remove('app-loading');
   }
 }
 
