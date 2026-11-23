@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 
 const read = path => readFile(new URL(path, import.meta.url), 'utf8');
-const loaderBase = 'https://raw.githubusercontent.com/Guang84/Glab-assets/15d1604029e803961ae9b3c8290cc1e3231d0869/shared/GLab-loader';
+const loaderBase = 'https://raw.githubusercontent.com/Guang84/Glab-assets/main/shared/GLab-loader';
 
 test('all app interfaces use the same pinned GLab Loader release', async () => {
   for (const page of ['../index.html', '../book.html', '../hymn.html']) {
