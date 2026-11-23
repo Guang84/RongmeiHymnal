@@ -1591,3 +1591,57 @@ html { font-size: var(--ui-font-size, 16px); }
   .reader-heading h1 { font-size: clamp(2.1rem, 8vw, 3rem); }
 }
 @media (prefers-reduced-motion: reduce) { .reader, .reader-actions, .reader-type-controls { scroll-behavior: auto; transition: none; } }
+
+/* Schema 2.1 reader and GLab product identity. */
+.language-control {
+  display: inline-grid;
+  gap: 6px;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 600;
+}
+.language-control select {
+  min-width: 190px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 9px 12px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+}
+.language-control select:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  outline-offset: 2px;
+}
+.rights-note {
+  margin: 9px 0 0;
+  max-width: 65ch;
+  color: var(--muted);
+  font-size: .76rem;
+  line-height: 1.55;
+}
+.lyrics-unavailable {
+  padding: 24px;
+  border-left: 3px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 7%, var(--reader));
+}
+.app-loader-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+.app-loader-label {
+  font-size: .78rem;
+  letter-spacing: .04em;
+}
+.song-catalog-meta {
+  display: block;
+  color: var(--muted);
+  font-size: .72rem;
+  margin-top: 5px;
+}
+@media (max-width: 700px) {
+  .language-control { width: 100%; }
+  .language-control select { width: 100%; }
+}
